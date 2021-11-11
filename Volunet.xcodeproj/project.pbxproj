@@ -12,6 +12,16 @@
 		E313D85D273D3D3E00EF1E3C /* ChangaOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E313D85B273D3D2800EF1E3C /* ChangaOne-Regular.ttf */; };
 		E313D85F273D3D9A00EF1E3C /* UIFont+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E313D85E273D3D9A00EF1E3C /* UIFont+Utils.swift */; };
 		E313D864273D408100EF1E3C /* String+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E313D863273D408100EF1E3C /* String+Utils.swift */; };
+		E313D867273D431700EF1E3C /* RegistrationScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E313D866273D431700EF1E3C /* RegistrationScreenInteractor.swift */; };
+		E313D869273D434B00EF1E3C /* RegistrationScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E313D868273D434B00EF1E3C /* RegistrationScreenPresenter.swift */; };
+		E313D86B273D438600EF1E3C /* RegistrationScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E313D86A273D438600EF1E3C /* RegistrationScreenVC.swift */; };
+		E313D86D273D43E200EF1E3C /* RegistrationScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E313D86C273D43E200EF1E3C /* RegistrationScreenRouter.swift */; };
+		E313D86F273D445C00EF1E3C /* RegistrationScreenGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = E313D86E273D445C00EF1E3C /* RegistrationScreenGraph.swift */; };
+		E313D876273D457A00EF1E3C /* SignInScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E313D871273D457A00EF1E3C /* SignInScreenRouter.swift */; };
+		E313D877273D457A00EF1E3C /* SignInScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E313D872273D457A00EF1E3C /* SignInScreenInteractor.swift */; };
+		E313D878273D457A00EF1E3C /* SignInScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E313D873273D457A00EF1E3C /* SignInScreenPresenter.swift */; };
+		E313D879273D457A00EF1E3C /* SignInScreenGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = E313D874273D457A00EF1E3C /* SignInScreenGraph.swift */; };
+		E313D87A273D457A00EF1E3C /* SignInScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E313D875273D457A00EF1E3C /* SignInScreenVC.swift */; };
 		E3A507A2273710F700AE8DD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A507A1273710F700AE8DD2 /* AppDelegate.swift */; };
 		E3A507AB273710FC00AE8DD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3A507AA273710FC00AE8DD2 /* Assets.xcassets */; };
 		E3A507AE273710FC00AE8DD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3A507AC273710FC00AE8DD2 /* LaunchScreen.storyboard */; };
@@ -51,6 +61,16 @@
 		E313D85B273D3D2800EF1E3C /* ChangaOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ChangaOne-Regular.ttf"; sourceTree = "<group>"; };
 		E313D85E273D3D9A00EF1E3C /* UIFont+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Utils.swift"; sourceTree = "<group>"; };
 		E313D863273D408100EF1E3C /* String+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Utils.swift"; sourceTree = "<group>"; };
+		E313D866273D431700EF1E3C /* RegistrationScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationScreenInteractor.swift; sourceTree = "<group>"; };
+		E313D868273D434B00EF1E3C /* RegistrationScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationScreenPresenter.swift; sourceTree = "<group>"; };
+		E313D86A273D438600EF1E3C /* RegistrationScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationScreenVC.swift; sourceTree = "<group>"; };
+		E313D86C273D43E200EF1E3C /* RegistrationScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationScreenRouter.swift; sourceTree = "<group>"; };
+		E313D86E273D445C00EF1E3C /* RegistrationScreenGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationScreenGraph.swift; sourceTree = "<group>"; };
+		E313D871273D457A00EF1E3C /* SignInScreenRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInScreenRouter.swift; sourceTree = "<group>"; };
+		E313D872273D457A00EF1E3C /* SignInScreenInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInScreenInteractor.swift; sourceTree = "<group>"; };
+		E313D873273D457A00EF1E3C /* SignInScreenPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInScreenPresenter.swift; sourceTree = "<group>"; };
+		E313D874273D457A00EF1E3C /* SignInScreenGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInScreenGraph.swift; sourceTree = "<group>"; };
+		E313D875273D457A00EF1E3C /* SignInScreenVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInScreenVC.swift; sourceTree = "<group>"; };
 		E3A5079E273710F700AE8DD2 /* Volunet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Volunet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3A507A1273710F700AE8DD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3A507AA273710FC00AE8DD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -113,6 +133,30 @@
 				E313D85B273D3D2800EF1E3C /* ChangaOne-Regular.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		E313D865273D42D000EF1E3C /* RegistrationScreen */ = {
+			isa = PBXGroup;
+			children = (
+				E313D866273D431700EF1E3C /* RegistrationScreenInteractor.swift */,
+				E313D868273D434B00EF1E3C /* RegistrationScreenPresenter.swift */,
+				E313D86A273D438600EF1E3C /* RegistrationScreenVC.swift */,
+				E313D86C273D43E200EF1E3C /* RegistrationScreenRouter.swift */,
+				E313D86E273D445C00EF1E3C /* RegistrationScreenGraph.swift */,
+			);
+			path = RegistrationScreen;
+			sourceTree = "<group>";
+		};
+		E313D870273D457A00EF1E3C /* SignInScreen */ = {
+			isa = PBXGroup;
+			children = (
+				E313D871273D457A00EF1E3C /* SignInScreenRouter.swift */,
+				E313D872273D457A00EF1E3C /* SignInScreenInteractor.swift */,
+				E313D873273D457A00EF1E3C /* SignInScreenPresenter.swift */,
+				E313D874273D457A00EF1E3C /* SignInScreenGraph.swift */,
+				E313D875273D457A00EF1E3C /* SignInScreenVC.swift */,
+			);
+			path = SignInScreen;
 			sourceTree = "<group>";
 		};
 		E3A50795273710F700AE8DD2 = {
@@ -179,6 +223,8 @@
 		E3A507DE2737153200AE8DD2 /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				E313D870273D457A00EF1E3C /* SignInScreen */,
+				E313D865273D42D000EF1E3C /* RegistrationScreen */,
 				E313D856273D38EB00EF1E3C /* CustomElements */,
 				E3A507E027371A6700AE8DD2 /* WelcomingScreen */,
 			);
@@ -341,11 +387,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E313D876273D457A00EF1E3C /* SignInScreenRouter.swift in Sources */,
 				E3A507E827371ACD00AE8DD2 /* WelcomingScreenGraph.swift in Sources */,
 				E3A507DB2737143800AE8DD2 /* UIColor+Utils.swift in Sources */,
 				E313D858273D390100EF1E3C /* MainButton.swift in Sources */,
+				E313D867273D431700EF1E3C /* RegistrationScreenInteractor.swift in Sources */,
+				E313D869273D434B00EF1E3C /* RegistrationScreenPresenter.swift in Sources */,
+				E313D86F273D445C00EF1E3C /* RegistrationScreenGraph.swift in Sources */,
+				E313D86D273D43E200EF1E3C /* RegistrationScreenRouter.swift in Sources */,
 				E3A507EC273725EA00AE8DD2 /* UIView+Utils.swift in Sources */,
+				E313D879273D457A00EF1E3C /* SignInScreenGraph.swift in Sources */,
+				E313D877273D457A00EF1E3C /* SignInScreenInteractor.swift in Sources */,
 				E3A507A2273710F700AE8DD2 /* AppDelegate.swift in Sources */,
+				E313D878273D457A00EF1E3C /* SignInScreenPresenter.swift in Sources */,
+				E313D86B273D438600EF1E3C /* RegistrationScreenVC.swift in Sources */,
+				E313D87A273D457A00EF1E3C /* SignInScreenVC.swift in Sources */,
 				E3A507E427371A9900AE8DD2 /* WelcomingScreenVC.swift in Sources */,
 				E313D85F273D3D9A00EF1E3C /* UIFont+Utils.swift in Sources */,
 				E313D864273D408100EF1E3C /* String+Utils.swift in Sources */,
@@ -461,7 +517,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -517,7 +573,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -542,6 +598,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -570,6 +627,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

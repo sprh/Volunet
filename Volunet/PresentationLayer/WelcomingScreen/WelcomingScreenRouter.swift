@@ -9,8 +9,21 @@ import UIKit
 
 protocol IWelcomingScreenRouter: AnyObject {
     var viewController: UIViewController? { get set }
+
+    func openSignInPage()
+    func openRegistrationPage()
 }
 
 final class WelcomingScreenRouter: IWelcomingScreenRouter {
     weak var viewController: UIViewController?
+
+    func openSignInPage() {
+        let graph = SignInScreenGraph()
+        viewController?.navigationController?.viewControllers = [graph.viewController]
+    }
+
+    func openRegistrationPage() {
+        let graph = RegistrationScreenGraph()
+        viewController?.navigationController?.viewControllers = [graph.viewController]
+    }
 }

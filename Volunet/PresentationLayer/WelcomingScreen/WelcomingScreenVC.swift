@@ -36,6 +36,16 @@ final class WelcomingScreenVC: UIViewController {
             welcomingScreenView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
         ])
         welcomingScreenView.setup()
+        addTargets()
+    }
+
+    func addTargets() {
+        welcomingScreenView.registrationButton.addTarget(self,
+                                                         action: #selector(didTapRegistrationButton),
+                                                         for: .touchUpInside)
+        welcomingScreenView.signInButton.addTarget(self,
+                                                   action: #selector(didTapSignInButton),
+                                                   for: .touchUpInside)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -46,6 +56,16 @@ final class WelcomingScreenVC: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.navigationBar.isHidden = false
+    }
+
+    @objc
+    func didTapRegistrationButton() {
+        router.openRegistrationPage()
+    }
+
+    @objc
+    func didTapSignInButton() {
+        router.openRegistrationPage()
     }
 }
 
