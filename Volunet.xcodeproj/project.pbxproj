@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0CE63C7AB5A693995C91A254 /* Pods_VolunetTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B0A1819683C358B41C27F8C /* Pods_VolunetTests.framework */; };
+		65F80F9BC19204CE552C1994 /* Pods_Volunet_VolunetUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 282A59E10578804AFB146908 /* Pods_Volunet_VolunetUITests.framework */; };
+		B8B5DB122B06C81F77712C58 /* Pods_Volunet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E25DD451E87C65D9D825799 /* Pods_Volunet.framework */; };
 		E313D858273D390100EF1E3C /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E313D857273D390100EF1E3C /* MainButton.swift */; };
 		E313D85C273D3D3B00EF1E3C /* ChangaOne-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E313D85A273D3D2800EF1E3C /* ChangaOne-Italic.ttf */; };
 		E313D85D273D3D3E00EF1E3C /* ChangaOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E313D85B273D3D2800EF1E3C /* ChangaOne-Regular.ttf */; };
@@ -57,6 +60,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		200F6AC7D5F74755D348FB2F /* Pods-Volunet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Volunet.debug.xcconfig"; path = "Target Support Files/Pods-Volunet/Pods-Volunet.debug.xcconfig"; sourceTree = "<group>"; };
+		209CA50C56745EBE31B01EF8 /* Pods-VolunetTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VolunetTests.release.xcconfig"; path = "Target Support Files/Pods-VolunetTests/Pods-VolunetTests.release.xcconfig"; sourceTree = "<group>"; };
+		282A59E10578804AFB146908 /* Pods_Volunet_VolunetUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Volunet_VolunetUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		34E38DA00BC3B5E26366E99E /* Pods-Volunet-VolunetUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Volunet-VolunetUITests.debug.xcconfig"; path = "Target Support Files/Pods-Volunet-VolunetUITests/Pods-Volunet-VolunetUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		3B0A1819683C358B41C27F8C /* Pods_VolunetTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VolunetTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E25DD451E87C65D9D825799 /* Pods_Volunet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Volunet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		59DD223D709470A2D4DD23F6 /* Pods-VolunetTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VolunetTests.debug.xcconfig"; path = "Target Support Files/Pods-VolunetTests/Pods-VolunetTests.debug.xcconfig"; sourceTree = "<group>"; };
+		654CDA22AC06E47A5495361C /* Pods-Volunet-VolunetUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Volunet-VolunetUITests.release.xcconfig"; path = "Target Support Files/Pods-Volunet-VolunetUITests/Pods-Volunet-VolunetUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A70FE1212A73F36BD1D8D6C7 /* Pods-Volunet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Volunet.release.xcconfig"; path = "Target Support Files/Pods-Volunet/Pods-Volunet.release.xcconfig"; sourceTree = "<group>"; };
 		E313D857273D390100EF1E3C /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
 		E313D85A273D3D2800EF1E3C /* ChangaOne-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ChangaOne-Italic.ttf"; sourceTree = "<group>"; };
 		E313D85B273D3D2800EF1E3C /* ChangaOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ChangaOne-Regular.ttf"; sourceTree = "<group>"; };
@@ -100,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8B5DB122B06C81F77712C58 /* Pods_Volunet.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CE63C7AB5A693995C91A254 /* Pods_VolunetTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65F80F9BC19204CE552C1994 /* Pods_Volunet_VolunetUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +184,8 @@
 				E3A507B7273710FC00AE8DD2 /* VolunetTests */,
 				E3A507C1273710FC00AE8DD2 /* VolunetUITests */,
 				E3A5079F273710F700AE8DD2 /* Products */,
+				E9890A28436B7F7FC7B9B0CE /* Pods */,
+				F357FA0EA6F131DC7F17C108 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -256,6 +273,30 @@
 			path = WelcomingScreen;
 			sourceTree = "<group>";
 		};
+		E9890A28436B7F7FC7B9B0CE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				200F6AC7D5F74755D348FB2F /* Pods-Volunet.debug.xcconfig */,
+				A70FE1212A73F36BD1D8D6C7 /* Pods-Volunet.release.xcconfig */,
+				34E38DA00BC3B5E26366E99E /* Pods-Volunet-VolunetUITests.debug.xcconfig */,
+				654CDA22AC06E47A5495361C /* Pods-Volunet-VolunetUITests.release.xcconfig */,
+				59DD223D709470A2D4DD23F6 /* Pods-VolunetTests.debug.xcconfig */,
+				209CA50C56745EBE31B01EF8 /* Pods-VolunetTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F357FA0EA6F131DC7F17C108 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E25DD451E87C65D9D825799 /* Pods_Volunet.framework */,
+				282A59E10578804AFB146908 /* Pods_Volunet_VolunetUITests.framework */,
+				3B0A1819683C358B41C27F8C /* Pods_VolunetTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -263,9 +304,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E3A507C8273710FC00AE8DD2 /* Build configuration list for PBXNativeTarget "Volunet" */;
 			buildPhases = (
+				5000E759806BFF648E77848C /* [CP] Check Pods Manifest.lock */,
 				E3A5079A273710F700AE8DD2 /* Sources */,
 				E3A5079B273710F700AE8DD2 /* Frameworks */,
 				E3A5079C273710F700AE8DD2 /* Resources */,
+				0D8CB8F4B8A3B358064680B2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -280,6 +323,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E3A507CB273710FC00AE8DD2 /* Build configuration list for PBXNativeTarget "VolunetTests" */;
 			buildPhases = (
+				270A08C0EFD9F27626685D6D /* [CP] Check Pods Manifest.lock */,
 				E3A507B0273710FC00AE8DD2 /* Sources */,
 				E3A507B1273710FC00AE8DD2 /* Frameworks */,
 				E3A507B2273710FC00AE8DD2 /* Resources */,
@@ -298,9 +342,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E3A507CE273710FC00AE8DD2 /* Build configuration list for PBXNativeTarget "VolunetUITests" */;
 			buildPhases = (
+				5212524DF14769871A780315 /* [CP] Check Pods Manifest.lock */,
 				E3A507BA273710FC00AE8DD2 /* Sources */,
 				E3A507BB273710FC00AE8DD2 /* Frameworks */,
 				E3A507BC273710FC00AE8DD2 /* Resources */,
+				995D5D68D6E699294630D8B1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -384,6 +430,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0D8CB8F4B8A3B358064680B2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Volunet/Pods-Volunet-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Volunet/Pods-Volunet-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Volunet/Pods-Volunet-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		270A08C0EFD9F27626685D6D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VolunetTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5000E759806BFF648E77848C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Volunet-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5212524DF14769871A780315 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Volunet-VolunetUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		995D5D68D6E699294630D8B1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Volunet-VolunetUITests/Pods-Volunet-VolunetUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Volunet-VolunetUITests/Pods-Volunet-VolunetUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Volunet-VolunetUITests/Pods-Volunet-VolunetUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E3A5079A273710F700AE8DD2 /* Sources */ = {
@@ -589,6 +738,7 @@
 		};
 		E3A507C9273710FC00AE8DD2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 200F6AC7D5F74755D348FB2F /* Pods-Volunet.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -618,6 +768,7 @@
 		};
 		E3A507CA273710FC00AE8DD2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A70FE1212A73F36BD1D8D6C7 /* Pods-Volunet.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -647,6 +798,7 @@
 		};
 		E3A507CC273710FC00AE8DD2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59DD223D709470A2D4DD23F6 /* Pods-VolunetTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -672,6 +824,7 @@
 		};
 		E3A507CD273710FC00AE8DD2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 209CA50C56745EBE31B01EF8 /* Pods-VolunetTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -697,6 +850,7 @@
 		};
 		E3A507CF273710FC00AE8DD2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34E38DA00BC3B5E26366E99E /* Pods-Volunet-VolunetUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -720,6 +874,7 @@
 		};
 		E3A507D0273710FC00AE8DD2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 654CDA22AC06E47A5495361C /* Pods-Volunet-VolunetUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

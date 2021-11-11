@@ -1,0 +1,6 @@
+framework module Pods_VolunetTests {
+  umbrella header "Pods-VolunetTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
