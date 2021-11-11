@@ -36,7 +36,7 @@ final class WelcomingScreenView: UIView {
 
     lazy var registrationButton: UIButton = {
         let viewModel = MainButton.ViewModel(font: .preferredFont(forTextStyle: .body),
-                                             title: "Зарегистрироваться",
+                                             title: .getLocalizedString(for: .registration),
                                              backgroundColor: .background,
                                              textColor: .text)
         let button = MainButton(viewModel: viewModel)
@@ -47,14 +47,14 @@ final class WelcomingScreenView: UIView {
 
     lazy var alreadyHaveAccountLabel: UILabel = {
         let label = UILabel()
-        label.text = "Уже есть аккаунт"
+        label.text = .getLocalizedString(for: .alreadyHaveAccount)
         label.font = .preferredFont(forTextStyle: .callout)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .secondaryText
         return label
     }()
 
-    lazy var logInButton: UIButton = {
+    lazy var signInButton: UIButton = {
         let viewModel = MainButton.ViewModel(font: .preferredFont(forTextStyle: .callout),
                                              title: nil,
                                              backgroundColor: .clear,
@@ -62,7 +62,7 @@ final class WelcomingScreenView: UIView {
         let button = MainButton(viewModel: viewModel)
         let underlineAttribute =
         [NSAttributedString.Key.underlineStyle: NSUnderlineStyle.thick.rawValue]
-        let underlineAttributedString = NSAttributedString(string: "Войти",
+        let underlineAttributedString = NSAttributedString(string: .getLocalizedString(for: .signIn),
                                                            attributes: underlineAttribute)
         button.setAttributedTitle(underlineAttributedString, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -77,7 +77,7 @@ final class WelcomingScreenView: UIView {
         addSubview(welcomingPageImageView)
         bottomSheet.addSubview(registrationButton)
         bottomSheet.addSubview(alreadyHaveAccountLabel)
-        bottomSheet.addSubview(logInButton)
+        bottomSheet.addSubview(signInButton)
         NSLayoutConstraint.activate([
             title.centerXAnchor.constraint(equalTo: centerXAnchor),
             title.topAnchor.constraint(equalTo: topAnchor, constant: 140),
@@ -98,8 +98,8 @@ final class WelcomingScreenView: UIView {
             alreadyHaveAccountLabel.centerXAnchor.constraint(equalTo: registrationButton.centerXAnchor),
             alreadyHaveAccountLabel.topAnchor.constraint(equalTo: registrationButton.bottomAnchor, constant: 8),
 
-            logInButton.centerXAnchor.constraint(equalTo: registrationButton.centerXAnchor),
-            logInButton.topAnchor.constraint(equalTo: alreadyHaveAccountLabel.bottomAnchor),
+            signInButton.centerXAnchor.constraint(equalTo: registrationButton.centerXAnchor),
+            signInButton.topAnchor.constraint(equalTo: alreadyHaveAccountLabel.bottomAnchor),
         ])
         layoutIfNeeded()
         bottomSheet.makeGradientBackground(with: [UIColor.darkTeal.cgColor, UIColor.lightTeal.cgColor])

@@ -11,6 +11,7 @@
 		E313D85C273D3D3B00EF1E3C /* ChangaOne-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E313D85A273D3D2800EF1E3C /* ChangaOne-Italic.ttf */; };
 		E313D85D273D3D3E00EF1E3C /* ChangaOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E313D85B273D3D2800EF1E3C /* ChangaOne-Regular.ttf */; };
 		E313D85F273D3D9A00EF1E3C /* UIFont+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E313D85E273D3D9A00EF1E3C /* UIFont+Utils.swift */; };
+		E313D864273D408100EF1E3C /* String+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E313D863273D408100EF1E3C /* String+Utils.swift */; };
 		E3A507A2273710F700AE8DD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A507A1273710F700AE8DD2 /* AppDelegate.swift */; };
 		E3A507AB273710FC00AE8DD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3A507AA273710FC00AE8DD2 /* Assets.xcassets */; };
 		E3A507AE273710FC00AE8DD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3A507AC273710FC00AE8DD2 /* LaunchScreen.storyboard */; };
@@ -49,6 +50,7 @@
 		E313D85A273D3D2800EF1E3C /* ChangaOne-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ChangaOne-Italic.ttf"; sourceTree = "<group>"; };
 		E313D85B273D3D2800EF1E3C /* ChangaOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ChangaOne-Regular.ttf"; sourceTree = "<group>"; };
 		E313D85E273D3D9A00EF1E3C /* UIFont+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Utils.swift"; sourceTree = "<group>"; };
+		E313D863273D408100EF1E3C /* String+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Utils.swift"; sourceTree = "<group>"; };
 		E3A5079E273710F700AE8DD2 /* Volunet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Volunet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3A507A1273710F700AE8DD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3A507AA273710FC00AE8DD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				E3A507DC2737144500AE8DD2 /* UIImage+Utils.swift */,
 				E3A507EB273725EA00AE8DD2 /* UIView+Utils.swift */,
 				E313D85E273D3D9A00EF1E3C /* UIFont+Utils.swift */,
+				E313D863273D408100EF1E3C /* String+Utils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 				E3A507A2273710F700AE8DD2 /* AppDelegate.swift in Sources */,
 				E3A507E427371A9900AE8DD2 /* WelcomingScreenVC.swift in Sources */,
 				E313D85F273D3D9A00EF1E3C /* UIFont+Utils.swift in Sources */,
+				E313D864273D408100EF1E3C /* String+Utils.swift in Sources */,
 				E3A507E627371AA400AE8DD2 /* WelcomingScreenRouter.swift in Sources */,
 				E3A507EA27371EDD00AE8DD2 /* WelcomingScreenView.swift in Sources */,
 				E3A507DD2737144500AE8DD2 /* UIImage+Utils.swift in Sources */,
