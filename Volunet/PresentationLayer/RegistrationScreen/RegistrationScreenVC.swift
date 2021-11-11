@@ -15,6 +15,12 @@ final class RegistrationScreenVC: UIViewController, IRegistrationScreenVC {
     private let interator: IRegistrationScreenInterator
     private let router: IRegistrationScreenRouter
 
+    let registrationScreenView: RegistrationScreenView = {
+        let view = RegistrationScreenView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+
     init(interator: IRegistrationScreenInterator,
          router: IRegistrationScreenRouter) {
         self.interator = interator
@@ -24,6 +30,19 @@ final class RegistrationScreenVC: UIViewController, IRegistrationScreenVC {
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .background
+        view.addSubview(registrationScreenView)
+        NSLayoutConstraint.activate([
+            registrationScreenView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            registrationScreenView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            registrationScreenView.topAnchor.constraint(equalTo: view.topAnchor),
+            registrationScreenView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+        ])
+        registrationScreenView.setup()
     }
 }
 

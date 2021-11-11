@@ -22,6 +22,7 @@
 		E313D878273D457A00EF1E3C /* SignInScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E313D873273D457A00EF1E3C /* SignInScreenPresenter.swift */; };
 		E313D879273D457A00EF1E3C /* SignInScreenGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = E313D874273D457A00EF1E3C /* SignInScreenGraph.swift */; };
 		E313D87A273D457A00EF1E3C /* SignInScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E313D875273D457A00EF1E3C /* SignInScreenVC.swift */; };
+		E313D87C273D58CC00EF1E3C /* RegistrationScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E313D87B273D58CB00EF1E3C /* RegistrationScreenView.swift */; };
 		E3A507A2273710F700AE8DD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A507A1273710F700AE8DD2 /* AppDelegate.swift */; };
 		E3A507AB273710FC00AE8DD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3A507AA273710FC00AE8DD2 /* Assets.xcassets */; };
 		E3A507AE273710FC00AE8DD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3A507AC273710FC00AE8DD2 /* LaunchScreen.storyboard */; };
@@ -71,6 +72,7 @@
 		E313D873273D457A00EF1E3C /* SignInScreenPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInScreenPresenter.swift; sourceTree = "<group>"; };
 		E313D874273D457A00EF1E3C /* SignInScreenGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInScreenGraph.swift; sourceTree = "<group>"; };
 		E313D875273D457A00EF1E3C /* SignInScreenVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInScreenVC.swift; sourceTree = "<group>"; };
+		E313D87B273D58CB00EF1E3C /* RegistrationScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationScreenView.swift; sourceTree = "<group>"; };
 		E3A5079E273710F700AE8DD2 /* Volunet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Volunet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3A507A1273710F700AE8DD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3A507AA273710FC00AE8DD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				E313D86A273D438600EF1E3C /* RegistrationScreenVC.swift */,
 				E313D86C273D43E200EF1E3C /* RegistrationScreenRouter.swift */,
 				E313D86E273D445C00EF1E3C /* RegistrationScreenGraph.swift */,
+				E313D87B273D58CB00EF1E3C /* RegistrationScreenView.swift */,
 			);
 			path = RegistrationScreen;
 			sourceTree = "<group>";
@@ -400,6 +403,7 @@
 				E313D877273D457A00EF1E3C /* SignInScreenInteractor.swift in Sources */,
 				E3A507A2273710F700AE8DD2 /* AppDelegate.swift in Sources */,
 				E313D878273D457A00EF1E3C /* SignInScreenPresenter.swift in Sources */,
+				E313D87C273D58CC00EF1E3C /* RegistrationScreenView.swift in Sources */,
 				E313D86B273D438600EF1E3C /* RegistrationScreenVC.swift in Sources */,
 				E313D87A273D457A00EF1E3C /* SignInScreenVC.swift in Sources */,
 				E3A507E427371A9900AE8DD2 /* WelcomingScreenVC.swift in Sources */,

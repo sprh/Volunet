@@ -19,31 +19,37 @@ final class MainButton: UIButton {
         let enabledTextColor: UIColor
         // Text color if isEnabled = false
         let disabledTextColor: UIColor
+        // Button corner radius
+        let cornerRadius: CGFloat
 
         init(font: UIFont,
              title: String?,
              enabledBackgroundColor: UIColor,
              disabledBackground: UIColor,
              enabledTextColor: UIColor,
-             disabledTextColor: UIColor) {
+             disabledTextColor: UIColor,
+             cornerRadius: CGFloat = 27) {
             self.font = font
             self.title = title
             self.enabledBackgroundColor = enabledBackgroundColor
             self.disabledBackgroundColor = disabledBackground
             self.enabledTextColor = enabledTextColor
             self.disabledTextColor = disabledTextColor
+            self.cornerRadius = cornerRadius
         }
 
         init(font: UIFont,
              title: String?,
              backgroundColor: UIColor,
-             textColor: UIColor) {
+             textColor: UIColor,
+             cornerRadius: CGFloat = 27) {
             self.font = font
             self.title = title
             self.enabledBackgroundColor = backgroundColor
             self.disabledBackgroundColor = backgroundColor
             self.enabledTextColor = textColor
             self.disabledTextColor = textColor
+            self.cornerRadius = cornerRadius
         }
     }
 
@@ -79,7 +85,7 @@ final class MainButton: UIButton {
     /// Confugurate the main button with parameters from the view model.
     private func configurate(with viewModel: ViewModel) {
         setTitle(viewModel.title, for: .normal)
-        layer.cornerRadius = 16
+        layer.cornerRadius = viewModel.cornerRadius
         titleLabel?.font = viewModel.font
         enabledTextColor = viewModel.enabledTextColor
         disabledTextColor = viewModel.disabledTextColor

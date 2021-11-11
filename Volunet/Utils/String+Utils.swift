@@ -11,6 +11,7 @@ enum LocalizedStringsKeys: String {
     case registration = "Registration"
     case alreadyHaveAccount = "I already have an account"
     case signIn = "Sign in"
+    case join = "Join"
 }
 
 extension String {
