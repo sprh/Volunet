@@ -102,6 +102,7 @@ final class WelcomingScreenView: UIView {
             signInButton.topAnchor.constraint(equalTo: alreadyHaveAccountLabel.bottomAnchor),
         ])
         layoutIfNeeded()
-        bottomSheet.makeGradientBackground(with: [UIColor.darkTeal.cgColor, UIColor.lightTeal.cgColor])
+        bottomSheet.makeGradientBackground(with: [UIColor.lightTeal.cgColor,
+                                                  UIColor.darkTeal.cgColor])
     }
 }

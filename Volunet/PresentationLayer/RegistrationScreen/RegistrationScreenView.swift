@@ -63,6 +63,7 @@ final class RegistrationScreenView: UIView {
             personalDataPanel.bottomAnchor.constraint(equalTo: joinButton.topAnchor, constant: -27)
         ])
         layoutIfNeeded()
-        personalDataPanel.makeGradientBackground(with: [UIColor.darkTeal.cgColor, UIColor.lightTeal.cgColor])
+        personalDataPanel.makeGradientBackground(with: [UIColor.lightTeal.cgColor,
+                                                        UIColor.darkTeal.cgColor])
     }
 }
