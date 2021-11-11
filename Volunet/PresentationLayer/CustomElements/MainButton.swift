@@ -19,6 +19,32 @@ final class MainButton: UIButton {
         let enabledTextColor: UIColor
         // Text color if isEnabled = false
         let disabledTextColor: UIColor
+
+        init(font: UIFont,
+             title: String?,
+             enabledBackgroundColor: UIColor,
+             disabledBackground: UIColor,
+             enabledTextColor: UIColor,
+             disabledTextColor: UIColor) {
+            self.font = font
+            self.title = title
+            self.enabledBackgroundColor = enabledBackgroundColor
+            self.disabledBackgroundColor = disabledBackground
+            self.enabledTextColor = enabledTextColor
+            self.disabledTextColor = disabledTextColor
+        }
+
+        init(font: UIFont,
+             title: String?,
+             backgroundColor: UIColor,
+             textColor: UIColor) {
+            self.font = font
+            self.title = title
+            self.enabledBackgroundColor = backgroundColor
+            self.disabledBackgroundColor = backgroundColor
+            self.enabledTextColor = textColor
+            self.disabledTextColor = textColor
+        }
     }
 
     private var enabledBackgroundColor: UIColor!

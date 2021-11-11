@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		E313D858273D390100EF1E3C /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E313D857273D390100EF1E3C /* MainButton.swift */; };
+		E313D85C273D3D3B00EF1E3C /* ChangaOne-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E313D85A273D3D2800EF1E3C /* ChangaOne-Italic.ttf */; };
+		E313D85D273D3D3E00EF1E3C /* ChangaOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E313D85B273D3D2800EF1E3C /* ChangaOne-Regular.ttf */; };
+		E313D85F273D3D9A00EF1E3C /* UIFont+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E313D85E273D3D9A00EF1E3C /* UIFont+Utils.swift */; };
 		E3A507A2273710F700AE8DD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A507A1273710F700AE8DD2 /* AppDelegate.swift */; };
 		E3A507AB273710FC00AE8DD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3A507AA273710FC00AE8DD2 /* Assets.xcassets */; };
 		E3A507AE273710FC00AE8DD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3A507AC273710FC00AE8DD2 /* LaunchScreen.storyboard */; };
@@ -43,6 +46,9 @@
 
 /* Begin PBXFileReference section */
 		E313D857273D390100EF1E3C /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
+		E313D85A273D3D2800EF1E3C /* ChangaOne-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ChangaOne-Italic.ttf"; sourceTree = "<group>"; };
+		E313D85B273D3D2800EF1E3C /* ChangaOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ChangaOne-Regular.ttf"; sourceTree = "<group>"; };
+		E313D85E273D3D9A00EF1E3C /* UIFont+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Utils.swift"; sourceTree = "<group>"; };
 		E3A5079E273710F700AE8DD2 /* Volunet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Volunet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3A507A1273710F700AE8DD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3A507AA273710FC00AE8DD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -98,6 +104,15 @@
 			path = CustomElements;
 			sourceTree = "<group>";
 		};
+		E313D859273D3D1C00EF1E3C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E313D85A273D3D2800EF1E3C /* ChangaOne-Italic.ttf */,
+				E313D85B273D3D2800EF1E3C /* ChangaOne-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		E3A50795273710F700AE8DD2 = {
 			isa = PBXGroup;
 			children = (
@@ -121,11 +136,11 @@
 		E3A507A0273710F700AE8DD2 /* Volunet */ = {
 			isa = PBXGroup;
 			children = (
+				E313D859273D3D1C00EF1E3C /* Fonts */,
 				E3A507AF273710FC00AE8DD2 /* Info.plist */,
 				E3A507DF273715A300AE8DD2 /* AppResources */,
 				E3A507DE2737153200AE8DD2 /* PresentationLayer */,
 				E3A507D92737142700AE8DD2 /* Utils */,
-				E3A507D82737142200AE8DD2 /* New Group */,
 			);
 			path = Volunet;
 			sourceTree = "<group>";
@@ -147,19 +162,13 @@
 			path = VolunetUITests;
 			sourceTree = "<group>";
 		};
-		E3A507D82737142200AE8DD2 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 		E3A507D92737142700AE8DD2 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
 				E3A507DA2737143800AE8DD2 /* UIColor+Utils.swift */,
 				E3A507DC2737144500AE8DD2 /* UIImage+Utils.swift */,
 				E3A507EB273725EA00AE8DD2 /* UIView+Utils.swift */,
+				E313D85E273D3D9A00EF1E3C /* UIFont+Utils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -300,9 +309,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E313D85D273D3D3E00EF1E3C /* ChangaOne-Regular.ttf in Resources */,
 				E3A507AE273710FC00AE8DD2 /* LaunchScreen.storyboard in Resources */,
 				E3A507AB273710FC00AE8DD2 /* Assets.xcassets in Resources */,
 				E3A507D4273713D700AE8DD2 /* Localazable.strings in Resources */,
+				E313D85C273D3D3B00EF1E3C /* ChangaOne-Italic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +344,7 @@
 				E3A507EC273725EA00AE8DD2 /* UIView+Utils.swift in Sources */,
 				E3A507A2273710F700AE8DD2 /* AppDelegate.swift in Sources */,
 				E3A507E427371A9900AE8DD2 /* WelcomingScreenVC.swift in Sources */,
+				E313D85F273D3D9A00EF1E3C /* UIFont+Utils.swift in Sources */,
 				E3A507E627371AA400AE8DD2 /* WelcomingScreenRouter.swift in Sources */,
 				E3A507EA27371EDD00AE8DD2 /* WelcomingScreenView.swift in Sources */,
 				E3A507DD2737144500AE8DD2 /* UIImage+Utils.swift in Sources */,

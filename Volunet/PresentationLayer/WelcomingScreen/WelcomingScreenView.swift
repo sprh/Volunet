@@ -13,7 +13,7 @@ final class WelcomingScreenView: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "VOLUNET"
         label.textColor = .lightTeal
-        label.font = .preferredFont(forTextStyle: .largeTitle)
+        label.font = .changaOneLargeTitle
         return label
     }()
 
@@ -37,10 +37,8 @@ final class WelcomingScreenView: UIView {
     lazy var registrationButton: UIButton = {
         let viewModel = MainButton.ViewModel(font: .preferredFont(forTextStyle: .body),
                                              title: "Зарегистрироваться",
-                                             enabledBackgroundColor: .background,
-                                             disabledBackgroundColor: .background,
-                                             enabledTextColor: .text,
-                                             disabledTextColor: .text)
+                                             backgroundColor: .background,
+                                             textColor: .text)
         let button = MainButton(viewModel: viewModel)
         button.isEnabled = true
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -57,15 +55,18 @@ final class WelcomingScreenView: UIView {
     }()
 
     lazy var logInButton: UIButton = {
-        let button = UIButton()
+        let viewModel = MainButton.ViewModel(font: .preferredFont(forTextStyle: .callout),
+                                             title: nil,
+                                             backgroundColor: .clear,
+                                             textColor: .secondaryText)
+        let button = MainButton(viewModel: viewModel)
         let underlineAttribute =
         [NSAttributedString.Key.underlineStyle: NSUnderlineStyle.thick.rawValue]
         let underlineAttributedString = NSAttributedString(string: "Войти",
                                                            attributes: underlineAttribute)
         button.setAttributedTitle(underlineAttributedString, for: .normal)
-        button.setTitleColor(.secondaryText, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.titleLabel?.font = .preferredFont(forTextStyle: .callout)
+        button.isEnabled = true
         return button
     }()
     
@@ -81,7 +82,7 @@ final class WelcomingScreenView: UIView {
             title.centerXAnchor.constraint(equalTo: centerXAnchor),
             title.topAnchor.constraint(equalTo: topAnchor, constant: 140),
             welcomingPageImageView.topAnchor.constraint(equalTo: title.bottomAnchor, constant: 16),
-            welcomingPageImageView.widthAnchor.constraint(equalToConstant: 200),
+            welcomingPageImageView.widthAnchor.constraint(equalToConstant: 230),
             welcomingPageImageView.centerXAnchor.constraint(equalTo: centerXAnchor),
 
             bottomSheet.bottomAnchor.constraint(equalTo: bottomAnchor),
