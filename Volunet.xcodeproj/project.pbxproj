@@ -26,6 +26,8 @@
 		E313D879273D457A00EF1E3C /* SignInScreenGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = E313D874273D457A00EF1E3C /* SignInScreenGraph.swift */; };
 		E313D87A273D457A00EF1E3C /* SignInScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E313D875273D457A00EF1E3C /* SignInScreenVC.swift */; };
 		E313D87C273D58CC00EF1E3C /* RegistrationScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E313D87B273D58CB00EF1E3C /* RegistrationScreenView.swift */; };
+		E313D880273D77DB00EF1E3C /* TextFieldWithPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E313D87F273D77DB00EF1E3C /* TextFieldWithPadding.swift */; };
+		E313D882273D7A0E00EF1E3C /* UIViewController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E313D881273D7A0E00EF1E3C /* UIViewController+Utils.swift */; };
 		E3A507A2273710F700AE8DD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A507A1273710F700AE8DD2 /* AppDelegate.swift */; };
 		E3A507AB273710FC00AE8DD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3A507AA273710FC00AE8DD2 /* Assets.xcassets */; };
 		E3A507AE273710FC00AE8DD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3A507AC273710FC00AE8DD2 /* LaunchScreen.storyboard */; };
@@ -85,6 +87,8 @@
 		E313D874273D457A00EF1E3C /* SignInScreenGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInScreenGraph.swift; sourceTree = "<group>"; };
 		E313D875273D457A00EF1E3C /* SignInScreenVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInScreenVC.swift; sourceTree = "<group>"; };
 		E313D87B273D58CB00EF1E3C /* RegistrationScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationScreenView.swift; sourceTree = "<group>"; };
+		E313D87F273D77DB00EF1E3C /* TextFieldWithPadding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithPadding.swift; sourceTree = "<group>"; };
+		E313D881273D7A0E00EF1E3C /* UIViewController+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Utils.swift"; sourceTree = "<group>"; };
 		E3A5079E273710F700AE8DD2 /* Volunet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Volunet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3A507A1273710F700AE8DD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3A507AA273710FC00AE8DD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -139,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				E313D857273D390100EF1E3C /* MainButton.swift */,
+				E313D87F273D77DB00EF1E3C /* TextFieldWithPadding.swift */,
 			);
 			path = CustomElements;
 			sourceTree = "<group>";
@@ -236,6 +241,7 @@
 				E3A507EB273725EA00AE8DD2 /* UIView+Utils.swift */,
 				E313D85E273D3D9A00EF1E3C /* UIFont+Utils.swift */,
 				E313D863273D408100EF1E3C /* String+Utils.swift */,
+				E313D881273D7A0E00EF1E3C /* UIViewController+Utils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -538,6 +544,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E313D880273D77DB00EF1E3C /* TextFieldWithPadding.swift in Sources */,
 				E313D876273D457A00EF1E3C /* SignInScreenRouter.swift in Sources */,
 				E3A507E827371ACD00AE8DD2 /* WelcomingScreenGraph.swift in Sources */,
 				E3A507DB2737143800AE8DD2 /* UIColor+Utils.swift in Sources */,
@@ -545,6 +552,7 @@
 				E313D867273D431700EF1E3C /* RegistrationScreenInteractor.swift in Sources */,
 				E313D869273D434B00EF1E3C /* RegistrationScreenPresenter.swift in Sources */,
 				E313D86F273D445C00EF1E3C /* RegistrationScreenGraph.swift in Sources */,
+				E313D882273D7A0E00EF1E3C /* UIViewController+Utils.swift in Sources */,
 				E313D86D273D43E200EF1E3C /* RegistrationScreenRouter.swift in Sources */,
 				E3A507EC273725EA00AE8DD2 /* UIView+Utils.swift in Sources */,
 				E313D879273D457A00EF1E3C /* SignInScreenGraph.swift in Sources */,

@@ -34,6 +34,7 @@ final class RegistrationScreenVC: UIViewController, IRegistrationScreenVC {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        hideKeyboardWhenTappedAround()
         view.backgroundColor = .background
         view.addSubview(registrationScreenView)
         NSLayoutConstraint.activate([
