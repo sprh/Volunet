@@ -13,8 +13,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        let navigationController = UINavigationController()
+        let graph = WelcomingScreenGraph()
         window = UIWindow()
-        window?.rootViewController = ViewController()
+        window?.rootViewController = navigationController
+        navigationController.pushViewController(graph.viewController, animated: false)
         window?.makeKeyAndVisible()
         return true
     }

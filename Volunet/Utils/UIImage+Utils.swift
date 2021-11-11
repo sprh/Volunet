@@ -8,5 +8,7 @@
 import UIKit
 
 extension UIImage {
-
+    static var welcomingPage: UIImage {
+        UIImage(named: "welcomingPageImage")!
+    }
 }

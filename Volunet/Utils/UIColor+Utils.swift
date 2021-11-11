@@ -12,23 +12,32 @@ import UIKit
  UIColor extension with custom colors from assets.
  */
 extension UIColor {
-    public var background: UIColor {
+    static var background: UIColor {
         UIColor(named: "backgroundColor")!
     }
 
-    public var darkTeal: UIColor {
+    static var darkTeal: UIColor {
         UIColor(named: "darkTealColor")!
     }
 
-    public var lightGreen: UIColor {
+    static var lightGreen: UIColor {
         UIColor(named: "lightGreenColor")!
     }
 
-    public var lightTeal: UIColor {
+    static var lightTeal: UIColor {
         UIColor(named: "lightTealColor")!
     }
 
-    public var teal: UIColor {
+    static var teal: UIColor {
         UIColor(named: "tealColor")!
     }
+
+    static var text: UIColor {
+        UIColor(named: "textColor")!
+    }
+
+    static var secondaryText: UIColor {
+        UIColor(named: "secondaryTextColor")!
+    }
 }
+
