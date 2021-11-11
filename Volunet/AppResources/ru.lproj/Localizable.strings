@@ -1,0 +1,20 @@
+/* 
+ Localizable.strings
+  Volunet
+
+  Created by Софья Тимохина on 06.11.2021.
+  
+*/
+
+"registration" = "Регистрация";
+"alreadyHaveAccount" = "Уже есть аккаунт";
+"signIn" = "Войти";
+"join" = "Присоединиться";
+"welcome" = "Добро пожаловать :)";
+"name" = "Имя";
+"email" = "Email";
+"password" = "Пароль";
+"confimPassword" = "Подтвердите пароль";
+"volunteer" = "Волонтер";
+"organizaton" = "Организация";
+"volunteerOrganization" = "Волонтерская организация";

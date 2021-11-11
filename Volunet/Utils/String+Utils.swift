@@ -8,10 +8,19 @@
 import Foundation
 
 enum LocalizedStringsKeys: String {
-    case registration = "Registration"
-    case alreadyHaveAccount = "I already have an account"
-    case signIn = "Sign in"
-    case join = "Join"
+    case registration
+    case alreadyHaveAccount
+    case signIn
+    case join
+    case name
+    case email
+    case password
+    case confimPassword
+    case volunteer
+    case organizaton
+    case volunteerOrganization
+    case welcome
+    
 }
 
 extension String {

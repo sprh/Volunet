@@ -43,11 +43,36 @@ final class RegistrationScreenView: UIView {
         return button
     }()
 
+    lazy var welcomeLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = .getLocalizedString(for: .welcome)
+        label.textColor = .secondaryText
+        return label
+    }()
+
+    lazy var roleSegmentedControl: UISegmentedControl = {
+        let segmentedControl = UISegmentedControl(items: [String.getLocalizedString(for: .volunteer),
+                                                          String.getLocalizedString(for: .volunteerOrganization)])
+        segmentedControl.backgroundColor = .lightTeal
+        segmentedControl.selectedSegmentTintColor = .darkTeal
+        segmentedControl.translatesAutoresizingMaskIntoConstraints = false
+        segmentedControl.tintColor = .secondaryText
+        segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.secondaryText],
+                                                for: .selected)
+        segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.text],
+                                                for: .normal)
+        segmentedControl.selectedSegmentIndex = 0
+        return segmentedControl
+    }()
+
     func setup() {
         backgroundColor = .background
         addSubview(title)
         addSubview(personalDataPanel)
         addSubview(joinButton)
+        personalDataPanel.addSubview(roleSegmentedControl)
+
         NSLayoutConstraint.activate([
             title.topAnchor.constraint(equalTo: topAnchor, constant: 65),
             title.centerXAnchor.constraint(equalTo: centerXAnchor),
@@ -60,7 +85,10 @@ final class RegistrationScreenView: UIView {
             personalDataPanel.topAnchor.constraint(equalTo: title.bottomAnchor, constant: 35),
             personalDataPanel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15),
             personalDataPanel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -15),
-            personalDataPanel.bottomAnchor.constraint(equalTo: joinButton.topAnchor, constant: -27)
+            personalDataPanel.bottomAnchor.constraint(equalTo: joinButton.topAnchor, constant: -27),
+
+            roleSegmentedControl.centerXAnchor.constraint(equalTo: personalDataPanel.centerXAnchor),
+            roleSegmentedControl.centerYAnchor.constraint(equalTo: personalDataPanel.centerYAnchor),
         ])
         layoutIfNeeded()
         personalDataPanel.makeGradientBackground(with: [UIColor.lightTeal.cgColor,

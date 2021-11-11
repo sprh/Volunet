@@ -32,7 +32,7 @@
 		E3A507B9273710FC00AE8DD2 /* VolunetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A507B8273710FC00AE8DD2 /* VolunetTests.swift */; };
 		E3A507C3273710FC00AE8DD2 /* VolunetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A507C2273710FC00AE8DD2 /* VolunetUITests.swift */; };
 		E3A507C5273710FC00AE8DD2 /* VolunetUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A507C4273710FC00AE8DD2 /* VolunetUITestsLaunchTests.swift */; };
-		E3A507D4273713D700AE8DD2 /* Localazable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E3A507D6273713D700AE8DD2 /* Localazable.strings */; };
+		E3A507D4273713D700AE8DD2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E3A507D6273713D700AE8DD2 /* Localizable.strings */; };
 		E3A507DB2737143800AE8DD2 /* UIColor+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A507DA2737143800AE8DD2 /* UIColor+Utils.swift */; };
 		E3A507DD2737144500AE8DD2 /* UIImage+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A507DC2737144500AE8DD2 /* UIImage+Utils.swift */; };
 		E3A507E427371A9900AE8DD2 /* WelcomingScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A507E327371A9900AE8DD2 /* WelcomingScreenVC.swift */; };
@@ -96,8 +96,8 @@
 		E3A507C2273710FC00AE8DD2 /* VolunetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolunetUITests.swift; sourceTree = "<group>"; };
 		E3A507C4273710FC00AE8DD2 /* VolunetUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolunetUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E3A507D12737134000AE8DD2 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		E3A507D5273713D700AE8DD2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localazable.strings; sourceTree = "<group>"; };
-		E3A507D7273713EC00AE8DD2 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localazable.strings; sourceTree = "<group>"; };
+		E3A507D5273713D700AE8DD2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E3A507D7273713EC00AE8DD2 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E3A507DA2737143800AE8DD2 /* UIColor+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Utils.swift"; sourceTree = "<group>"; };
 		E3A507DC2737144500AE8DD2 /* UIImage+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Utils.swift"; sourceTree = "<group>"; };
 		E3A507E327371A9900AE8DD2 /* WelcomingScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomingScreenVC.swift; sourceTree = "<group>"; };
@@ -256,7 +256,7 @@
 			children = (
 				E3A507A1273710F700AE8DD2 /* AppDelegate.swift */,
 				E3A507AC273710FC00AE8DD2 /* LaunchScreen.storyboard */,
-				E3A507D6273713D700AE8DD2 /* Localazable.strings */,
+				E3A507D6273713D700AE8DD2 /* Localizable.strings */,
 				E3A507AA273710FC00AE8DD2 /* Assets.xcassets */,
 			);
 			path = AppResources;
@@ -283,7 +283,6 @@
 				59DD223D709470A2D4DD23F6 /* Pods-VolunetTests.debug.xcconfig */,
 				209CA50C56745EBE31B01EF8 /* Pods-VolunetTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -410,7 +409,7 @@
 				E313D85D273D3D3E00EF1E3C /* ChangaOne-Regular.ttf in Resources */,
 				E3A507AE273710FC00AE8DD2 /* LaunchScreen.storyboard in Resources */,
 				E3A507AB273710FC00AE8DD2 /* Assets.xcassets in Resources */,
-				E3A507D4273713D700AE8DD2 /* Localazable.strings in Resources */,
+				E3A507D4273713D700AE8DD2 /* Localizable.strings in Resources */,
 				E313D85C273D3D3B00EF1E3C /* ChangaOne-Italic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -606,13 +605,13 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		E3A507D6273713D700AE8DD2 /* Localazable.strings */ = {
+		E3A507D6273713D700AE8DD2 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				E3A507D5273713D700AE8DD2 /* en */,
 				E3A507D7273713EC00AE8DD2 /* ru */,
 			);
-			name = Localazable.strings;
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
