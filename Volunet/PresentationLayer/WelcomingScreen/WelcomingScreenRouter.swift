@@ -19,11 +19,11 @@ final class WelcomingScreenRouter: IWelcomingScreenRouter {
 
     func openSignInPage() {
         let graph = SignInScreenGraph()
-        viewController?.navigationController?.viewControllers = [graph.viewController]
+        viewController?.navigationController?.pushViewController(graph.viewController, animated: true)
     }
 
     func openRegistrationPage() {
         let graph = RegistrationScreenGraph()
-        viewController?.navigationController?.viewControllers = [graph.viewController]
+        viewController?.navigationController?.pushViewController(graph.viewController, animated: true)
     }
 }

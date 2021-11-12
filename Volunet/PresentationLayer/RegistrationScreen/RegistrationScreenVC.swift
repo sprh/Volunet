@@ -21,6 +21,17 @@ final class RegistrationScreenVC: UIViewController, IRegistrationScreenVC {
         return view
     }()
 
+    let backButton: UIBarButtonItem = {
+        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+        let imageView = UIImageView(frame: CGRect(x: 10, y: 10, width: 20, height: 20))
+        imageView.image = .chevronLeft.withTintColor(.lightTeal)
+        button.addSubview(imageView)
+        button.addSubview(imageView)
+        button.addTarget(self, action: #selector(didTabBackButton), for: .touchUpInside)
+        let leftBarButtonItem = UIBarButtonItem(customView: button)
+        return leftBarButtonItem
+    }()
+
     init(interator: IRegistrationScreenInterator,
          router: IRegistrationScreenRouter) {
         self.interator = interator
@@ -34,7 +45,11 @@ final class RegistrationScreenVC: UIViewController, IRegistrationScreenVC {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.setHidesBackButton(true, animated: false)
+        navigationItem.leftBarButtonItem = backButton
+        setNavigationControllerTransparent()
         hideKeyboardWhenTappedAround()
+        
         view.backgroundColor = .background
         view.addSubview(registrationScreenView)
         NSLayoutConstraint.activate([
@@ -44,6 +59,10 @@ final class RegistrationScreenVC: UIViewController, IRegistrationScreenVC {
             registrationScreenView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
         ])
         registrationScreenView.setup()
+    }
+
+    @objc func didTabBackButton() {
+        router.goBack()
     }
 }
 

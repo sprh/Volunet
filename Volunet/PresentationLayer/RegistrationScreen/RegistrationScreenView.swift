@@ -135,8 +135,8 @@ final class RegistrationScreenView: UIView {
             scrollView.topAnchor.constraint(equalTo: topAnchor),
             scrollView.bottomAnchor.constraint(equalTo: bottomAnchor),
 
-            title.topAnchor.constraint(equalTo: scrollView.safeAreaLayoutGuide.topAnchor, constant: 65),
-            title.centerXAnchor.constraint(equalTo: scrollView.safeAreaLayoutGuide.centerXAnchor),
+            title.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 65),
+            title.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor),
 
             personalDataPanel.topAnchor.constraint(equalTo: title.bottomAnchor, constant: 35),
             personalDataPanel.leadingAnchor.constraint(equalTo: scrollView.safeAreaLayoutGuide.leadingAnchor, constant: 15),

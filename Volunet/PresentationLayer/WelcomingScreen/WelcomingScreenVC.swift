@@ -65,7 +65,7 @@ final class WelcomingScreenVC: UIViewController {
 
     @objc
     func didTapSignInButton() {
-        router.openRegistrationPage()
+        router.openSignInPage()
     }
 }
 

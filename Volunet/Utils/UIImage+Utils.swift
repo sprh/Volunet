@@ -11,4 +11,8 @@ extension UIImage {
     static var welcomingPage: UIImage {
         UIImage(named: "welcomingPageImage")!
     }
+
+    static var chevronLeft: UIImage {
+        UIImage(named: "chevronLeftImage")!
+    }
 }
