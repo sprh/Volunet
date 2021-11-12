@@ -45,11 +45,15 @@ final class RegistrationScreenVC: UIViewController, IRegistrationScreenVC {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setup()
+    }
+
+    private func setup() {
         navigationItem.setHidesBackButton(true, animated: false)
         navigationItem.leftBarButtonItem = backButton
         setNavigationControllerTransparent()
         hideKeyboardWhenTappedAround()
-        
+
         view.backgroundColor = .background
         view.addSubview(registrationScreenView)
         NSLayoutConstraint.activate([
@@ -61,8 +65,43 @@ final class RegistrationScreenVC: UIViewController, IRegistrationScreenVC {
         registrationScreenView.setup()
     }
 
-    @objc func didTabBackButton() {
+    private func addTargets() {
+        registrationScreenView.joinButton.addTarget(self,
+                                                    action: #selector(didTapJoinButton),
+                                                    for: .touchUpInside)
+        registrationScreenView.nameTextField.addTarget(self,
+                                                       action: #selector(textFieldDidChange),
+                                                       for: .editingChanged)
+        registrationScreenView.emailTextField.addTarget(self,
+                                                       action: #selector(textFieldDidChange),
+                                                       for: .editingChanged)
+        registrationScreenView.passwordTextField.addTarget(self,
+                                                       action: #selector(textFieldDidChange),
+                                                       for: .editingChanged)
+
+    }
+
+    @objc
+    func didTabBackButton() {
         router.goBack()
+    }
+
+    @objc
+    func textFieldDidChange() {
+        // TODO: add more logic
+        if (registrationScreenView.nameTextField.text?.isEmpty ?? false ||
+            registrationScreenView.nameTextField.text?.isEmpty ?? false ||
+            registrationScreenView.nameTextField.text?.isEmpty ?? false) {
+            registrationScreenView.joinButton.isEnabled = false
+        } else {
+            registrationScreenView.joinButton.isEnabled = true
+        }
+    }
+
+    @objc
+    func didTapJoinButton() {
+        // TODO: create a user
+        router.onTapJoinButton()
     }
 }
 

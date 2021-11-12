@@ -11,6 +11,7 @@ protocol IRegistrationScreenRouter {
     var viewController: IRegistrationScreenVC? { get set }
 
     func goBack()
+    func onTapJoinButton()
 }
 
 final class RegistrationScreenRouter: IRegistrationScreenRouter {
@@ -18,5 +19,9 @@ final class RegistrationScreenRouter: IRegistrationScreenRouter {
 
     func goBack() {
         viewController?.navigationController?.popViewController(animated: true)
+    }
+
+    func onTapJoinButton() {
+        
     }
 }

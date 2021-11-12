@@ -8,70 +8,6 @@
 import UIKit
 
 final class RegistrationScreenView: UIView {
-    private lazy var title: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "VOLUNET"
-        label.font = .changaOneTitle
-        label.textColor = .lightTeal
-        return label
-    }()
-
-    private lazy var personalDataPanel: UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.layer.cornerRadius = 70
-        view.layer.maskedCorners = [.layerMaxXMinYCorner,
-                                    .layerMinXMinYCorner,
-                                    .layerMaxXMaxYCorner]
-        view.clipsToBounds = true
-        view.backgroundColor = .red
-        return view
-    }()
-
-    lazy var joinButton: UIButton = {
-        let viewModel = MainButton.ViewModel(font: .preferredFont(forTextStyle: .body),
-                                             title: .getLocalizedString(for: .join),
-                                             enabledBackgroundColor: .lightTeal,
-                                             disabledBackground: .darkTeal,
-                                             enabledTextColor: .secondaryText,
-                                             // TODO: change
-                                             disabledTextColor: .secondaryText)
-        let button = MainButton(viewModel: viewModel)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.isEnabled = false
-        return button
-    }()
-
-    private lazy var welcomeLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = .getLocalizedString(for: .welcome)
-        label.textColor = .secondaryText
-        return label
-    }()
-
-    lazy var roleSegmentedControl: UISegmentedControl = {
-        let segmentedControl = UISegmentedControl(items: [String.getLocalizedString(for: .volunteer),
-                                                          String.getLocalizedString(for: .volunteerOrganization)])
-        segmentedControl.backgroundColor = .lightTeal
-        segmentedControl.selectedSegmentTintColor = .darkTeal
-        segmentedControl.translatesAutoresizingMaskIntoConstraints = false
-        segmentedControl.tintColor = .secondaryText
-        segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.secondaryText],
-                                                for: .selected)
-        segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.text],
-                                                for: .normal)
-        segmentedControl.selectedSegmentIndex = 0
-        return segmentedControl
-    }()
-
-    lazy var personalDataStack: UIStackView = {
-        let stack = UIStackView()
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        return stack
-    }()
-
     lazy var nameTextField: UITextField = {
         let textField = TextFieldWithPadding()
         textField.translatesAutoresizingMaskIntoConstraints = false
@@ -106,7 +42,72 @@ final class RegistrationScreenView: UIView {
         return textField
     }()
 
-    lazy var scrollView: UIScrollView = {
+    lazy var joinButton: UIButton = {
+        let viewModel = MainButton.ViewModel(font: .preferredFont(forTextStyle: .body),
+                                             title: .getLocalizedString(for: .join),
+                                             enabledBackgroundColor: .lightTeal,
+                                             disabledBackground: .darkTeal,
+                                             enabledTextColor: .secondaryText,
+                                             // TODO: change
+                                             disabledTextColor: .secondaryText)
+        let button = MainButton(viewModel: viewModel)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.isEnabled = false
+        return button
+    }()
+
+    private lazy var title: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "VOLUNET"
+        label.font = .changaOneTitle
+        label.textColor = .lightTeal
+        return label
+    }()
+
+    private lazy var personalDataPanel: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.layer.cornerRadius = 70
+        view.layer.maskedCorners = [.layerMaxXMinYCorner,
+                                    .layerMinXMinYCorner,
+                                    .layerMaxXMaxYCorner]
+        view.clipsToBounds = true
+        view.backgroundColor = .red
+        return view
+    }()
+
+    private lazy var welcomeLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = .getLocalizedString(for: .welcome)
+        label.font = .preferredFont(forTextStyle: .title3)
+        label.textColor = .secondaryText
+        return label
+    }()
+
+    lazy var roleSegmentedControl: UISegmentedControl = {
+        let segmentedControl = UISegmentedControl(items: [String.getLocalizedString(for: .volunteer),
+                                                          String.getLocalizedString(for: .volunteerOrganization)])
+        segmentedControl.backgroundColor = .lightTeal
+        segmentedControl.selectedSegmentTintColor = .darkTeal
+        segmentedControl.translatesAutoresizingMaskIntoConstraints = false
+        segmentedControl.tintColor = .secondaryText
+        segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.secondaryText],
+                                                for: .selected)
+        segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.text],
+                                                for: .normal)
+        segmentedControl.selectedSegmentIndex = 0
+        return segmentedControl
+    }()
+
+    private lazy var personalDataStack: UIStackView = {
+        let stack = UIStackView()
+        stack.translatesAutoresizingMaskIntoConstraints = false
+        return stack
+    }()
+
+    private lazy var scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         scrollView.alwaysBounceVertical = true
