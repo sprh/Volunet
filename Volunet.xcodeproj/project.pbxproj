@@ -28,6 +28,11 @@
 		E313D87C273D58CC00EF1E3C /* RegistrationScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E313D87B273D58CB00EF1E3C /* RegistrationScreenView.swift */; };
 		E313D880273D77DB00EF1E3C /* TextFieldWithPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E313D87F273D77DB00EF1E3C /* TextFieldWithPadding.swift */; };
 		E313D882273D7A0E00EF1E3C /* UIViewController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E313D881273D7A0E00EF1E3C /* UIViewController+Utils.swift */; };
+		E313D88D273EFDB900EF1E3C /* MainScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E313D888273EFDB900EF1E3C /* MainScreenPresenter.swift */; };
+		E313D88E273EFDB900EF1E3C /* MainScreenGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = E313D889273EFDB900EF1E3C /* MainScreenGraph.swift */; };
+		E313D88F273EFDB900EF1E3C /* MainScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E313D88A273EFDB900EF1E3C /* MainScreenRouter.swift */; };
+		E313D890273EFDB900EF1E3C /* MainScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E313D88B273EFDB900EF1E3C /* MainScreenVC.swift */; };
+		E313D891273EFDB900EF1E3C /* MainScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E313D88C273EFDB900EF1E3C /* MainScreenInteractor.swift */; };
 		E3A507A2273710F700AE8DD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A507A1273710F700AE8DD2 /* AppDelegate.swift */; };
 		E3A507AB273710FC00AE8DD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3A507AA273710FC00AE8DD2 /* Assets.xcassets */; };
 		E3A507AE273710FC00AE8DD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3A507AC273710FC00AE8DD2 /* LaunchScreen.storyboard */; };
@@ -89,6 +94,11 @@
 		E313D87B273D58CB00EF1E3C /* RegistrationScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationScreenView.swift; sourceTree = "<group>"; };
 		E313D87F273D77DB00EF1E3C /* TextFieldWithPadding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithPadding.swift; sourceTree = "<group>"; };
 		E313D881273D7A0E00EF1E3C /* UIViewController+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Utils.swift"; sourceTree = "<group>"; };
+		E313D888273EFDB900EF1E3C /* MainScreenPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenPresenter.swift; sourceTree = "<group>"; };
+		E313D889273EFDB900EF1E3C /* MainScreenGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenGraph.swift; sourceTree = "<group>"; };
+		E313D88A273EFDB900EF1E3C /* MainScreenRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenRouter.swift; sourceTree = "<group>"; };
+		E313D88B273EFDB900EF1E3C /* MainScreenVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenVC.swift; sourceTree = "<group>"; };
+		E313D88C273EFDB900EF1E3C /* MainScreenInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenInteractor.swift; sourceTree = "<group>"; };
 		E3A5079E273710F700AE8DD2 /* Volunet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Volunet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3A507A1273710F700AE8DD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3A507AA273710FC00AE8DD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -182,6 +192,18 @@
 			path = SignInScreen;
 			sourceTree = "<group>";
 		};
+		E313D887273EFD3200EF1E3C /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				E313D889273EFDB900EF1E3C /* MainScreenGraph.swift */,
+				E313D88C273EFDB900EF1E3C /* MainScreenInteractor.swift */,
+				E313D888273EFDB900EF1E3C /* MainScreenPresenter.swift */,
+				E313D88A273EFDB900EF1E3C /* MainScreenRouter.swift */,
+				E313D88B273EFDB900EF1E3C /* MainScreenVC.swift */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
 		E3A50795273710F700AE8DD2 = {
 			isa = PBXGroup;
 			children = (
@@ -249,6 +271,7 @@
 		E3A507DE2737153200AE8DD2 /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				E313D887273EFD3200EF1E3C /* MainScreen */,
 				E313D870273D457A00EF1E3C /* SignInScreen */,
 				E313D865273D42D000EF1E3C /* RegistrationScreen */,
 				E313D856273D38EB00EF1E3C /* CustomElements */,
@@ -562,11 +585,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E313D88F273EFDB900EF1E3C /* MainScreenRouter.swift in Sources */,
+				E313D891273EFDB900EF1E3C /* MainScreenInteractor.swift in Sources */,
 				E313D880273D77DB00EF1E3C /* TextFieldWithPadding.swift in Sources */,
+				E313D88E273EFDB900EF1E3C /* MainScreenGraph.swift in Sources */,
 				E313D876273D457A00EF1E3C /* SignInScreenRouter.swift in Sources */,
 				E3A507E827371ACD00AE8DD2 /* WelcomingScreenGraph.swift in Sources */,
 				E3A507DB2737143800AE8DD2 /* UIColor+Utils.swift in Sources */,
 				E313D858273D390100EF1E3C /* MainButton.swift in Sources */,
+				E313D890273EFDB900EF1E3C /* MainScreenVC.swift in Sources */,
 				E313D867273D431700EF1E3C /* RegistrationScreenInteractor.swift in Sources */,
 				E313D869273D434B00EF1E3C /* RegistrationScreenPresenter.swift in Sources */,
 				E313D86F273D445C00EF1E3C /* RegistrationScreenGraph.swift in Sources */,
@@ -576,6 +603,7 @@
 				E313D879273D457A00EF1E3C /* SignInScreenGraph.swift in Sources */,
 				E313D877273D457A00EF1E3C /* SignInScreenInteractor.swift in Sources */,
 				E3A507A2273710F700AE8DD2 /* AppDelegate.swift in Sources */,
+				E313D88D273EFDB900EF1E3C /* MainScreenPresenter.swift in Sources */,
 				E313D878273D457A00EF1E3C /* SignInScreenPresenter.swift in Sources */,
 				E313D87C273D58CC00EF1E3C /* RegistrationScreenView.swift in Sources */,
 				E313D86B273D438600EF1E3C /* RegistrationScreenVC.swift in Sources */,
