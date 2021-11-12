@@ -35,7 +35,7 @@ final class RegistrationScreenView: UIView {
                                              enabledBackgroundColor: .lightTeal,
                                              disabledBackground: .darkTeal,
                                              enabledTextColor: .secondaryText,
-                                             // TODO change
+                                             // TODO: change
                                              disabledTextColor: .secondaryText)
         let button = MainButton(viewModel: viewModel)
         button.translatesAutoresizingMaskIntoConstraints = false

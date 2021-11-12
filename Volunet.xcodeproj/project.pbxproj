@@ -314,6 +314,7 @@
 				E3A5079B273710F700AE8DD2 /* Frameworks */,
 				E3A5079C273710F700AE8DD2 /* Resources */,
 				0D8CB8F4B8A3B358064680B2 /* [CP] Embed Pods Frameworks */,
+				E313D883273EF02800EF1E3C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -536,6 +537,23 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Volunet-VolunetUITests/Pods-Volunet-VolunetUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		E313D883273EF02800EF1E3C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "KEYWORDS=\"TODO:|FIXME:|DevTeam:|XXX:\"\nfind \"${SRCROOT}\" \\( -name \"*.h\" -or -name \"*.m\" -or -name \"*.swift\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($KEYWORDS).*\\$\" | perl -p -e \"s/($KEYWORDS)/ warning: \\$1/\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
