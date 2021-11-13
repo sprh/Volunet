@@ -15,4 +15,8 @@ extension UIImage {
     static var chevronLeft: UIImage {
         UIImage(named: "chevronLeftImage")!
     }
+
+    static var volunteerOrganizationPlaceholder: UIImage {
+        UIImage(named: "volunteerOrganizationPlaceholderImage")!
+    }
 }

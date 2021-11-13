@@ -39,5 +39,9 @@ extension UIColor {
     static var secondaryText: UIColor {
         UIColor(named: "secondaryTextColor")!
     }
+
+    static var whiteTeal: UIColor {
+        UIColor(named: "whiteTealColor")!
+    }
 }
 

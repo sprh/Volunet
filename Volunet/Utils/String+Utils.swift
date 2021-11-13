@@ -20,7 +20,7 @@ enum LocalizedStringsKeys: String {
     case organizaton
     case volunteerOrganization
     case welcome
-    
+    case whatGoodTodayQuestion
 }
 
 extension String {
