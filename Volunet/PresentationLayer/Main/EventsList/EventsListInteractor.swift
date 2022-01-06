@@ -8,13 +8,25 @@
 import Foundation
 
 protocol IEventsListScreenInterator {
+    var eventsCount: Int { get }
 
+    func getEvent(at index: Int) -> Event?
 }
 
 final class EventsListScreenInterator: IEventsListScreenInterator {
     private let presenter: IEventsListScreenPresenter
+    private let eventsStorage: IEventsStorage
 
-    init(presenter: IEventsListScreenPresenter) {
+    var eventsCount: Int {
+        eventsStorage.eventsCount
+    }
+
+    init(presenter: IEventsListScreenPresenter, eventsStorage: IEventsStorage) {
         self.presenter = presenter
+        self.eventsStorage = eventsStorage
+    }
+
+    func getEvent(at index: Int) -> Event? {
+        return eventsStorage.getEvent(at: index)
     }
 }

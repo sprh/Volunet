@@ -74,7 +74,7 @@ final class EventsListScreenVC: UIViewController, IEventsListScreenVC {
 
 extension EventsListScreenVC: UITableViewDataSource, UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 10
+        return interator.eventsCount
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -82,8 +82,9 @@ extension EventsListScreenVC: UITableViewDataSource, UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "\(EventCell.self)") as? EventCell else { return UITableViewCell() }
-        cell.setup()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "\(EventCell.self)") as? EventCell,
+              let event = interator.getEvent(at: indexPath.section) else { return UITableViewCell() }
+        cell.setup(with: event)
         return cell
     }
 
@@ -104,6 +105,11 @@ extension EventsListScreenVC: UITableViewDataSource, UITableViewDelegate {
             label.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -26),
         ])
         return tableViewHeaderView
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let event = interator.getEvent(at: indexPath.section) else { return }
+        router.showEventInfoScreen(for: event)
     }
 }
 

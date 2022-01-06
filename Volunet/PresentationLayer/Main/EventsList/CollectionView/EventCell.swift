@@ -61,11 +61,12 @@ final class EventCell: UITableViewCell {
         return label
     }()
 
-    func setup() {
+    func setup(with event: Event) {
         backgroundColor = .whiteTeal
-        title.text = "Мы едем в приют!"
-        descriptionLabel.text = "Ты сможешь поделиться своей любовью и заботой с собаками из приюта ‘В добрые руки’. Если хочешь, захвати с собой немного корма, всех ждем :)"
-        ownerName.text = "Мосволонтер"
+        title.text = event.title
+        descriptionLabel.text = event.description
+        ownerName.text = event.ownerName
+        // TODO: change calendar and avatar
         contentView.addSubview(calendarDate)
         contentView.addSubview(title)
         contentView.addSubview(descriptionLabel)
