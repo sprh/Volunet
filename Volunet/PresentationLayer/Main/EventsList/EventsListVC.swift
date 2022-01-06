@@ -1,5 +1,5 @@
 //
-//  MainScreenVC.swift
+//  EventsListScreenVC.swift
 //  Volunet
 //
 //  Created by Софья Тимохина on 12.11.2021.
@@ -7,13 +7,13 @@
 
 import UIKit
 
-protocol IMainScreenVC: UIViewController {
+protocol IEventsListScreenVC: UIViewController {
 
 }
 
-final class MainScreenVC: UIViewController, IMainScreenVC {
-    private let interator: IMainScreenInterator
-    private let router: IMainScreenRouter
+final class EventsListScreenVC: UIViewController, IEventsListScreenVC {
+    private let interator: IEventsListScreenInterator
+    private let router: IEventsListScreenRouter
 
     lazy var tableView: UITableView = {
         let tableView = UITableView(frame: view.frame, style: .insetGrouped)
@@ -43,8 +43,8 @@ final class MainScreenVC: UIViewController, IMainScreenVC {
         return view
     }()
 
-    init(interator: IMainScreenInterator,
-         router: IMainScreenRouter) {
+    init(interator: IEventsListScreenInterator,
+         router: IEventsListScreenRouter) {
         self.interator = interator
         self.router = router
         super.init(nibName: nil, bundle: nil)
@@ -72,7 +72,7 @@ final class MainScreenVC: UIViewController, IMainScreenVC {
     }
 }
 
-extension MainScreenVC: UITableViewDataSource, UITableViewDelegate {
+extension EventsListScreenVC: UITableViewDataSource, UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 10
     }
