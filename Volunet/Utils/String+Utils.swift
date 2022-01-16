@@ -21,6 +21,7 @@ enum LocalizedStringsKeys: String {
     case volunteerOrganization
     case welcome
     case whatGoodTodayQuestion
+    case respond
 }
 
 extension String {
