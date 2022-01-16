@@ -15,4 +15,12 @@ extension UIView {
         gradient.frame = bounds
         layer.insertSublayer(gradient, at: 0)
     }
+
+    func makeRounded() {
+        layer.borderWidth = 1
+        layer.masksToBounds = false
+        layer.borderColor = UIColor.black.cgColor
+        layer.cornerRadius = frame.height / 2
+        clipsToBounds = true
+    }
 }

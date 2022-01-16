@@ -34,7 +34,6 @@
 		E313D890273EFDB900EF1E3C /* EventsListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E313D88B273EFDB900EF1E3C /* EventsListVC.swift */; };
 		E313D891273EFDB900EF1E3C /* EventsListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E313D88C273EFDB900EF1E3C /* EventsListInteractor.swift */; };
 		E313D894273EFECA00EF1E3C /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E313D893273EFECA00EF1E3C /* EventCell.swift */; };
-		E313D899273F00F200EF1E3C /* UIImageView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E313D898273F00F200EF1E3C /* UIImageView+Utils.swift */; };
 		E313D89B273F019900EF1E3C /* CalendarDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E313D89A273F019900EF1E3C /* CalendarDate.swift */; };
 		E3A507A2273710F700AE8DD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A507A1273710F700AE8DD2 /* AppDelegate.swift */; };
 		E3A507AB273710FC00AE8DD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3A507AA273710FC00AE8DD2 /* Assets.xcassets */; };
@@ -57,6 +56,9 @@
 		E3FDDF332786F60F0045B237 /* EventInfoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FDDF2E2786F60F0045B237 /* EventInfoRouter.swift */; };
 		E3FDDF352786F7440045B237 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FDDF342786F7440045B237 /* Event.swift */; };
 		E3FDDF382786F7F90045B237 /* EventsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FDDF372786F7F90045B237 /* EventsStorage.swift */; };
+		E3FDDF3F279499620045B237 /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FDDF3E279499620045B237 /* CloseButton.swift */; };
+		E3FDDF4127949BC50045B237 /* UIButton+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FDDF4027949BC50045B237 /* UIButton+Utils.swift */; };
+		E3FDDF4327949C040045B237 /* RoundedAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FDDF4227949C040045B237 /* RoundedAvatar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,7 +112,6 @@
 		E313D88B273EFDB900EF1E3C /* EventsListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsListVC.swift; sourceTree = "<group>"; };
 		E313D88C273EFDB900EF1E3C /* EventsListInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsListInteractor.swift; sourceTree = "<group>"; };
 		E313D893273EFECA00EF1E3C /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
-		E313D898273F00F200EF1E3C /* UIImageView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Utils.swift"; sourceTree = "<group>"; };
 		E313D89A273F019900EF1E3C /* CalendarDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDate.swift; sourceTree = "<group>"; };
 		E3A5079E273710F700AE8DD2 /* Volunet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Volunet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3A507A1273710F700AE8DD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +140,9 @@
 		E3FDDF2E2786F60F0045B237 /* EventInfoRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventInfoRouter.swift; sourceTree = "<group>"; };
 		E3FDDF342786F7440045B237 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		E3FDDF372786F7F90045B237 /* EventsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsStorage.swift; sourceTree = "<group>"; };
+		E3FDDF3E279499620045B237 /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
+		E3FDDF4027949BC50045B237 /* UIButton+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Utils.swift"; sourceTree = "<group>"; };
+		E3FDDF4227949C040045B237 /* RoundedAvatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedAvatar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +179,8 @@
 				E313D857273D390100EF1E3C /* MainButton.swift */,
 				E313D87F273D77DB00EF1E3C /* TextFieldWithPadding.swift */,
 				E313D89A273F019900EF1E3C /* CalendarDate.swift */,
+				E3FDDF3E279499620045B237 /* CloseButton.swift */,
+				E3FDDF4227949C040045B237 /* RoundedAvatar.swift */,
 			);
 			path = CustomElements;
 			sourceTree = "<group>";
@@ -304,7 +310,7 @@
 				E313D85E273D3D9A00EF1E3C /* UIFont+Utils.swift */,
 				E313D863273D408100EF1E3C /* String+Utils.swift */,
 				E313D881273D7A0E00EF1E3C /* UIViewController+Utils.swift */,
-				E313D898273F00F200EF1E3C /* UIImageView+Utils.swift */,
+				E3FDDF4027949BC50045B237 /* UIButton+Utils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -665,7 +671,7 @@
 			files = (
 				E313D88F273EFDB900EF1E3C /* EventsListRouter.swift in Sources */,
 				E313D891273EFDB900EF1E3C /* EventsListInteractor.swift in Sources */,
-				E313D899273F00F200EF1E3C /* UIImageView+Utils.swift in Sources */,
+				E3FDDF4327949C040045B237 /* RoundedAvatar.swift in Sources */,
 				E313D880273D77DB00EF1E3C /* TextFieldWithPadding.swift in Sources */,
 				E3FDDF2F2786F60F0045B237 /* EventInfoGraph.swift in Sources */,
 				E3FDDF332786F60F0045B237 /* EventInfoRouter.swift in Sources */,
@@ -676,6 +682,7 @@
 				E3A507E827371ACD00AE8DD2 /* WelcomingScreenGraph.swift in Sources */,
 				E3FDDF312786F60F0045B237 /* EventInfoVC.swift in Sources */,
 				E3A507DB2737143800AE8DD2 /* UIColor+Utils.swift in Sources */,
+				E3FDDF4127949BC50045B237 /* UIButton+Utils.swift in Sources */,
 				E313D858273D390100EF1E3C /* MainButton.swift in Sources */,
 				E313D890273EFDB900EF1E3C /* EventsListVC.swift in Sources */,
 				E313D867273D431700EF1E3C /* RegistrationScreenInteractor.swift in Sources */,
@@ -693,6 +700,7 @@
 				E3FDDF322786F60F0045B237 /* EventInfoInteractor.swift in Sources */,
 				E313D86B273D438600EF1E3C /* RegistrationScreenVC.swift in Sources */,
 				E313D894273EFECA00EF1E3C /* EventCell.swift in Sources */,
+				E3FDDF3F279499620045B237 /* CloseButton.swift in Sources */,
 				E313D87A273D457A00EF1E3C /* SignInScreenVC.swift in Sources */,
 				E3FDDF302786F60F0045B237 /* EventInfoPresenter.swift in Sources */,
 				E3A507E427371A9900AE8DD2 /* WelcomingScreenVC.swift in Sources */,

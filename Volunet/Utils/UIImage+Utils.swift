@@ -19,4 +19,8 @@ extension UIImage {
     static var volunteerOrganizationPlaceholder: UIImage {
         UIImage(named: "volunteerOrganizationPlaceholderImage")!
     }
+
+    static var close: UIImage {
+        UIImage(named: "close")!
+    }
 }

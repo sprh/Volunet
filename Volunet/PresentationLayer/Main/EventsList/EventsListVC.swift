@@ -102,7 +102,7 @@ extension EventsListScreenVC: UITableViewDataSource, UITableViewDelegate {
             label.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             label.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
             label.topAnchor.constraint(equalTo: view.topAnchor, constant: 16),
-            label.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -26),
+            label.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -40),
         ])
         return tableViewHeaderView
     }

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 protocol IEventsListScreenRouter {
     var viewController: IEventsListScreenVC? { get set }
@@ -18,6 +19,8 @@ final class EventsListScreenRouter: IEventsListScreenRouter {
 
     func showEventInfoScreen(for event: Event) {
         let graph = EventInfoScreenGraph(event: event)
-        viewController?.navigationController?.present(graph.viewController, animated: true)
+        let navigationController = UINavigationController(rootViewController: graph.viewController)
+        navigationController.modalPresentationStyle = .overCurrentContext
+        viewController?.navigationController?.present(navigationController, animated: false)
     }
 }

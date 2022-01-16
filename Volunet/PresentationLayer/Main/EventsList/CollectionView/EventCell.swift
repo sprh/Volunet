@@ -10,6 +10,7 @@ import UIKit
 
 final class EventCell: UITableViewCell {
     private var isHeightCalculated: Bool = false
+
     lazy var calendarDate: UIView = {
         let viewModel = CalendarDate.ViewModel(topBorderColor: .red, // TODO: add custom
                                                backgroundColor: .background,
@@ -41,16 +42,14 @@ final class EventCell: UITableViewCell {
         return label
     }()
 
-    lazy var ownerAvatar: UIImageView = {
-        let imageView = UIImageView(frame: CGRect(x: 0,
-                                                  y: 0,
-                                                  width: 40,
-                                                  height: 40))
-        imageView.image = .volunteerOrganizationPlaceholder
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.makeRounded()
-        imageView.contentMode = .scaleToFill
-        return imageView
+    lazy var ownerAvatar: UIView = {
+        let avatar = AvatarView(frame: CGRect(x: 0,
+                                              y: 0,
+                                              width: 48,
+                                              height: 48),
+                                image: .volunteerOrganizationPlaceholder)
+        avatar.translatesAutoresizingMaskIntoConstraints = false
+        return avatar
     }()
 
     lazy var ownerName: UILabel = {
@@ -88,8 +87,8 @@ final class EventCell: UITableViewCell {
 
             ownerAvatar.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 8),
             ownerAvatar.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 15),
-            ownerAvatar.heightAnchor.constraint(equalToConstant: 41),
-            ownerAvatar.widthAnchor.constraint(equalToConstant: 41),
+            ownerAvatar.heightAnchor.constraint(equalToConstant: 48),
+            ownerAvatar.widthAnchor.constraint(equalTo: ownerAvatar.heightAnchor),
 
             ownerName.leadingAnchor.constraint(equalTo: ownerAvatar.trailingAnchor, constant: 12),
             ownerName.bottomAnchor.constraint(equalTo: ownerAvatar.bottomAnchor, constant: -2),
