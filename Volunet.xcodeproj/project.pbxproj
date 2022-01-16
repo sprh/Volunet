@@ -60,6 +60,7 @@
 		E3FDDF4127949BC50045B237 /* UIButton+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FDDF4027949BC50045B237 /* UIButton+Utils.swift */; };
 		E3FDDF4327949C040045B237 /* RoundedAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FDDF4227949C040045B237 /* RoundedAvatar.swift */; };
 		E3FDDF452794B51F0045B237 /* EventInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FDDF442794B51F0045B237 /* EventInfoView.swift */; };
+		E3FDDF482794B9860045B237 /* UIScrollView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FDDF472794B9860045B237 /* UIScrollView+Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -145,6 +146,7 @@
 		E3FDDF4027949BC50045B237 /* UIButton+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Utils.swift"; sourceTree = "<group>"; };
 		E3FDDF4227949C040045B237 /* RoundedAvatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedAvatar.swift; sourceTree = "<group>"; };
 		E3FDDF442794B51F0045B237 /* EventInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventInfoView.swift; sourceTree = "<group>"; };
+		E3FDDF472794B9860045B237 /* UIScrollView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Utils.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -313,6 +315,7 @@
 				E313D863273D408100EF1E3C /* String+Utils.swift */,
 				E313D881273D7A0E00EF1E3C /* UIViewController+Utils.swift */,
 				E3FDDF4027949BC50045B237 /* UIButton+Utils.swift */,
+				E3FDDF472794B9860045B237 /* UIScrollView+Utils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -685,6 +688,7 @@
 				E3FDDF4327949C040045B237 /* RoundedAvatar.swift in Sources */,
 				E313D880273D77DB00EF1E3C /* TextFieldWithPadding.swift in Sources */,
 				E3FDDF2F2786F60F0045B237 /* EventInfoGraph.swift in Sources */,
+				E3FDDF482794B9860045B237 /* UIScrollView+Utils.swift in Sources */,
 				E3FDDF332786F60F0045B237 /* EventInfoRouter.swift in Sources */,
 				E3FDDF352786F7440045B237 /* Event.swift in Sources */,
 				E313D88E273EFDB900EF1E3C /* EventsListGraph.swift in Sources */,

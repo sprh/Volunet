@@ -179,10 +179,6 @@ final class RegistrationScreenView: UIView {
         layoutIfNeeded()
         personalDataPanel.makeGradientBackground(with: [UIColor.lightTeal.cgColor,
                                                         UIColor.darkTeal.cgColor])
-        setScrollViewContentSize()
-    }
-
-    func setScrollViewContentSize() {
-        scrollView.contentSize.height = 300
+        scrollView.setContentSize()
     }
 }

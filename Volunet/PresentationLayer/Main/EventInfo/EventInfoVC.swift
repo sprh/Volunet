@@ -26,6 +26,7 @@ final class EventInfoScreenVC: UIViewController, IEventInfoScreenVC {
     lazy var scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.translatesAutoresizingMaskIntoConstraints = false
+        scrollView.alwaysBounceVertical = true
         return scrollView
     }()
 
@@ -75,19 +76,27 @@ final class EventInfoScreenVC: UIViewController, IEventInfoScreenVC {
 
     private func setup() {
         view.addSubview(blurEffectView)
+        view.addSubview(scrollView)
+        scrollView.addSubview(eventInfoView)
         view.addSubview(closeButton)
-        view.addSubview(eventInfoView)
 
         NSLayoutConstraint.activate([
+            scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            scrollView.topAnchor.constraint(equalTo: view.topAnchor),
+            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+
+            eventInfoView.leadingAnchor.constraint(equalTo: scrollView.safeAreaLayoutGuide.leadingAnchor, constant: 16),
+            eventInfoView.trailingAnchor.constraint(equalTo: scrollView.safeAreaLayoutGuide.trailingAnchor, constant: -16),
+            eventInfoView.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 16 + UIViewController.topSafeAreaHeight),
+
             closeButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
             closeButton.widthAnchor.constraint(equalToConstant: 30),
             closeButton.heightAnchor.constraint(equalTo: closeButton.widthAnchor),
             closeButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
-
-            eventInfoView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            eventInfoView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
-            eventInfoView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
         ])
+        view.layoutIfNeeded()
+        scrollView.setContentSize()
     }
 
     @objc

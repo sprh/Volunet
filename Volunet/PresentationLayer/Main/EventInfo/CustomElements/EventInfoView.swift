@@ -33,12 +33,6 @@ final class EventInfoView: UIStackView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    lazy var scrollView: UIScrollView = {
-        let scrollView = UIScrollView()
-        scrollView.translatesAutoresizingMaskIntoConstraints = false
-        return scrollView
-    }()
-
     lazy var mainInfoView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -57,6 +51,7 @@ final class EventInfoView: UIStackView {
         label.font = .preferredFont(forTextStyle: .title3)
         label.textAlignment = .center
         label.text = title
+        label.numberOfLines = 0
         return label
     }()
 
@@ -65,6 +60,7 @@ final class EventInfoView: UIStackView {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .preferredFont(forTextStyle: .title3)
         label.text = descriptionString
+        label.numberOfLines = 0
         return label
     }()
 

@@ -8,18 +8,25 @@
 import UIKit
 
 extension UIViewController {
-    func createAlarmHeader(_ button: UIBarButtonItem, _ title: String) {
-        navigationController?.navigationBar.prefersLargeTitles = true
-        self.title = title
-        navigationController?.navigationBar.tintColor = .black
-        navigationItem.rightBarButtonItem = button
+    // https://stackoverflow.com/questions/68387187/how-to-use-uiwindowscene-windows-on-ios-15/68397379#68397379
+    private static var keyWindow: UIWindow? {
+        return UIApplication.shared.connectedScenes
+            .filter { $0.activationState == .foregroundActive }
+            .first(where: { $0 is UIWindowScene })
+            .flatMap({ $0 as? UIWindowScene })?.windows
+            .first(where: \.isKeyWindow)
     }
 
-    static func safeAreaHeight() -> CGFloat {
-        let window = UIApplication.shared.windows[0]
-        let topPadding = window.safeAreaInsets.top
-        let bottomPadding = window.safeAreaInsets.bottom
-        return topPadding + bottomPadding
+    static var safeAreaHeight: CGFloat {
+        topSafeAreaHeight + bottomSafeAreaHeight
+    }
+
+    static var topSafeAreaHeight: CGFloat {
+        keyWindow?.safeAreaInsets.top ?? 0
+    }
+
+    static var bottomSafeAreaHeight: CGFloat {
+        keyWindow?.safeAreaInsets.top ?? 0
     }
 
     /// This method helps to hide keyboard.
