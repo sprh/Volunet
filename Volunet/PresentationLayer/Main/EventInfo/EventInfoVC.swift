@@ -36,7 +36,8 @@ final class EventInfoScreenVC: UIViewController, IEventInfoScreenVC {
                                  date: interator.eventDate,
                                  title: interator.eventTitle,
                                  description: interator.eventDescription,
-                                 avatar: .volunteerOrganizationPlaceholder) // TODO: change
+                                 avatar: .volunteerOrganizationPlaceholder,  // TODO: change
+                                 ownerName: interator.eventOwner)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()

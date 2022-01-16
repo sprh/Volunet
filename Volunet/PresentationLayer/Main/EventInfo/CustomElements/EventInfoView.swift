@@ -13,18 +13,21 @@ final class EventInfoView: UIStackView {
     let title: String
     let descriptionString: String
     let avatar: UIImage
+    let ownerName: String
 
     init(frame: CGRect,
          location: String,
          date: String,
          title: String,
          description: String,
-         avatar: UIImage) {
+         avatar: UIImage,
+         ownerName: String) {
         self.location = location
         self.date = date
         self.title = title
         self.descriptionString = description
         self.avatar = avatar
+        self.ownerName = ownerName
         super.init(frame: frame)
         setup()
     }
@@ -78,6 +81,7 @@ final class EventInfoView: UIStackView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .preferredFont(forTextStyle: .title3)
+        label.text = ownerName
         return label
     }()
 
