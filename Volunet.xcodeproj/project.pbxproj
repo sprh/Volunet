@@ -59,6 +59,7 @@
 		E3FDDF3F279499620045B237 /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FDDF3E279499620045B237 /* CloseButton.swift */; };
 		E3FDDF4127949BC50045B237 /* UIButton+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FDDF4027949BC50045B237 /* UIButton+Utils.swift */; };
 		E3FDDF4327949C040045B237 /* RoundedAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FDDF4227949C040045B237 /* RoundedAvatar.swift */; };
+		E3FDDF452794B51F0045B237 /* EventInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FDDF442794B51F0045B237 /* EventInfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,6 +144,7 @@
 		E3FDDF3E279499620045B237 /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
 		E3FDDF4027949BC50045B237 /* UIButton+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Utils.swift"; sourceTree = "<group>"; };
 		E3FDDF4227949C040045B237 /* RoundedAvatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedAvatar.swift; sourceTree = "<group>"; };
+		E3FDDF442794B51F0045B237 /* EventInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventInfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -369,6 +371,7 @@
 		E3FDDF292786F5BB0045B237 /* EventInfo */ = {
 			isa = PBXGroup;
 			children = (
+				E3FDDF462794B7D70045B237 /* CustomElements */,
 				E3FDDF2A2786F60F0045B237 /* EventInfoGraph.swift */,
 				E3FDDF2D2786F60F0045B237 /* EventInfoInteractor.swift */,
 				E3FDDF2B2786F60F0045B237 /* EventInfoPresenter.swift */,
@@ -384,6 +387,14 @@
 				E3FDDF372786F7F90045B237 /* EventsStorage.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		E3FDDF462794B7D70045B237 /* CustomElements */ = {
+			isa = PBXGroup;
+			children = (
+				E3FDDF442794B51F0045B237 /* EventInfoView.swift */,
+			);
+			path = CustomElements;
 			sourceTree = "<group>";
 		};
 		E9890A28436B7F7FC7B9B0CE /* Pods */ = {
@@ -704,6 +715,7 @@
 				E313D87A273D457A00EF1E3C /* SignInScreenVC.swift in Sources */,
 				E3FDDF302786F60F0045B237 /* EventInfoPresenter.swift in Sources */,
 				E3A507E427371A9900AE8DD2 /* WelcomingScreenVC.swift in Sources */,
+				E3FDDF452794B51F0045B237 /* EventInfoView.swift in Sources */,
 				E313D85F273D3D9A00EF1E3C /* UIFont+Utils.swift in Sources */,
 				E3FDDF382786F7F90045B237 /* EventsStorage.swift in Sources */,
 				E313D864273D408100EF1E3C /* String+Utils.swift in Sources */,
