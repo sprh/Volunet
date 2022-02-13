@@ -23,6 +23,7 @@ enum LocalizedStringsKeys: String {
     case whatGoodTodayQuestion
     case respond
     case events
+    case logout
 }
 
 extension String {

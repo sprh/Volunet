@@ -11,7 +11,7 @@ protocol IProfileScreenRouter {
     var viewController: IProfileScreenVC? { get set }
 
     func goBack()
-    func onTapJoinButton()
+    func onTapLogout()
 }
 
 final class ProfileScreenRouter: IProfileScreenRouter {
@@ -21,7 +21,8 @@ final class ProfileScreenRouter: IProfileScreenRouter {
         viewController?.navigationController?.popViewController(animated: true)
     }
 
-    func onTapJoinButton() {
-        
+    func onTapLogout() {
+        let graph = WelcomingScreenGraph()
+        viewController?.navigationController?.pushViewController(graph.viewController, animated: true)
     }
 }

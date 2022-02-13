@@ -19,6 +19,7 @@ final class ProfileScreenVC: UIViewController, IProfileScreenVC {
         let view = ProfileScreenView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backButton.addTarget(self, action: #selector(didTabBackButton), for: .touchUpInside)
+        view.logoutButton.addTarget(self, action: #selector(didTapLogoutButton), for: .touchUpInside)
         return view
     }()
 
@@ -56,7 +57,13 @@ final class ProfileScreenVC: UIViewController, IProfileScreenVC {
     }
 
     @objc
-    func didTabBackButton() {
+    private func didTabBackButton() {
         router.goBack()
+    }
+
+    @objc
+    private func didTapLogoutButton() {
+        // TODO: remove from keychain
+        router.onTapLogout()
     }
 }

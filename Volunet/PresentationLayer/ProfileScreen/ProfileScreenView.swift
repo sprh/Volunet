@@ -86,7 +86,7 @@ final class ProfileScreenView: UIView {
 
     lazy var logoutButton: UIButton = {
         let viewModel = MainButton.ViewModel(font: .preferredFont(forTextStyle: .title1),
-                                             title: "Выйти",
+                                             title: .getLocalizedString(for: .logout),
                                              backgroundColor: .darkTeal,
                                              textColor: .white)
         let button = MainButton(viewModel: viewModel)
