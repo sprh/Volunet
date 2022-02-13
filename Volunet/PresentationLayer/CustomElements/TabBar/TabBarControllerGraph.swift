@@ -11,8 +11,8 @@ class TabBarControllerGraph {
     let controller: UITabBarController
 
     init() {
-        controller = TabBarController(controllers: [TabBarControllerGraph.getProfilePage(),
-                                                    TabBarControllerGraph.getMainPage()])
+        controller = TabBarController(controllers: [TabBarControllerGraph.getMainPage(),
+                                                    TabBarControllerGraph.getProfilePage()])
     }
 
     private static func getProfilePage() -> UIViewController {

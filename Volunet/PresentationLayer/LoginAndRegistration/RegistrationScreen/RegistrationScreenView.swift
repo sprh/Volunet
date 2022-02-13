@@ -166,8 +166,9 @@ final class RegistrationScreenView: UIView {
             passwordTextField.heightAnchor.constraint(equalToConstant: 42),
 
             roleSegmentedControl.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 19),
-            roleSegmentedControl.centerXAnchor.constraint(equalTo: personalDataStack.centerXAnchor),
             roleSegmentedControl.bottomAnchor.constraint(equalTo: personalDataStack.bottomAnchor, constant: -16),
+            roleSegmentedControl.leadingAnchor.constraint(equalTo: personalDataStack.leadingAnchor, constant: 16),
+            roleSegmentedControl.trailingAnchor.constraint(equalTo: personalDataStack.trailingAnchor, constant: -16),
 
 
             joinButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 70),

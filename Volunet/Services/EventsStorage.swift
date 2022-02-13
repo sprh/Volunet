@@ -32,7 +32,7 @@ final class EventsStorage: IEventsStorage {
     }
 
     private init() {
-        events = []
+        events = [Event(startDate: "1", title: "1", description: "1", ownerName: "1")]
     }
 
     func getEvent(at index: Int) -> Event? {

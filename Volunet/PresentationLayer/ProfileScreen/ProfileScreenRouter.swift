@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 protocol IProfileScreenRouter {
     var viewController: IProfileScreenVC? { get set }
@@ -23,6 +24,7 @@ final class ProfileScreenRouter: IProfileScreenRouter {
 
     func onTapLogout() {
         let graph = WelcomingScreenGraph()
-        viewController?.navigationController?.pushViewController(graph.viewController, animated: true)
+
+        viewController?.navigationController?.viewControllers = [graph.viewController]
     }
 }

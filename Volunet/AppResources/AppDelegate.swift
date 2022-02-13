@@ -14,9 +14,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let navigationController = UINavigationController()
-        let graph = ProfileScreenGraph()
         window = UIWindow()
-        window?.rootViewController = TabBarControllerGraph().controller
+        window?.rootViewController = navigationController
+//        navigationController.pushViewController(TabBarControllerGraph().controller, animated: false)
+        navigationController.pushViewController(WelcomingScreenGraph().viewController, animated: true)
         window?.makeKeyAndVisible()
         return true
     }
