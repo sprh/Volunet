@@ -52,6 +52,7 @@ final class ProfileScreenVC: UIViewController, IProfileScreenVC {
         ])
         profileScreenView.frame.size.width = view.frame.width
         profileScreenView.setup(with: interator.profile)
+        profileScreenView.scrollView.setContentSize()
     }
 
     @objc

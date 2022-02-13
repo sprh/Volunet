@@ -8,6 +8,22 @@
 import UIKit
 
 final class ProfileScreenView: UIView {
+    lazy var name: UILabel = {
+        let label = UILabel()
+        label.font = .preferredFont(forTextStyle: .title1).makeBold()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .whiteTeal
+        return label
+    }()
+
+    lazy var scrollView: UIScrollView = {
+        let scrollView = UIScrollView()
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        scrollView.alwaysBounceVertical = true
+        scrollView.alwaysBounceHorizontal = true
+        return scrollView
+    }()
+
     lazy var profilePanel: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -80,14 +96,8 @@ final class ProfileScreenView: UIView {
     }()
     
     func setup(with profile: Profile) {
-        addSubview(profilePanel)
-        addSubview(profileImage)
-        addSubview(healthInfoStackView)
-        addSubview(eventsLabel)
-        addSubview(eventsStackView)
-        addSubview(logoutButton)
-        profilePanel.addSubview(backButton)
-        
+        name.text = "\(profile.firstName) \(profile.lastName)"
+
         for specialHealthFeature in profile.specialHealthFeatures {
             let healthView = SpecialHealthFeatureView()
             healthInfoStackView.addArrangedSubview(healthView)
@@ -102,37 +112,56 @@ final class ProfileScreenView: UIView {
             eventInfoView.setup(event: event)
         }
         
+        addSubview(name)
+        addSubview(profilePanel)
+        addSubview(profileImage)
+        profilePanel.addSubview(scrollView)
+        scrollView.addSubview(backButton)
+        scrollView.addSubview(healthInfoStackView)
+        scrollView.addSubview(eventsLabel)
+        scrollView.addSubview(eventsStackView)
+        scrollView.addSubview(logoutButton)
+        
         
         NSLayoutConstraint.activate([
             profileImage.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
             profileImage.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 20),
             profileImage.heightAnchor.constraint(equalToConstant: 100),
             profileImage.widthAnchor.constraint(equalToConstant: 100),
+
+            name.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
+            name.bottomAnchor.constraint(equalTo: profilePanel.topAnchor, constant: -8),
             
             profilePanel.leadingAnchor.constraint(equalTo: leadingAnchor),
             profilePanel.trailingAnchor.constraint(equalTo: trailingAnchor),
             profilePanel.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
             profilePanel.topAnchor.constraint(equalTo: profileImage.centerYAnchor),
-            
-            backButton.leadingAnchor.constraint(equalTo: profilePanel.leadingAnchor, constant: 16),
-            backButton.topAnchor.constraint(equalTo: profilePanel.topAnchor, constant: 16),
-            
-            healthInfoStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
-            healthInfoStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
+
+            backButton.leadingAnchor.constraint(equalTo: scrollView.safeAreaLayoutGuide.leadingAnchor, constant: 16),
+            backButton.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 16),
+
+            scrollView.leadingAnchor.constraint(equalTo: profilePanel.leadingAnchor),
+            scrollView.trailingAnchor.constraint(equalTo: profilePanel.trailingAnchor),
+            scrollView.topAnchor.constraint(equalTo: profilePanel.topAnchor),
+            scrollView.bottomAnchor.constraint(equalTo: profilePanel.bottomAnchor),
+
+            healthInfoStackView.leadingAnchor.constraint(equalTo: scrollView.safeAreaLayoutGuide.leadingAnchor, constant: 16),
+            healthInfoStackView.trailingAnchor.constraint(equalTo: scrollView.safeAreaLayoutGuide.trailingAnchor, constant: -16),
             healthInfoStackView.topAnchor.constraint(equalTo: backButton.bottomAnchor, constant: 16),
 
-            eventsLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
-            eventsLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
+            eventsLabel.leadingAnchor.constraint(equalTo: scrollView.safeAreaLayoutGuide.leadingAnchor, constant: 16),
+            eventsLabel.trailingAnchor.constraint(equalTo: scrollView.safeAreaLayoutGuide.trailingAnchor, constant: -16),
             eventsLabel.topAnchor.constraint(equalTo: healthInfoStackView.bottomAnchor, constant: 16),
 
-            eventsStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
-            eventsStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
+            eventsStackView.leadingAnchor.constraint(equalTo: scrollView.safeAreaLayoutGuide.leadingAnchor, constant: 16),
+            eventsStackView.trailingAnchor.constraint(equalTo: scrollView.safeAreaLayoutGuide.trailingAnchor, constant: -16),
             eventsStackView.topAnchor.constraint(equalTo: eventsLabel.bottomAnchor, constant: 16),
 
-            logoutButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
-            logoutButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
+            logoutButton.leadingAnchor.constraint(equalTo: scrollView.safeAreaLayoutGuide.leadingAnchor, constant: 16),
+            logoutButton.trailingAnchor.constraint(equalTo: scrollView.safeAreaLayoutGuide.trailingAnchor, constant: -16),
             logoutButton.topAnchor.constraint(equalTo: eventsStackView.bottomAnchor, constant: 16),
-            logoutButton.heightAnchor.constraint(equalToConstant: 55)
+            logoutButton.heightAnchor.constraint(equalToConstant: 55),
+            logoutButton.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor)
         ])
         
         layoutIfNeeded()

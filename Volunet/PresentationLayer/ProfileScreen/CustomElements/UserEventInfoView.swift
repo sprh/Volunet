@@ -31,7 +31,7 @@ class UserEventInfoView: UIButton {
     lazy var mark: UILabel = {
         let label = UILabel()
         if let mark = event?.mark {
-            label.text = "\(mark)"
+            label.text = " \(mark)"
         } else {
             mark.isHidden = true
         }
