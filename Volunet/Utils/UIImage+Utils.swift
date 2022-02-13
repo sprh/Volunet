@@ -23,4 +23,8 @@ extension UIImage {
     static var close: UIImage {
         UIImage(named: "close")!
     }
+
+    static var edit: UIImage {
+        UIImage(systemName: "pencil")!
+    }
 }

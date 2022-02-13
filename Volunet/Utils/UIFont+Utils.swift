@@ -15,4 +15,17 @@ extension UIFont {
     static var changaOneTitle: UIFont {
         UIFont(name: "ChangaOne", size: 57)!
     }
+
+    private func withTraits(traits: UIFontDescriptor.SymbolicTraits) -> UIFont {
+        let descriptor = fontDescriptor.withSymbolicTraits(traits)
+        return UIFont(descriptor: descriptor!, size: 0)
+    }
+
+    func makeBold() -> UIFont {
+        return withTraits(traits: .traitBold)
+    }
+
+    func makeItalik() -> UIFont {
+        return withTraits(traits: .traitItalic)
+    }
 }

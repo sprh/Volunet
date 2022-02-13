@@ -73,7 +73,6 @@ final class RegistrationScreenView: UIView {
                                     .layerMinXMinYCorner,
                                     .layerMaxXMaxYCorner]
         view.clipsToBounds = true
-        view.backgroundColor = .red
         return view
     }()
 

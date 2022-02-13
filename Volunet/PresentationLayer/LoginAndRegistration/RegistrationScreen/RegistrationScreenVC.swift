@@ -26,7 +26,6 @@ final class RegistrationScreenVC: UIViewController, IRegistrationScreenVC {
         let imageView = UIImageView(frame: CGRect(x: 10, y: 10, width: 20, height: 20))
         imageView.image = .chevronLeft.withTintColor(.lightTeal)
         button.addSubview(imageView)
-        button.addSubview(imageView)
         button.addTarget(self, action: #selector(didTabBackButton), for: .touchUpInside)
         let leftBarButtonItem = UIBarButtonItem(customView: button)
         return leftBarButtonItem
