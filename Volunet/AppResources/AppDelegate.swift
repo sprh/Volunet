@@ -16,8 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navigationController = UINavigationController()
         let graph = ProfileScreenGraph()
         window = UIWindow()
-        window?.rootViewController = navigationController
-        navigationController.pushViewController(graph.viewController, animated: false)
+        window?.rootViewController = TabBarControllerGraph().controller
         window?.makeKeyAndVisible()
         return true
     }

@@ -27,4 +27,12 @@ extension UIImage {
     static var edit: UIImage {
         UIImage(systemName: "pencil")!
     }
+
+    static var profileTabBarItem: UIImage {
+        UIImage(named: "profileTabBarItem")!
+    }
+
+    static var mainTabBarItem: UIImage {
+        UIImage(named: "mainTabBarItem")!
+    }
 }
