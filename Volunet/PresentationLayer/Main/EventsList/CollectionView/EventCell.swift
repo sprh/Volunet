@@ -43,7 +43,7 @@ final class EventCell: UITableViewCell {
     }()
 
     lazy var ownerAvatar: UIView = {
-        let avatar = AvatarView(frame: CGRect(x: 0,
+        let avatar = RoundedImageView(frame: CGRect(x: 0,
                                               y: 0,
                                               width: 48,
                                               height: 48),

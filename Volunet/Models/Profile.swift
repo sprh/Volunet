@@ -13,5 +13,6 @@ struct Profile {
     let events: [UserEvent]
     let specialHealthFeatures: [String]
     let imageUrl: String
+    let avards: [Avard]?
 }
 

@@ -38,6 +38,14 @@
 		E316FB3E27B9702400E9C76E /* UserEventInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E316FB3D27B9702400E9C76E /* UserEventInfoView.swift */; };
 		E384C63227B99AAA008026AE /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E384C63127B99AAA008026AE /* TabBarController.swift */; };
 		E384C63527B9AA51008026AE /* TabBarControllerGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = E384C63427B9AA51008026AE /* TabBarControllerGraph.swift */; };
+		E384C63727BAE52D008026AE /* Avard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E384C63627BAE52D008026AE /* Avard.swift */; };
+		E384C63F27BAE66A008026AE /* AvardsScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E384C63927BAE66A008026AE /* AvardsScreenRouter.swift */; };
+		E384C64027BAE66A008026AE /* AvardsScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E384C63A27BAE66A008026AE /* AvardsScreenVC.swift */; };
+		E384C64127BAE66A008026AE /* AvardsScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E384C63B27BAE66A008026AE /* AvardsScreenView.swift */; };
+		E384C64227BAE66A008026AE /* AvardsScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E384C63C27BAE66A008026AE /* AvardsScreenPresenter.swift */; };
+		E384C64327BAE66A008026AE /* AvardsScreenGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = E384C63D27BAE66A008026AE /* AvardsScreenGraph.swift */; };
+		E384C64427BAE66A008026AE /* AvardsScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E384C63E27BAE66A008026AE /* AvardsScreenInteractor.swift */; };
+		E384C64727BAEBD2008026AE /* AvardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E384C64627BAEBD2008026AE /* AvardCell.swift */; };
 		E3A507A2273710F700AE8DD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A507A1273710F700AE8DD2 /* AppDelegate.swift */; };
 		E3A507AB273710FC00AE8DD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3A507AA273710FC00AE8DD2 /* Assets.xcassets */; };
 		E3A507AE273710FC00AE8DD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3A507AC273710FC00AE8DD2 /* LaunchScreen.storyboard */; };
@@ -71,7 +79,7 @@
 		E3FDDF382786F7F90045B237 /* EventsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FDDF372786F7F90045B237 /* EventsStorage.swift */; };
 		E3FDDF3F279499620045B237 /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FDDF3E279499620045B237 /* CloseButton.swift */; };
 		E3FDDF4127949BC50045B237 /* UIButton+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FDDF4027949BC50045B237 /* UIButton+Utils.swift */; };
-		E3FDDF4327949C040045B237 /* RoundedAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FDDF4227949C040045B237 /* RoundedAvatar.swift */; };
+		E3FDDF4327949C040045B237 /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FDDF4227949C040045B237 /* RoundedImageView.swift */; };
 		E3FDDF452794B51F0045B237 /* EventInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FDDF442794B51F0045B237 /* EventInfoView.swift */; };
 		E3FDDF482794B9860045B237 /* UIScrollView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FDDF472794B9860045B237 /* UIScrollView+Utils.swift */; };
 /* End PBXBuildFile section */
@@ -131,6 +139,14 @@
 		E316FB3D27B9702400E9C76E /* UserEventInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEventInfoView.swift; sourceTree = "<group>"; };
 		E384C63127B99AAA008026AE /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		E384C63427B9AA51008026AE /* TabBarControllerGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllerGraph.swift; sourceTree = "<group>"; };
+		E384C63627BAE52D008026AE /* Avard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Avard.swift; sourceTree = "<group>"; };
+		E384C63927BAE66A008026AE /* AvardsScreenRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvardsScreenRouter.swift; sourceTree = "<group>"; };
+		E384C63A27BAE66A008026AE /* AvardsScreenVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvardsScreenVC.swift; sourceTree = "<group>"; };
+		E384C63B27BAE66A008026AE /* AvardsScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvardsScreenView.swift; sourceTree = "<group>"; };
+		E384C63C27BAE66A008026AE /* AvardsScreenPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvardsScreenPresenter.swift; sourceTree = "<group>"; };
+		E384C63D27BAE66A008026AE /* AvardsScreenGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvardsScreenGraph.swift; sourceTree = "<group>"; };
+		E384C63E27BAE66A008026AE /* AvardsScreenInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvardsScreenInteractor.swift; sourceTree = "<group>"; };
+		E384C64627BAEBD2008026AE /* AvardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvardCell.swift; sourceTree = "<group>"; };
 		E3A5079E273710F700AE8DD2 /* Volunet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Volunet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3A507A1273710F700AE8DD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3A507AA273710FC00AE8DD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -170,7 +186,7 @@
 		E3FDDF372786F7F90045B237 /* EventsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsStorage.swift; sourceTree = "<group>"; };
 		E3FDDF3E279499620045B237 /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
 		E3FDDF4027949BC50045B237 /* UIButton+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Utils.swift"; sourceTree = "<group>"; };
-		E3FDDF4227949C040045B237 /* RoundedAvatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedAvatar.swift; sourceTree = "<group>"; };
+		E3FDDF4227949C040045B237 /* RoundedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
 		E3FDDF442794B51F0045B237 /* EventInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventInfoView.swift; sourceTree = "<group>"; };
 		E3FDDF472794B9860045B237 /* UIScrollView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Utils.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -211,7 +227,7 @@
 				E313D87F273D77DB00EF1E3C /* TextFieldWithPadding.swift */,
 				E313D89A273F019900EF1E3C /* CalendarDate.swift */,
 				E3FDDF3E279499620045B237 /* CloseButton.swift */,
-				E3FDDF4227949C040045B237 /* RoundedAvatar.swift */,
+				E3FDDF4227949C040045B237 /* RoundedImageView.swift */,
 			);
 			path = CustomElements;
 			sourceTree = "<group>";
@@ -277,6 +293,7 @@
 				E3FDDF342786F7440045B237 /* Event.swift */,
 				E3C8DEF427AC4ED90020D176 /* Profile.swift */,
 				E3C8DEF627AC504C0020D176 /* UserEvent.swift */,
+				E384C63627BAE52D008026AE /* Avard.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -288,6 +305,28 @@
 				E384C63427B9AA51008026AE /* TabBarControllerGraph.swift */,
 			);
 			path = TabBar;
+			sourceTree = "<group>";
+		};
+		E384C63827BAE612008026AE /* Avards */ = {
+			isa = PBXGroup;
+			children = (
+				E384C64527BAEBA1008026AE /* CustomElements */,
+				E384C63D27BAE66A008026AE /* AvardsScreenGraph.swift */,
+				E384C63E27BAE66A008026AE /* AvardsScreenInteractor.swift */,
+				E384C63C27BAE66A008026AE /* AvardsScreenPresenter.swift */,
+				E384C63927BAE66A008026AE /* AvardsScreenRouter.swift */,
+				E384C63A27BAE66A008026AE /* AvardsScreenVC.swift */,
+				E384C63B27BAE66A008026AE /* AvardsScreenView.swift */,
+			);
+			path = Avards;
+			sourceTree = "<group>";
+		};
+		E384C64527BAEBA1008026AE /* CustomElements */ = {
+			isa = PBXGroup;
+			children = (
+				E384C64627BAEBD2008026AE /* AvardCell.swift */,
+			);
+			path = CustomElements;
 			sourceTree = "<group>";
 		};
 		E3A50795273710F700AE8DD2 = {
@@ -361,6 +400,7 @@
 		E3A507DE2737153200AE8DD2 /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				E384C63827BAE612008026AE /* Avards */,
 				E3C8DEF127AC4C320020D176 /* ProfileScreen */,
 				E3FDDF282786F4D30045B237 /* Main */,
 				E3FDDF272786F4B90045B237 /* LoginAndRegistration */,
@@ -765,10 +805,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3C8DF0027AC512E0020D176 /* ProfileScreenPresenter.swift in Sources */,
+				E384C64127BAE66A008026AE /* AvardsScreenView.swift in Sources */,
 				E313D88F273EFDB900EF1E3C /* EventsListRouter.swift in Sources */,
 				E3C8DEF327AC4E9E0020D176 /* ProfileStorage.swift in Sources */,
 				E313D891273EFDB900EF1E3C /* EventsListInteractor.swift in Sources */,
-				E3FDDF4327949C040045B237 /* RoundedAvatar.swift in Sources */,
+				E3FDDF4327949C040045B237 /* RoundedImageView.swift in Sources */,
 				E3C8DEFF27AC512E0020D176 /* ProfileScreenInteractor.swift in Sources */,
 				E313D880273D77DB00EF1E3C /* TextFieldWithPadding.swift in Sources */,
 				E3FDDF2F2786F60F0045B237 /* EventInfoGraph.swift in Sources */,
@@ -776,6 +817,7 @@
 				E3FDDF332786F60F0045B237 /* EventInfoRouter.swift in Sources */,
 				E3FDDF352786F7440045B237 /* Event.swift in Sources */,
 				E313D88E273EFDB900EF1E3C /* EventsListGraph.swift in Sources */,
+				E384C64027BAE66A008026AE /* AvardsScreenVC.swift in Sources */,
 				E313D89B273F019900EF1E3C /* CalendarDate.swift in Sources */,
 				E316FB3E27B9702400E9C76E /* UserEventInfoView.swift in Sources */,
 				E313D876273D457A00EF1E3C /* SignInScreenRouter.swift in Sources */,
@@ -786,27 +828,33 @@
 				E384C63227B99AAA008026AE /* TabBarController.swift in Sources */,
 				E3C8DF0327AC512E0020D176 /* ProfileScreenRouter.swift in Sources */,
 				E3A507DB2737143800AE8DD2 /* UIColor+Utils.swift in Sources */,
+				E384C64727BAEBD2008026AE /* AvardCell.swift in Sources */,
 				E3FDDF4127949BC50045B237 /* UIButton+Utils.swift in Sources */,
 				E3C8DEF527AC4ED90020D176 /* Profile.swift in Sources */,
 				E3C8DEF727AC504C0020D176 /* UserEvent.swift in Sources */,
 				E313D858273D390100EF1E3C /* MainButton.swift in Sources */,
 				E313D890273EFDB900EF1E3C /* EventsListVC.swift in Sources */,
+				E384C64327BAE66A008026AE /* AvardsScreenGraph.swift in Sources */,
 				E313D867273D431700EF1E3C /* RegistrationScreenInteractor.swift in Sources */,
 				E313D869273D434B00EF1E3C /* RegistrationScreenPresenter.swift in Sources */,
 				E313D86F273D445C00EF1E3C /* RegistrationScreenGraph.swift in Sources */,
 				E313D882273D7A0E00EF1E3C /* UIViewController+Utils.swift in Sources */,
 				E313D86D273D43E200EF1E3C /* RegistrationScreenRouter.swift in Sources */,
 				E3A507EC273725EA00AE8DD2 /* UIView+Utils.swift in Sources */,
+				E384C64227BAE66A008026AE /* AvardsScreenPresenter.swift in Sources */,
 				E313D879273D457A00EF1E3C /* SignInScreenGraph.swift in Sources */,
 				E313D877273D457A00EF1E3C /* SignInScreenInteractor.swift in Sources */,
 				E3A507A2273710F700AE8DD2 /* AppDelegate.swift in Sources */,
 				E3C8DF0227AC512E0020D176 /* ProfileScreenGraph.swift in Sources */,
+				E384C63F27BAE66A008026AE /* AvardsScreenRouter.swift in Sources */,
 				E313D88D273EFDB900EF1E3C /* EventsListPresenter.swift in Sources */,
 				E313D878273D457A00EF1E3C /* SignInScreenPresenter.swift in Sources */,
 				E313D87C273D58CC00EF1E3C /* RegistrationScreenView.swift in Sources */,
+				E384C63727BAE52D008026AE /* Avard.swift in Sources */,
 				E3FDDF322786F60F0045B237 /* EventInfoInteractor.swift in Sources */,
 				E313D86B273D438600EF1E3C /* RegistrationScreenVC.swift in Sources */,
 				E384C63527B9AA51008026AE /* TabBarControllerGraph.swift in Sources */,
+				E384C64427BAE66A008026AE /* AvardsScreenInteractor.swift in Sources */,
 				E313D894273EFECA00EF1E3C /* EventCell.swift in Sources */,
 				E3FDDF3F279499620045B237 /* CloseButton.swift in Sources */,
 				E313D87A273D457A00EF1E3C /* SignInScreenVC.swift in Sources */,

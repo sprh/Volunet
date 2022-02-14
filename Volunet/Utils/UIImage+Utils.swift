@@ -35,4 +35,8 @@ extension UIImage {
     static var mainTabBarItem: UIImage {
         UIImage(named: "mainTabBarItem")!
     }
+
+    static var avardsImage: UIImage {
+        UIImage(named: "avardsImage")!
+    }
 }

@@ -30,6 +30,7 @@ final class ProfileStorage: IProfileStorage {
                           events: [UserEvent(event: Event(startDate: "1", title: "1", description: "2", ownerName: "23"), mark: 12.2, comment: "Comment"),
                                    UserEvent(event: Event(startDate: "1", title: "1", description: "2", ownerName: "23"), mark: 12.2, comment: "Comment")],
                           specialHealthFeatures: ["test", "test"],
-                          imageUrl: "image")
+                          imageUrl: "image",
+                          avards: [Avard(title: "Шарики - детям", image: .add)])
     }
 }

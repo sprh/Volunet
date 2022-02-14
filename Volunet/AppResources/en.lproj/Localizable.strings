@@ -22,3 +22,5 @@
 "respond" = "Respond";
 "events" = "Events";
 "logout" = "Logout";
+"myAvards" = "My avards";
+"noAvard" = "Ops, you haven't got any avards yet!";

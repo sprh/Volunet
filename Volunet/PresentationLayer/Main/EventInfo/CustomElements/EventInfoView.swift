@@ -67,8 +67,8 @@ final class EventInfoView: UIStackView {
         return label
     }()
 
-    lazy var avatarView: UIView = {
-        let avatar = AvatarView(frame: CGRect(x: 0,
+    lazy var roundedImageView: UIView = {
+        let avatar = RoundedImageView(frame: CGRect(x: 0,
                                               y: 0,
                                               width: 60,
                                               height: 60),
@@ -124,7 +124,7 @@ final class EventInfoView: UIStackView {
         addSubview(mainInfoView)
         mainInfoView.addSubview(eventTitle)
         mainInfoView.addSubview(eventDescription)
-        addSubview(avatarView)
+        addSubview(roundedImageView)
         addSubview(eventOwnerName)
         addSubview(locationButton)
         addSubview(dateButton)
@@ -144,16 +144,16 @@ final class EventInfoView: UIStackView {
             eventDescription.trailingAnchor.constraint(equalTo: eventTitle.trailingAnchor),
             eventDescription.bottomAnchor.constraint(equalTo: mainInfoView.bottomAnchor, constant: -40),
 
-            avatarView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
-            avatarView.widthAnchor.constraint(equalToConstant: 60),
-            avatarView.heightAnchor.constraint(equalTo: avatarView.widthAnchor),
-            avatarView.topAnchor.constraint(equalTo: mainInfoView.bottomAnchor, constant: -24),
+            roundedImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            roundedImageView.widthAnchor.constraint(equalToConstant: 60),
+            roundedImageView.heightAnchor.constraint(equalTo: roundedImageView.widthAnchor),
+            roundedImageView.topAnchor.constraint(equalTo: mainInfoView.bottomAnchor, constant: -24),
 
-            eventOwnerName.leadingAnchor.constraint(equalTo: avatarView.trailingAnchor, constant: 10),
+            eventOwnerName.leadingAnchor.constraint(equalTo: roundedImageView.trailingAnchor, constant: 10),
             eventOwnerName.topAnchor.constraint(equalTo: mainInfoView.bottomAnchor, constant: 5),
             eventOwnerName.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
 
-            locationButton.topAnchor.constraint(equalTo: avatarView.bottomAnchor, constant: 14),
+            locationButton.topAnchor.constraint(equalTo: roundedImageView.bottomAnchor, constant: 14),
             locationButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             locationButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
             locationButton.heightAnchor.constraint(equalToConstant: 55),
