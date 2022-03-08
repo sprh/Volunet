@@ -57,6 +57,13 @@ final class MainButton: UIButton {
     private var disabledBackgroundColor: UIColor!
     private var enabledTextColor: UIColor!
     private var disabledTextColor: UIColor!
+    private lazy var dotsAnimationView: DotsAnimationView = {
+        let view = DotsAnimationView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.isHidden = true
+        return view
+    }()
+    private var title: String!
 
     /// Override var isEnabled to change colors (background and text) to show user that it is not enabled.
     override var isEnabled: Bool {
@@ -91,6 +98,27 @@ final class MainButton: UIButton {
         disabledTextColor = viewModel.disabledTextColor
         enabledBackgroundColor = viewModel.enabledBackgroundColor
         disabledBackgroundColor = viewModel.disabledBackgroundColor
+        title = viewModel.title
+
+        addSubview(dotsAnimationView)
+        NSLayoutConstraint.activate([
+            dotsAnimationView.topAnchor.constraint(equalTo: topAnchor),
+            dotsAnimationView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            dotsAnimationView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            dotsAnimationView.trailingAnchor.constraint(equalTo: trailingAnchor)
+        ])
+    }
+
+    func startAnimation() {
+        setTitle(nil, for: .normal)
+        dotsAnimationView.isHidden = false
+        dotsAnimationView.startAnimation()
+    }
+
+    func stopAnimation() {
+        dotsAnimationView.stopAnimation()
+        dotsAnimationView.isHidden = true
+        setTitle(title, for: .normal)
     }
 }
 

@@ -19,7 +19,7 @@ final class SignInScreenGraph {
 
     init() {
         presenter = SignInScreenPresenter()
-        interator = SignInScreenInterator(presenter: presenter)
+        interator = SignInScreenInterator(presenter: presenter, signInSevice: SignInService.shared, profileStorage: ProfileStorage.shared)
         router = SignInScreenRouter()
         view = SignInScreenVC(interator: interator, router: router)
         router.viewController = view

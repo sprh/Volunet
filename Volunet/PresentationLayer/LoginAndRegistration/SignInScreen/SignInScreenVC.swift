@@ -8,7 +8,8 @@
 import UIKit
 
 protocol ISignInScreenVC: UIViewController {
-
+    func goToMainScreen()
+    func showErrorDialog(error: String)
 }
 
 final class SignInScreenVC: UIViewController, ISignInScreenVC {
@@ -45,6 +46,7 @@ final class SignInScreenVC: UIViewController, ISignInScreenVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        addTargets()
     }
 
     private func setup() {
@@ -84,9 +86,8 @@ final class SignInScreenVC: UIViewController, ISignInScreenVC {
 
     @objc
     func textFieldDidChange() {
-        // TODO: add more logic
-        if (signInScreenView.emailTextField.text?.isEmpty ?? false ||
-            signInScreenView.passwordTextField.text?.isEmpty ?? false) {
+        if (signInScreenView.emailTextField.text?.isEmpty ?? true ||
+            signInScreenView.passwordTextField.text?.isEmpty ?? true) {
             signInScreenView.signInButton.isEnabled = false
         } else {
             signInScreenView.signInButton.isEnabled = true
@@ -95,7 +96,29 @@ final class SignInScreenVC: UIViewController, ISignInScreenVC {
 
     @objc
     func didTapSignInButton() {
-        // TODO: try to login
+        let email = signInScreenView.emailTextField.text
+        let password = signInScreenView.passwordTextField.text
+        guard let email = email, let password = password, !password.isEmpty, !email.isEmpty else {
+            return
+        }
+        signInScreenView.signInButton.startAnimation()
+        backButton.isEnabled = false
+        interator.onTapSignIn(email: email, password: password)
+    }
+
+    func stopLoading() {
+        signInScreenView.signInButton.stopAnimation()
+        backButton.isEnabled = true
+    }
+
+    func goToMainScreen() {
+        stopLoading()
+        router.openMainScreen()
+    }
+
+    func showErrorDialog(error: String) {
+        stopLoading()
+        router.showErrorDialog(error: error)
     }
 }
 

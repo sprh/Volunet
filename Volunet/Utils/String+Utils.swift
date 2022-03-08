@@ -27,6 +27,9 @@ enum LocalizedStringsKeys: String {
     case myAvards
     case noAvard
     case gladToSeeYouAgain
+    case ok
+    case error
+    case somethingWentWrong
 }
 
 extension String {

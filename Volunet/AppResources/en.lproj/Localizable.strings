@@ -25,3 +25,6 @@
 "myAvards" = "My avards";
 "noAvard" = "Ops, you haven't got any avards yet!";
 "gladToSeeYouAgain" = "Glad to see you again :)";
+"ok" = "Ok";
+"error" = "Error";
+"somethingWentWrong" = "Something went wrong";

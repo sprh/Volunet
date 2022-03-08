@@ -21,7 +21,7 @@ final class TabBarController: UITabBarController {
     }
 
     private let xInsets: CGFloat = 16
-    private let yInsets: CGFloat = UIViewController.safeAreaHeight + 64
+    private let yInsets: CGFloat = UIViewController.safeAreaHeight
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,8 +38,6 @@ final class TabBarController: UITabBarController {
                               height: previousFrame.height - 16)
     }
 
-    // MARK: - UI Setup
-
     private func makeUI() {
         tabBar.itemPositioning = .centered
         tabBar.layer.cornerRadius = 32
@@ -48,10 +46,6 @@ final class TabBarController: UITabBarController {
         tabBar.layer.masksToBounds = true
 
         viewControllers = controllers
-
-//        for tab in self.tabBar.items! {
-//            tab.imageInsets = UIEdgeInsets(top: 6, left: 0, bottom: -6, right: 0)
-//        }
     }
 }
 

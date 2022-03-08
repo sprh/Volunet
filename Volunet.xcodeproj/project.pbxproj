@@ -71,6 +71,8 @@
 		E3C8DF0327AC512E0020D176 /* ProfileScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C8DEFD27AC512D0020D176 /* ProfileScreenRouter.swift */; };
 		E3C8DF0627AC63AC0020D176 /* SpecialHealthFeatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C8DF0527AC63AC0020D176 /* SpecialHealthFeatureView.swift */; };
 		E3EE4C1127D77FD200E02090 /* SignInScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE4C1027D77FD200E02090 /* SignInScreenView.swift */; };
+		E3EE4C1427D78C8900E02090 /* SignInService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE4C1327D78C8900E02090 /* SignInService.swift */; };
+		E3EE4C1627D791F500E02090 /* DotsAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE4C1527D791F500E02090 /* DotsAnimationView.swift */; };
 		E3FDDF2F2786F60F0045B237 /* EventInfoGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FDDF2A2786F60F0045B237 /* EventInfoGraph.swift */; };
 		E3FDDF302786F60F0045B237 /* EventInfoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FDDF2B2786F60F0045B237 /* EventInfoPresenter.swift */; };
 		E3FDDF312786F60F0045B237 /* EventInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FDDF2C2786F60F0045B237 /* EventInfoVC.swift */; };
@@ -179,6 +181,8 @@
 		E3C8DEFD27AC512D0020D176 /* ProfileScreenRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileScreenRouter.swift; sourceTree = "<group>"; };
 		E3C8DF0527AC63AC0020D176 /* SpecialHealthFeatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialHealthFeatureView.swift; sourceTree = "<group>"; };
 		E3EE4C1027D77FD200E02090 /* SignInScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInScreenView.swift; sourceTree = "<group>"; };
+		E3EE4C1327D78C8900E02090 /* SignInService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInService.swift; sourceTree = "<group>"; };
+		E3EE4C1527D791F500E02090 /* DotsAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotsAnimationView.swift; sourceTree = "<group>"; };
 		E3FDDF2A2786F60F0045B237 /* EventInfoGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventInfoGraph.swift; sourceTree = "<group>"; };
 		E3FDDF2B2786F60F0045B237 /* EventInfoPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventInfoPresenter.swift; sourceTree = "<group>"; };
 		E3FDDF2C2786F60F0045B237 /* EventInfoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventInfoVC.swift; sourceTree = "<group>"; };
@@ -230,6 +234,7 @@
 				E313D89A273F019900EF1E3C /* CalendarDate.swift */,
 				E3FDDF3E279499620045B237 /* CloseButton.swift */,
 				E3FDDF4227949C040045B237 /* RoundedImageView.swift */,
+				E3EE4C1527D791F500E02090 /* DotsAnimationView.swift */,
 			);
 			path = CustomElements;
 			sourceTree = "<group>";
@@ -457,6 +462,15 @@
 			path = CustomElements;
 			sourceTree = "<group>";
 		};
+		E3EE4C1227D78C6600E02090 /* Storages */ = {
+			isa = PBXGroup;
+			children = (
+				E3FDDF372786F7F90045B237 /* EventsStorage.swift */,
+				E3C8DEF227AC4E9E0020D176 /* ProfileStorage.swift */,
+			);
+			path = Storages;
+			sourceTree = "<group>";
+		};
 		E3FDDF272786F4B90045B237 /* LoginAndRegistration */ = {
 			isa = PBXGroup;
 			children = (
@@ -492,8 +506,8 @@
 		E3FDDF362786F7C70045B237 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				E3FDDF372786F7F90045B237 /* EventsStorage.swift */,
-				E3C8DEF227AC4E9E0020D176 /* ProfileStorage.swift */,
+				E3EE4C1227D78C6600E02090 /* Storages */,
+				E3EE4C1327D78C8900E02090 /* SignInService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -822,6 +836,7 @@
 				E3FDDF352786F7440045B237 /* Event.swift in Sources */,
 				E313D88E273EFDB900EF1E3C /* EventsListGraph.swift in Sources */,
 				E384C64027BAE66A008026AE /* AvardsScreenVC.swift in Sources */,
+				E3EE4C1627D791F500E02090 /* DotsAnimationView.swift in Sources */,
 				E313D89B273F019900EF1E3C /* CalendarDate.swift in Sources */,
 				E316FB3E27B9702400E9C76E /* UserEventInfoView.swift in Sources */,
 				E313D876273D457A00EF1E3C /* SignInScreenRouter.swift in Sources */,
@@ -868,6 +883,7 @@
 				E313D85F273D3D9A00EF1E3C /* UIFont+Utils.swift in Sources */,
 				E3FDDF382786F7F90045B237 /* EventsStorage.swift in Sources */,
 				E313D864273D408100EF1E3C /* String+Utils.swift in Sources */,
+				E3EE4C1427D78C8900E02090 /* SignInService.swift in Sources */,
 				E3A507E627371AA400AE8DD2 /* WelcomingScreenRouter.swift in Sources */,
 				E3A507EA27371EDD00AE8DD2 /* WelcomingScreenView.swift in Sources */,
 				E3A507DD2737144500AE8DD2 /* UIImage+Utils.swift in Sources */,

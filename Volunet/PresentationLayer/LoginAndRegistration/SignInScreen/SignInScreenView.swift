@@ -31,7 +31,7 @@ final class SignInScreenView: UIView {
         return textField
     }()
 
-    lazy var signInButton: UIButton = {
+    lazy var signInButton: MainButton = {
         let viewModel = MainButton.ViewModel(font: .preferredFont(forTextStyle: .body),
                                              title: .getLocalizedString(for: .signIn),
                                              enabledBackgroundColor: .lightTeal,
