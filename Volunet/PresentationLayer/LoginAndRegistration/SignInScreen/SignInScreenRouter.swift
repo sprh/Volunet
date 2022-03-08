@@ -9,8 +9,14 @@ import Foundation
 
 protocol ISignInScreenRouter {
     var viewController: ISignInScreenVC? { get set }
+
+    func goBack()
 }
 
 final class SignInScreenRouter: ISignInScreenRouter {
     weak var viewController: ISignInScreenVC?
+
+    func goBack() {
+        viewController?.navigationController?.popViewController(animated: true)
+    }
 }

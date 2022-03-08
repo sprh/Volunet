@@ -26,6 +26,7 @@ enum LocalizedStringsKeys: String {
     case logout
     case myAvards
     case noAvard
+    case gladToSeeYouAgain
 }
 
 extension String {

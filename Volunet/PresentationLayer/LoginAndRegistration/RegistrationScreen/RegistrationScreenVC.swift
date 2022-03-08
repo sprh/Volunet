@@ -15,13 +15,13 @@ final class RegistrationScreenVC: UIViewController, IRegistrationScreenVC {
     private let interator: IRegistrationScreenInterator
     private let router: IRegistrationScreenRouter
 
-    let registrationScreenView: RegistrationScreenView = {
+    lazy var registrationScreenView: RegistrationScreenView = {
         let view = RegistrationScreenView()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
 
-    let backButton: UIBarButtonItem = {
+    lazy var backButton: UIBarButtonItem = {
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
         let imageView = UIImageView(frame: CGRect(x: 10, y: 10, width: 20, height: 20))
         imageView.image = .chevronLeft.withTintColor(.lightTeal)
@@ -77,7 +77,6 @@ final class RegistrationScreenVC: UIViewController, IRegistrationScreenVC {
         registrationScreenView.passwordTextField.addTarget(self,
                                                        action: #selector(textFieldDidChange),
                                                        for: .editingChanged)
-
     }
 
     @objc
@@ -89,8 +88,8 @@ final class RegistrationScreenVC: UIViewController, IRegistrationScreenVC {
     func textFieldDidChange() {
         // TODO: add more logic
         if (registrationScreenView.nameTextField.text?.isEmpty ?? false ||
-            registrationScreenView.nameTextField.text?.isEmpty ?? false ||
-            registrationScreenView.nameTextField.text?.isEmpty ?? false) {
+            registrationScreenView.emailTextField.text?.isEmpty ?? false ||
+            registrationScreenView.passwordTextField.text?.isEmpty ?? false) {
             registrationScreenView.joinButton.isEnabled = false
         } else {
             registrationScreenView.joinButton.isEnabled = true

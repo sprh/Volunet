@@ -70,6 +70,7 @@
 		E3C8DF0227AC512E0020D176 /* ProfileScreenGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C8DEFC27AC512D0020D176 /* ProfileScreenGraph.swift */; };
 		E3C8DF0327AC512E0020D176 /* ProfileScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C8DEFD27AC512D0020D176 /* ProfileScreenRouter.swift */; };
 		E3C8DF0627AC63AC0020D176 /* SpecialHealthFeatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C8DF0527AC63AC0020D176 /* SpecialHealthFeatureView.swift */; };
+		E3EE4C1127D77FD200E02090 /* SignInScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE4C1027D77FD200E02090 /* SignInScreenView.swift */; };
 		E3FDDF2F2786F60F0045B237 /* EventInfoGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FDDF2A2786F60F0045B237 /* EventInfoGraph.swift */; };
 		E3FDDF302786F60F0045B237 /* EventInfoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FDDF2B2786F60F0045B237 /* EventInfoPresenter.swift */; };
 		E3FDDF312786F60F0045B237 /* EventInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FDDF2C2786F60F0045B237 /* EventInfoVC.swift */; };
@@ -177,6 +178,7 @@
 		E3C8DEFC27AC512D0020D176 /* ProfileScreenGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileScreenGraph.swift; sourceTree = "<group>"; };
 		E3C8DEFD27AC512D0020D176 /* ProfileScreenRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileScreenRouter.swift; sourceTree = "<group>"; };
 		E3C8DF0527AC63AC0020D176 /* SpecialHealthFeatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialHealthFeatureView.swift; sourceTree = "<group>"; };
+		E3EE4C1027D77FD200E02090 /* SignInScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInScreenView.swift; sourceTree = "<group>"; };
 		E3FDDF2A2786F60F0045B237 /* EventInfoGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventInfoGraph.swift; sourceTree = "<group>"; };
 		E3FDDF2B2786F60F0045B237 /* EventInfoPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventInfoPresenter.swift; sourceTree = "<group>"; };
 		E3FDDF2C2786F60F0045B237 /* EventInfoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventInfoVC.swift; sourceTree = "<group>"; };
@@ -262,6 +264,7 @@
 				E313D873273D457A00EF1E3C /* SignInScreenPresenter.swift */,
 				E313D874273D457A00EF1E3C /* SignInScreenGraph.swift */,
 				E313D875273D457A00EF1E3C /* SignInScreenVC.swift */,
+				E3EE4C1027D77FD200E02090 /* SignInScreenView.swift */,
 			);
 			path = SignInScreen;
 			sourceTree = "<group>";
@@ -806,6 +809,7 @@
 			files = (
 				E3C8DF0027AC512E0020D176 /* ProfileScreenPresenter.swift in Sources */,
 				E384C64127BAE66A008026AE /* AvardsScreenView.swift in Sources */,
+				E3EE4C1127D77FD200E02090 /* SignInScreenView.swift in Sources */,
 				E313D88F273EFDB900EF1E3C /* EventsListRouter.swift in Sources */,
 				E3C8DEF327AC4E9E0020D176 /* ProfileStorage.swift in Sources */,
 				E313D891273EFDB900EF1E3C /* EventsListInteractor.swift in Sources */,
