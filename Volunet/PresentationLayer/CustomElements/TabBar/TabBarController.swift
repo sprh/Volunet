@@ -21,7 +21,7 @@ final class TabBarController: UITabBarController {
     }
 
     private let xInsets: CGFloat = 16
-    private let yInsets: CGFloat = UIViewController.safeAreaHeight
+    private let yInsets: CGFloat = UIViewController.safeAreaHeight - 32
 
     override func viewDidLoad() {
         super.viewDidLoad()

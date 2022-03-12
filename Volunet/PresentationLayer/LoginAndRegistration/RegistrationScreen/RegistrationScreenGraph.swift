@@ -19,7 +19,7 @@ final class RegistrationScreenGraph {
 
     init() {
         presenter = RegistrationScreenPresenter()
-        interator = RegistrationScreenInterator(presenter: presenter)
+        interator = RegistrationScreenInterator(presenter: presenter, registrationService: RegistrationService.shared, profileStorage: ProfileStorage.shared)
         router = RegistrationScreenRouter()
         view = RegistrationScreenVC(interator: interator, router: router)
         router.viewController = view

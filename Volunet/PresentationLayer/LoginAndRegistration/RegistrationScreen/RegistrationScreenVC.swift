@@ -8,7 +8,8 @@
 import UIKit
 
 protocol IRegistrationScreenVC: UIViewController {
-
+    func goToMainScreen()
+    func showErrorDialog(error: String)
 }
 
 final class RegistrationScreenVC: UIViewController, IRegistrationScreenVC {
@@ -45,6 +46,7 @@ final class RegistrationScreenVC: UIViewController, IRegistrationScreenVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        addTargets()
     }
 
     private func setup() {
@@ -86,7 +88,6 @@ final class RegistrationScreenVC: UIViewController, IRegistrationScreenVC {
 
     @objc
     func textFieldDidChange() {
-        // TODO: add more logic
         if (registrationScreenView.nameTextField.text?.isEmpty ?? false ||
             registrationScreenView.emailTextField.text?.isEmpty ?? false ||
             registrationScreenView.passwordTextField.text?.isEmpty ?? false) {
@@ -98,8 +99,31 @@ final class RegistrationScreenVC: UIViewController, IRegistrationScreenVC {
 
     @objc
     func didTapJoinButton() {
-        // TODO: create a user
-        router.onTapJoinButton()
+        let name = registrationScreenView.nameTextField.text
+        let password = registrationScreenView.passwordTextField.text
+        let email = registrationScreenView.emailTextField.text
+        let accountType = registrationScreenView.roleSegmentedControl.selectedSegmentIndex
+        guard let name = name, let email = email, let password = password, !password.isEmpty, !email.isEmpty, !name.isEmpty else {
+            return
+        }
+        registrationScreenView.joinButton.startAnimation()
+        backButton.isEnabled = false
+        interator.onTapRegister(email: email, password: password, name: name, accountType: accountType)
+    }
+
+    func stopLoading() {
+        registrationScreenView.joinButton.stopAnimation()
+        backButton.isEnabled = true
+    }
+
+    func showErrorDialog(error: String) {
+        stopLoading()
+        router.showErrorDialog(error: error)
+    }
+
+    func goToMainScreen() {
+        stopLoading()
+        router.openMainScreen()
     }
 }
 

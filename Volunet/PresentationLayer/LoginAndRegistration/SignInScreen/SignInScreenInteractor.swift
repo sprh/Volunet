@@ -29,7 +29,7 @@ final class SignInScreenInterator: ISignInScreenInterator {
             switch result {
             case let .success(profile):
                 guard let profile = profile else {
-                    self?.presenter.onSignInError(error: "Что-то пошло не так")
+                    self?.presenter.onSignInError(error: .getLocalizedString(for: .somethingWentWrong))
                     return
                 }
                 self?.profileStorage.updateProfile(profile)

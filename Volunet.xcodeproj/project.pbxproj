@@ -73,6 +73,7 @@
 		E3EE4C1127D77FD200E02090 /* SignInScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE4C1027D77FD200E02090 /* SignInScreenView.swift */; };
 		E3EE4C1427D78C8900E02090 /* SignInService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE4C1327D78C8900E02090 /* SignInService.swift */; };
 		E3EE4C1627D791F500E02090 /* DotsAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE4C1527D791F500E02090 /* DotsAnimationView.swift */; };
+		E3EE4C1827D79DA100E02090 /* RegistrationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE4C1727D79DA100E02090 /* RegistrationService.swift */; };
 		E3FDDF2F2786F60F0045B237 /* EventInfoGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FDDF2A2786F60F0045B237 /* EventInfoGraph.swift */; };
 		E3FDDF302786F60F0045B237 /* EventInfoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FDDF2B2786F60F0045B237 /* EventInfoPresenter.swift */; };
 		E3FDDF312786F60F0045B237 /* EventInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FDDF2C2786F60F0045B237 /* EventInfoVC.swift */; };
@@ -183,6 +184,7 @@
 		E3EE4C1027D77FD200E02090 /* SignInScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInScreenView.swift; sourceTree = "<group>"; };
 		E3EE4C1327D78C8900E02090 /* SignInService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInService.swift; sourceTree = "<group>"; };
 		E3EE4C1527D791F500E02090 /* DotsAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotsAnimationView.swift; sourceTree = "<group>"; };
+		E3EE4C1727D79DA100E02090 /* RegistrationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationService.swift; sourceTree = "<group>"; };
 		E3FDDF2A2786F60F0045B237 /* EventInfoGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventInfoGraph.swift; sourceTree = "<group>"; };
 		E3FDDF2B2786F60F0045B237 /* EventInfoPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventInfoPresenter.swift; sourceTree = "<group>"; };
 		E3FDDF2C2786F60F0045B237 /* EventInfoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventInfoVC.swift; sourceTree = "<group>"; };
@@ -508,6 +510,7 @@
 			children = (
 				E3EE4C1227D78C6600E02090 /* Storages */,
 				E3EE4C1327D78C8900E02090 /* SignInService.swift */,
+				E3EE4C1727D79DA100E02090 /* RegistrationService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -873,6 +876,7 @@
 				E3FDDF322786F60F0045B237 /* EventInfoInteractor.swift in Sources */,
 				E313D86B273D438600EF1E3C /* RegistrationScreenVC.swift in Sources */,
 				E384C63527B9AA51008026AE /* TabBarControllerGraph.swift in Sources */,
+				E3EE4C1827D79DA100E02090 /* RegistrationService.swift in Sources */,
 				E384C64427BAE66A008026AE /* AvardsScreenInteractor.swift in Sources */,
 				E313D894273EFECA00EF1E3C /* EventCell.swift in Sources */,
 				E3FDDF3F279499620045B237 /* CloseButton.swift in Sources */,

@@ -42,7 +42,7 @@ final class RegistrationScreenView: UIView {
         return textField
     }()
 
-    lazy var joinButton: UIButton = {
+    lazy var joinButton: MainButton = {
         let viewModel = MainButton.ViewModel(font: .preferredFont(forTextStyle: .body),
                                              title: .getLocalizedString(for: .join),
                                              enabledBackgroundColor: .lightTeal,

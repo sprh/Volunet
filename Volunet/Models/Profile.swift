@@ -16,3 +16,7 @@ struct Profile {
     let avards: [Avard]?
 }
 
+enum AccountType: Int {
+    case volunteer, organization
+}
+

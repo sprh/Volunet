@@ -24,7 +24,7 @@ final class SignInScreenRouter: ISignInScreenRouter {
 
     func openMainScreen() {
         let graph = TabBarControllerGraph()
-        viewController?.navigationController?.pushViewController(graph.controller, animated: true)
+        viewController?.navigationController?.setViewControllers([graph.controller], animated: true)
     }
 
     func showErrorDialog(error: String) {

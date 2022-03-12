@@ -34,7 +34,6 @@ final class SignInService: ISignInService {
 
     func signIn(email: String, password: String, completion: @escaping (Result<Profile?, Error>) -> Void) {
         queue.async { [weak self] in
-            sleep(4) // TODO: login
             DispatchQueue.main.async {
                 completion(.success(self?.mockedProfile))
             }
