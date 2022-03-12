@@ -16,8 +16,8 @@ final class RegistrationService: IRegistrationService {
 
     let queue = DispatchQueue(label: "RegistrationService")
 
-    let mockedProfile = Profile(firstName: "Саша",
-                                lastName: "Семенов",
+    let mockedProfile = Profile(uuid: "1",
+                                name: "Саша",
                                 events: [UserEvent(event: Event(startDate: "1", title: "1", description: "2", ownerName: "23"), mark: 12.2, comment: "Comment"),
                                          UserEvent(event: Event(startDate: "1", title: "1", description: "2", ownerName: "23"), mark: 12.2, comment: "Comment")],
                                 specialHealthFeatures: ["test", "test"],

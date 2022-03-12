@@ -96,7 +96,7 @@ final class ProfileScreenView: UIView {
     }()
     
     func setup(with profile: Profile) {
-        name.text = "\(profile.firstName) \(profile.lastName)"
+        name.text = profile.name
 
         for specialHealthFeature in profile.specialHealthFeatures {
             let healthView = SpecialHealthFeatureView()

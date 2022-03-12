@@ -8,8 +8,8 @@
 import Foundation
 
 struct Profile {
-    let firstName: String
-    let lastName: String
+    let uuid: String
+    let name: String
     let events: [UserEvent]
     let specialHealthFeatures: [String]
     let imageUrl: String

@@ -74,6 +74,12 @@
 		E3EE4C1427D78C8900E02090 /* SignInService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE4C1327D78C8900E02090 /* SignInService.swift */; };
 		E3EE4C1627D791F500E02090 /* DotsAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE4C1527D791F500E02090 /* DotsAnimationView.swift */; };
 		E3EE4C1827D79DA100E02090 /* RegistrationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE4C1727D79DA100E02090 /* RegistrationService.swift */; };
+		E3EE4C1A27DCD33800E02090 /* EventsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE4C1927DCD33700E02090 /* EventsService.swift */; };
+		E3EE4C2027DCD4E300E02090 /* StartScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE4C1C27DCD4E300E02090 /* StartScreenVC.swift */; };
+		E3EE4C2227DCD4E300E02090 /* StartScreenGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE4C1E27DCD4E300E02090 /* StartScreenGraph.swift */; };
+		E3EE4C2327DCD4E300E02090 /* StartScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE4C1F27DCD4E300E02090 /* StartScreenRouter.swift */; };
+		E3EE4C2527DCD66F00E02090 /* StartScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE4C2427DCD66F00E02090 /* StartScreenInteractor.swift */; };
+		E3EE4C2727DCD6A000E02090 /* StartScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE4C2627DCD6A000E02090 /* StartScreenPresenter.swift */; };
 		E3FDDF2F2786F60F0045B237 /* EventInfoGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FDDF2A2786F60F0045B237 /* EventInfoGraph.swift */; };
 		E3FDDF302786F60F0045B237 /* EventInfoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FDDF2B2786F60F0045B237 /* EventInfoPresenter.swift */; };
 		E3FDDF312786F60F0045B237 /* EventInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FDDF2C2786F60F0045B237 /* EventInfoVC.swift */; };
@@ -185,6 +191,12 @@
 		E3EE4C1327D78C8900E02090 /* SignInService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInService.swift; sourceTree = "<group>"; };
 		E3EE4C1527D791F500E02090 /* DotsAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotsAnimationView.swift; sourceTree = "<group>"; };
 		E3EE4C1727D79DA100E02090 /* RegistrationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationService.swift; sourceTree = "<group>"; };
+		E3EE4C1927DCD33700E02090 /* EventsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsService.swift; sourceTree = "<group>"; };
+		E3EE4C1C27DCD4E300E02090 /* StartScreenVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScreenVC.swift; sourceTree = "<group>"; };
+		E3EE4C1E27DCD4E300E02090 /* StartScreenGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScreenGraph.swift; sourceTree = "<group>"; };
+		E3EE4C1F27DCD4E300E02090 /* StartScreenRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScreenRouter.swift; sourceTree = "<group>"; };
+		E3EE4C2427DCD66F00E02090 /* StartScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenInteractor.swift; sourceTree = "<group>"; };
+		E3EE4C2627DCD6A000E02090 /* StartScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenPresenter.swift; sourceTree = "<group>"; };
 		E3FDDF2A2786F60F0045B237 /* EventInfoGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventInfoGraph.swift; sourceTree = "<group>"; };
 		E3FDDF2B2786F60F0045B237 /* EventInfoPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventInfoPresenter.swift; sourceTree = "<group>"; };
 		E3FDDF2C2786F60F0045B237 /* EventInfoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventInfoVC.swift; sourceTree = "<group>"; };
@@ -473,9 +485,22 @@
 			path = Storages;
 			sourceTree = "<group>";
 		};
+		E3EE4C1B27DCD4B200E02090 /* StartScreen */ = {
+			isa = PBXGroup;
+			children = (
+				E3EE4C1E27DCD4E300E02090 /* StartScreenGraph.swift */,
+				E3EE4C1F27DCD4E300E02090 /* StartScreenRouter.swift */,
+				E3EE4C1C27DCD4E300E02090 /* StartScreenVC.swift */,
+				E3EE4C2427DCD66F00E02090 /* StartScreenInteractor.swift */,
+				E3EE4C2627DCD6A000E02090 /* StartScreenPresenter.swift */,
+			);
+			path = StartScreen;
+			sourceTree = "<group>";
+		};
 		E3FDDF272786F4B90045B237 /* LoginAndRegistration */ = {
 			isa = PBXGroup;
 			children = (
+				E3EE4C1B27DCD4B200E02090 /* StartScreen */,
 				E3A507E027371A6700AE8DD2 /* WelcomingScreen */,
 				E313D870273D457A00EF1E3C /* SignInScreen */,
 				E313D865273D42D000EF1E3C /* RegistrationScreen */,
@@ -511,6 +536,7 @@
 				E3EE4C1227D78C6600E02090 /* Storages */,
 				E3EE4C1327D78C8900E02090 /* SignInService.swift */,
 				E3EE4C1727D79DA100E02090 /* RegistrationService.swift */,
+				E3EE4C1927DCD33700E02090 /* EventsService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -834,7 +860,10 @@
 				E3C8DEFF27AC512E0020D176 /* ProfileScreenInteractor.swift in Sources */,
 				E313D880273D77DB00EF1E3C /* TextFieldWithPadding.swift in Sources */,
 				E3FDDF2F2786F60F0045B237 /* EventInfoGraph.swift in Sources */,
+				E3EE4C2527DCD66F00E02090 /* StartScreenInteractor.swift in Sources */,
+				E3EE4C1A27DCD33800E02090 /* EventsService.swift in Sources */,
 				E3FDDF482794B9860045B237 /* UIScrollView+Utils.swift in Sources */,
+				E3EE4C2227DCD4E300E02090 /* StartScreenGraph.swift in Sources */,
 				E3FDDF332786F60F0045B237 /* EventInfoRouter.swift in Sources */,
 				E3FDDF352786F7440045B237 /* Event.swift in Sources */,
 				E313D88E273EFDB900EF1E3C /* EventsListGraph.swift in Sources */,
@@ -847,6 +876,7 @@
 				E3A507E827371ACD00AE8DD2 /* WelcomingScreenGraph.swift in Sources */,
 				E3FDDF312786F60F0045B237 /* EventInfoVC.swift in Sources */,
 				E3C8DEFE27AC512E0020D176 /* ProfileScreenVC.swift in Sources */,
+				E3EE4C2027DCD4E300E02090 /* StartScreenVC.swift in Sources */,
 				E384C63227B99AAA008026AE /* TabBarController.swift in Sources */,
 				E3C8DF0327AC512E0020D176 /* ProfileScreenRouter.swift in Sources */,
 				E3A507DB2737143800AE8DD2 /* UIColor+Utils.swift in Sources */,
@@ -872,10 +902,12 @@
 				E313D88D273EFDB900EF1E3C /* EventsListPresenter.swift in Sources */,
 				E313D878273D457A00EF1E3C /* SignInScreenPresenter.swift in Sources */,
 				E313D87C273D58CC00EF1E3C /* RegistrationScreenView.swift in Sources */,
+				E3EE4C2327DCD4E300E02090 /* StartScreenRouter.swift in Sources */,
 				E384C63727BAE52D008026AE /* Avard.swift in Sources */,
 				E3FDDF322786F60F0045B237 /* EventInfoInteractor.swift in Sources */,
 				E313D86B273D438600EF1E3C /* RegistrationScreenVC.swift in Sources */,
 				E384C63527B9AA51008026AE /* TabBarControllerGraph.swift in Sources */,
+				E3EE4C2727DCD6A000E02090 /* StartScreenPresenter.swift in Sources */,
 				E3EE4C1827D79DA100E02090 /* RegistrationService.swift in Sources */,
 				E384C64427BAE66A008026AE /* AvardsScreenInteractor.swift in Sources */,
 				E313D894273EFECA00EF1E3C /* EventCell.swift in Sources */,

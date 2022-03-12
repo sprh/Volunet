@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 final class TabBarController: UITabBarController {
     let controllers: [UIViewController]
 
@@ -30,7 +29,6 @@ final class TabBarController: UITabBarController {
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        print(tabBar.frame)
         let previousFrame = tabBar.frame
         tabBar.frame = CGRect(x: xInsets,
                               y: previousFrame.midY - yInsets,

@@ -39,4 +39,8 @@ extension UIImage {
     static var avardsImage: UIImage {
         UIImage(named: "avardsImage")!
     }
+
+    static var launchScreenImage: UIImage {
+        UIImage(named: "launchScreenImage")!
+    }
 }
