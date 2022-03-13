@@ -13,7 +13,11 @@ extension UIImage {
     }
 
     static var chevronLeft: UIImage {
-        UIImage(named: "chevronLeftImage")!
+        UIImage(named: "chevronLeft")!
+    }
+
+    static var chevronRight: UIImage {
+        UIImage(named: "chevronRight")!
     }
 
     static var volunteerOrganizationPlaceholder: UIImage {

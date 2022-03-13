@@ -61,6 +61,13 @@
 		E3A507EA27371EDD00AE8DD2 /* WelcomingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A507E927371EDD00AE8DD2 /* WelcomingScreenView.swift */; };
 		E3A507EC273725EA00AE8DD2 /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A507EB273725EA00AE8DD2 /* UIView+Utils.swift */; };
 		E3AC9EAF27DDFA2800C3A9DB /* LoadingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AC9EAE27DDFA2700C3A9DB /* LoadingTableViewCell.swift */; };
+		E3AC9ECE27DE218C00C3A9DB /* MenuItemButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AC9ECD27DE218C00C3A9DB /* MenuItemButton.swift */; };
+		E3AC9ED527DE235100C3A9DB /* MenuScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AC9ECF27DE235100C3A9DB /* MenuScreenPresenter.swift */; };
+		E3AC9ED627DE235100C3A9DB /* MenuScreenGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AC9ED027DE235100C3A9DB /* MenuScreenGraph.swift */; };
+		E3AC9ED727DE235100C3A9DB /* MenuScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AC9ED127DE235100C3A9DB /* MenuScreenInteractor.swift */; };
+		E3AC9ED827DE235100C3A9DB /* MenuScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AC9ED227DE235100C3A9DB /* MenuScreenView.swift */; };
+		E3AC9ED927DE235100C3A9DB /* MenuScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AC9ED327DE235100C3A9DB /* MenuScreenVC.swift */; };
+		E3AC9EDA27DE235100C3A9DB /* MenuScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AC9ED427DE235100C3A9DB /* MenuScreenRouter.swift */; };
 		E3C8DEF327AC4E9E0020D176 /* ProfileStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C8DEF227AC4E9E0020D176 /* ProfileStorage.swift */; };
 		E3C8DEF527AC4ED90020D176 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C8DEF427AC4ED90020D176 /* Profile.swift */; };
 		E3C8DEF727AC504C0020D176 /* UserEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C8DEF627AC504C0020D176 /* UserEvent.swift */; };
@@ -179,6 +186,13 @@
 		E3A507E927371EDD00AE8DD2 /* WelcomingScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomingScreenView.swift; sourceTree = "<group>"; };
 		E3A507EB273725EA00AE8DD2 /* UIView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Utils.swift"; sourceTree = "<group>"; };
 		E3AC9EAE27DDFA2700C3A9DB /* LoadingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingTableViewCell.swift; sourceTree = "<group>"; };
+		E3AC9ECD27DE218C00C3A9DB /* MenuItemButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemButton.swift; sourceTree = "<group>"; };
+		E3AC9ECF27DE235100C3A9DB /* MenuScreenPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuScreenPresenter.swift; sourceTree = "<group>"; };
+		E3AC9ED027DE235100C3A9DB /* MenuScreenGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuScreenGraph.swift; sourceTree = "<group>"; };
+		E3AC9ED127DE235100C3A9DB /* MenuScreenInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuScreenInteractor.swift; sourceTree = "<group>"; };
+		E3AC9ED227DE235100C3A9DB /* MenuScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuScreenView.swift; sourceTree = "<group>"; };
+		E3AC9ED327DE235100C3A9DB /* MenuScreenVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuScreenVC.swift; sourceTree = "<group>"; };
+		E3AC9ED427DE235100C3A9DB /* MenuScreenRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuScreenRouter.swift; sourceTree = "<group>"; };
 		E3C8DEF227AC4E9E0020D176 /* ProfileStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileStorage.swift; sourceTree = "<group>"; };
 		E3C8DEF427AC4ED90020D176 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		E3C8DEF627AC504C0020D176 /* UserEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEvent.swift; sourceTree = "<group>"; };
@@ -425,8 +439,7 @@
 		E3A507DE2737153200AE8DD2 /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
-				E384C63827BAE612008026AE /* Avards */,
-				E3C8DEF127AC4C320020D176 /* ProfileScreen */,
+				E3AC9EB027DE1E0900C3A9DB /* MenuScreen */,
 				E3FDDF282786F4D30045B237 /* Main */,
 				E3FDDF272786F4B90045B237 /* LoginAndRegistration */,
 				E313D856273D38EB00EF1E3C /* CustomElements */,
@@ -454,6 +467,38 @@
 				E3A507E927371EDD00AE8DD2 /* WelcomingScreenView.swift */,
 			);
 			path = WelcomingScreen;
+			sourceTree = "<group>";
+		};
+		E3AC9EB027DE1E0900C3A9DB /* MenuScreen */ = {
+			isa = PBXGroup;
+			children = (
+				E3AC9EB327DE1E6B00C3A9DB /* MenuScreen */,
+				E384C63827BAE612008026AE /* Avards */,
+				E3C8DEF127AC4C320020D176 /* ProfileScreen */,
+			);
+			path = MenuScreen;
+			sourceTree = "<group>";
+		};
+		E3AC9EB327DE1E6B00C3A9DB /* MenuScreen */ = {
+			isa = PBXGroup;
+			children = (
+				E3AC9ECC27DE217000C3A9DB /* CustomElements */,
+				E3AC9ED027DE235100C3A9DB /* MenuScreenGraph.swift */,
+				E3AC9ED127DE235100C3A9DB /* MenuScreenInteractor.swift */,
+				E3AC9ECF27DE235100C3A9DB /* MenuScreenPresenter.swift */,
+				E3AC9ED427DE235100C3A9DB /* MenuScreenRouter.swift */,
+				E3AC9ED327DE235100C3A9DB /* MenuScreenVC.swift */,
+				E3AC9ED227DE235100C3A9DB /* MenuScreenView.swift */,
+			);
+			path = MenuScreen;
+			sourceTree = "<group>";
+		};
+		E3AC9ECC27DE217000C3A9DB /* CustomElements */ = {
+			isa = PBXGroup;
+			children = (
+				E3AC9ECD27DE218C00C3A9DB /* MenuItemButton.swift */,
+			);
+			path = CustomElements;
 			sourceTree = "<group>";
 		};
 		E3C8DEF127AC4C320020D176 /* ProfileScreen */ = {
@@ -862,21 +907,26 @@
 				E3FDDF4327949C040045B237 /* RoundedImageView.swift in Sources */,
 				E3C8DEFF27AC512E0020D176 /* ProfileScreenInteractor.swift in Sources */,
 				E313D880273D77DB00EF1E3C /* TextFieldWithPadding.swift in Sources */,
+				E3AC9EDA27DE235100C3A9DB /* MenuScreenRouter.swift in Sources */,
 				E3FDDF2F2786F60F0045B237 /* EventInfoGraph.swift in Sources */,
 				E3EE4C2527DCD66F00E02090 /* StartScreenInteractor.swift in Sources */,
 				E3EE4C1A27DCD33800E02090 /* EventsService.swift in Sources */,
 				E3FDDF482794B9860045B237 /* UIScrollView+Utils.swift in Sources */,
 				E3EE4C2227DCD4E300E02090 /* StartScreenGraph.swift in Sources */,
 				E3FDDF332786F60F0045B237 /* EventInfoRouter.swift in Sources */,
+				E3AC9ED727DE235100C3A9DB /* MenuScreenInteractor.swift in Sources */,
 				E3FDDF352786F7440045B237 /* Event.swift in Sources */,
 				E313D88E273EFDB900EF1E3C /* EventsListGraph.swift in Sources */,
 				E384C64027BAE66A008026AE /* AvardsScreenVC.swift in Sources */,
 				E3EE4C1627D791F500E02090 /* DotsAnimationView.swift in Sources */,
 				E313D89B273F019900EF1E3C /* CalendarDate.swift in Sources */,
+				E3AC9ECE27DE218C00C3A9DB /* MenuItemButton.swift in Sources */,
 				E316FB3E27B9702400E9C76E /* UserEventInfoView.swift in Sources */,
+				E3AC9ED927DE235100C3A9DB /* MenuScreenVC.swift in Sources */,
 				E313D876273D457A00EF1E3C /* SignInScreenRouter.swift in Sources */,
 				E3C8DF0127AC512E0020D176 /* ProfileScreenView.swift in Sources */,
 				E3A507E827371ACD00AE8DD2 /* WelcomingScreenGraph.swift in Sources */,
+				E3AC9ED627DE235100C3A9DB /* MenuScreenGraph.swift in Sources */,
 				E3FDDF312786F60F0045B237 /* EventInfoVC.swift in Sources */,
 				E3C8DEFE27AC512E0020D176 /* ProfileScreenVC.swift in Sources */,
 				E3EE4C2027DCD4E300E02090 /* StartScreenVC.swift in Sources */,
@@ -913,6 +963,7 @@
 				E3EE4C2727DCD6A000E02090 /* StartScreenPresenter.swift in Sources */,
 				E3EE4C1827D79DA100E02090 /* RegistrationService.swift in Sources */,
 				E384C64427BAE66A008026AE /* AvardsScreenInteractor.swift in Sources */,
+				E3AC9ED827DE235100C3A9DB /* MenuScreenView.swift in Sources */,
 				E313D894273EFECA00EF1E3C /* EventCell.swift in Sources */,
 				E3FDDF3F279499620045B237 /* CloseButton.swift in Sources */,
 				E313D87A273D457A00EF1E3C /* SignInScreenVC.swift in Sources */,
@@ -925,6 +976,7 @@
 				E3EE4C1427D78C8900E02090 /* SignInService.swift in Sources */,
 				E3A507E627371AA400AE8DD2 /* WelcomingScreenRouter.swift in Sources */,
 				E3A507EA27371EDD00AE8DD2 /* WelcomingScreenView.swift in Sources */,
+				E3AC9ED527DE235100C3A9DB /* MenuScreenPresenter.swift in Sources */,
 				E3A507DD2737144500AE8DD2 /* UIImage+Utils.swift in Sources */,
 				E3AC9EAF27DDFA2800C3A9DB /* LoadingTableViewCell.swift in Sources */,
 				E3C8DF0627AC63AC0020D176 /* SpecialHealthFeatureView.swift in Sources */,

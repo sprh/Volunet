@@ -27,6 +27,14 @@ final class ProfileStorage: IProfileStorage {
     }
 
     private init() {
+        // TODO: remove
+        profile = Profile(uuid: "1",
+                                                  name: "Саша",
+                                                  events: [UserEvent(event: Event(startDate: "05/07/21", title: "Юбилей ВДНХ", description: "2", ownerName: "23"), mark: 4.9, comment: "Comment"),
+                                                           UserEvent(event: Event(startDate: "05/07/21", title: "Поездка в детский дом", description: "2", ownerName: "23"), mark: 5.0, comment: "Comment")],
+                                                  specialHealthFeatures: ["Вегетарианец", "Плохой слух"],
+                                                  imageUrl: "image",
+                                                  avards: [Avard(title: "Шарики - детям", image: .add)])
     }
 
     func updateProfile(_ profile: Profile) {
