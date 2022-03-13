@@ -27,8 +27,9 @@ class EventsService: IEventsService {
     func loadEvents(uuid: String, completion: @escaping (Result<[Event], Error>) -> Void) {
         // TODO: load events
         queue.async { [weak self] in
+            sleep(2)
             DispatchQueue.main.async {
-                completion(.success([]))
+                completion(.success([Event(startDate: "02/02/22", title: "title", description: "desctiption", ownerName: "owner name")]))
             }
         }
     }

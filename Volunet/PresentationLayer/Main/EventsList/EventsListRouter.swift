@@ -12,6 +12,7 @@ protocol IEventsListScreenRouter {
     var viewController: IEventsListScreenVC? { get set }
 
     func showEventInfoScreen(for event: Event)
+    func showErrorDialog(error: String)
 }
 
 final class EventsListScreenRouter: IEventsListScreenRouter {
@@ -22,5 +23,11 @@ final class EventsListScreenRouter: IEventsListScreenRouter {
         let navigationController = UINavigationController(rootViewController: graph.viewController)
         navigationController.modalPresentationStyle = .overCurrentContext
         viewController?.navigationController?.present(navigationController, animated: false)
+    }
+
+    func showErrorDialog(error: String) {
+        let alert = UIAlertController(title: .getLocalizedString(for: .error), message: error, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: .getLocalizedString(for: .ok), style: UIAlertAction.Style.default, handler: nil))
+        viewController?.present(alert, animated: true, completion: nil)
     }
 }

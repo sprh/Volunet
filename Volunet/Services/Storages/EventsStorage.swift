@@ -10,12 +10,13 @@ import UIKit
 
 protocol IEventsStorage: AnyObject {
     func getEvent(at index: Int) -> Event?
+    func addEvents(events: [Event])
 
     var eventsCount: Int { get }
 }
 
 final class EventsStorage: IEventsStorage {
-    private var events: [Event]
+    private var events: [Event] = []
 
     private static var _shared: IEventsStorage?
 
@@ -32,10 +33,13 @@ final class EventsStorage: IEventsStorage {
     }
 
     private init() {
-        events = [Event(startDate: "1", title: "1", description: "1", ownerName: "1")]
     }
 
     func getEvent(at index: Int) -> Event? {
         return index >= events.count ? nil : events[index]
+    }
+
+    func addEvents(events: [Event]) {
+            self.events.append(contentsOf: events)
     }
 }

@@ -8,7 +8,8 @@
 import UIKit
 
 protocol IEventsListScreenVC: UIViewController {
-
+    func onLoadingError(error: String)
+    func onLoadEvents()
 }
 
 final class EventsListScreenVC: UIViewController, IEventsListScreenVC {
@@ -19,6 +20,7 @@ final class EventsListScreenVC: UIViewController, IEventsListScreenVC {
         let tableView = UITableView(frame: view.frame, style: .insetGrouped)
         tableView.backgroundColor = .clear
         tableView.register(EventCell.self, forCellReuseIdentifier: "\(EventCell.self)")
+        tableView.register(LoadingTableViewCell.self, forCellReuseIdentifier: "\(LoadingTableViewCell.self)")
         tableView.delegate = self
         tableView.dataSource = self
         tableView.alwaysBounceVertical = true
@@ -70,11 +72,24 @@ final class EventsListScreenVC: UIViewController, IEventsListScreenVC {
         super.viewWillDisappear(animated)
         navigationController?.navigationBar.isHidden = false
     }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        interator.loadEvents()
+    }
+
+    func onLoadingError(error: String) {
+        router.showErrorDialog(error: error)
+    }
+
+    func onLoadEvents() {
+        tableView.reloadData()
+    }
 }
 
 extension EventsListScreenVC: UITableViewDataSource, UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return interator.eventsCount
+        return interator.eventsCount + (interator.loading ? 1 : 0)
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -82,6 +97,13 @@ extension EventsListScreenVC: UITableViewDataSource, UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if (interator.loading && indexPath.row == interator.eventsCount) {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "\(LoadingTableViewCell.self)") as? LoadingTableViewCell else {
+                return UITableViewCell()
+            }
+            cell.setup()
+            return cell
+        }
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "\(EventCell.self)") as? EventCell,
               let event = interator.getEvent(at: indexPath.section) else { return UITableViewCell() }
         cell.setup(with: event)

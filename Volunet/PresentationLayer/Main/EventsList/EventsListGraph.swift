@@ -19,7 +19,10 @@ final class EventsListScreenGraph {
 
     init() {
         presenter = EventsListScreenPresenter()
-        interator = EventsListScreenInterator(presenter: presenter, eventsStorage: EventsStorage.shared)
+        interator = EventsListScreenInterator(presenter: presenter,
+                                              eventsStorage: EventsStorage.shared,
+                                              eventsService: EventsService.shared,
+                                              profileStorage: ProfileStorage.shared)
         router = EventsListScreenRouter()
         view = EventsListScreenVC(interator: interator, router: router)
         router.viewController = view
