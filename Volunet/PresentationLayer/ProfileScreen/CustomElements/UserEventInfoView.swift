@@ -22,6 +22,7 @@ class UserEventInfoView: UIButton {
     lazy var title: UILabel = {
         let label = UILabel()
         label.text = event?.event.title
+        label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .whiteTeal
         label.font = .preferredFont(forTextStyle: .body)
@@ -61,7 +62,6 @@ class UserEventInfoView: UIButton {
             title.leadingAnchor.constraint(equalTo: date.trailingAnchor, constant: 5),
             title.topAnchor.constraint(equalTo: topAnchor, constant: 10),
             title.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16),
-            title.centerXAnchor.constraint(equalTo: centerXAnchor),
 
             mark.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
             mark.leadingAnchor.constraint(equalTo: title.trailingAnchor, constant: 10),
