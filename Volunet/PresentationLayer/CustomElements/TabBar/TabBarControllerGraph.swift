@@ -16,8 +16,8 @@ class TabBarControllerGraph {
     }
 
     private static func getProfilePage() -> UIViewController {
-        let viewController = ProfileScreenGraph().viewController
-        viewController.tabBarItem.image = .profileTabBarItem
+        let viewController = MenuScreenGraph().viewController
+        viewController.tabBarItem.image = .menuItem
         return viewController
     }
 

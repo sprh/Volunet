@@ -47,4 +47,8 @@ extension UIImage {
     static var launchScreenImage: UIImage {
         UIImage(named: "launchScreenImage")!
     }
+
+    static var menuItem: UIImage {
+        UIImage(named: "menuItem")!
+    }
 }

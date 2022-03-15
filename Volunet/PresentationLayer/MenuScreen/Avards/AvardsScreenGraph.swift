@@ -19,7 +19,7 @@ final class AvardsScreenGraph {
 
     init() {
         presenter = AvardsScreenPresenter()
-        interator = AvardsScreenInterator(presenter: presenter)
+        interator = AvardsScreenInterator(presenter: presenter, profileStorage: ProfileStorage.shared)
         router = AvardsScreenRouter()
         view = AvardsScreenVC(interator: interator, router: router)
         router.viewController = view

@@ -30,7 +30,7 @@ final class EventInfoScreenVC: UIViewController, IEventInfoScreenVC {
         return scrollView
     }()
 
-    lazy var eventInfoView: UIView = {
+    lazy var eventInfoView: EventInfoView = {
         let view = EventInfoView(frame: .zero,
                                  location: interator.eventLocation,
                                  date: interator.eventDate,
@@ -70,8 +70,8 @@ final class EventInfoScreenVC: UIViewController, IEventInfoScreenVC {
         navigationController?.navigationBar.isHidden = true
     }
 
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
         navigationController?.navigationBar.isHidden = false
     }
 
@@ -98,10 +98,17 @@ final class EventInfoScreenVC: UIViewController, IEventInfoScreenVC {
         ])
         view.layoutIfNeeded()
         scrollView.setContentSize()
+
+        eventInfoView.respondButton.addTarget(self, action: #selector(onTapRespond), for: .touchUpInside)
     }
 
     @objc
     private func close() {
-        dismiss(animated: false)
+        router.close()
+    }
+
+    @objc
+    private func onTapRespond() {
+        router.onTapRespond()
     }
 }

@@ -25,14 +25,6 @@ class MenuItemButton: UIButton {
         return imageView
     }()
 
-    lazy var contentView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .whiteTeal
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.layer.cornerRadius = 20
-        return view
-    }()
-
 
     init(frame: CGRect = .zero, title: String) {
         self.title = title
@@ -46,23 +38,20 @@ class MenuItemButton: UIButton {
 
     private func setup() {
         addTarget(self, action: #selector(onPress), for: .touchUpInside)
-        addSubview(contentView)
-        contentView.addSubview(labelTitle)
-        contentView.addSubview(trailingImage)
+        backgroundColor = .whiteTeal
+        layer.cornerRadius = 20
+        addSubview(labelTitle)
+        addSubview(trailingImage)
 
         NSLayoutConstraint.activate([
-            contentView.topAnchor.constraint(equalTo: topAnchor),
-            contentView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            contentView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            contentView.trailingAnchor.constraint(equalTo: trailingAnchor),
 
-            labelTitle.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
-            labelTitle.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
-            labelTitle.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -16),
+            labelTitle.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
+            labelTitle.topAnchor.constraint(equalTo: topAnchor, constant: 16),
+            labelTitle.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16),
 
 
-            trailingImage.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
-            trailingImage.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+            trailingImage.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
+            trailingImage.centerYAnchor.constraint(equalTo: centerYAnchor),
             trailingImage.heightAnchor.constraint(equalToConstant: 20),
             trailingImage.widthAnchor.constraint(equalToConstant: 20),
         ])

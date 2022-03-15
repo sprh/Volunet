@@ -19,7 +19,7 @@ final class MenuScreenView: UIView {
         return avatar
     }()
 
-    private lazy var scrollView: UIScrollView = {
+    lazy var scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         scrollView.alwaysBounceVertical = true
@@ -38,9 +38,20 @@ final class MenuScreenView: UIView {
     }()
 
     lazy var profileButton: UIButton = {
-        let button = MenuItemButton(title: "Profile") // TODO: translate
+        let button = MenuItemButton(title: .getLocalizedString(for: .profile))
         button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
 
+    lazy var avardsButton: UIButton = {
+        let button = MenuItemButton(title: .getLocalizedString(for: .avards))
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+
+    lazy var aboutAppButton: UIButton = {
+        let button = MenuItemButton(title: .getLocalizedString(for: .aboutApp))
+        button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
 
@@ -49,6 +60,8 @@ final class MenuScreenView: UIView {
         addSubview(profileImage)
         menuPanel.addSubview(scrollView)
         scrollView.addSubview(profileButton)
+        scrollView.addSubview(avardsButton)
+        scrollView.addSubview(aboutAppButton)
 
         NSLayoutConstraint.activate([
             profileImage.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 20),
@@ -69,7 +82,15 @@ final class MenuScreenView: UIView {
             profileButton.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 116),
             profileButton.leadingAnchor.constraint(equalTo: scrollView.safeAreaLayoutGuide.leadingAnchor, constant: 16),
             profileButton.trailingAnchor.constraint(equalTo: scrollView.safeAreaLayoutGuide.trailingAnchor, constant: -16),
-            profileButton.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: -16)
+
+            avardsButton.topAnchor.constraint(equalTo: profileButton.bottomAnchor, constant: 16),
+            avardsButton.leadingAnchor.constraint(equalTo: scrollView.safeAreaLayoutGuide.leadingAnchor, constant: 16),
+            avardsButton.trailingAnchor.constraint(equalTo: scrollView.safeAreaLayoutGuide.trailingAnchor, constant: -16),
+
+            aboutAppButton.topAnchor.constraint(equalTo: avardsButton.bottomAnchor, constant: 16),
+            aboutAppButton.leadingAnchor.constraint(equalTo: scrollView.safeAreaLayoutGuide.leadingAnchor, constant: 16),
+            aboutAppButton.trailingAnchor.constraint(equalTo: scrollView.safeAreaLayoutGuide.trailingAnchor, constant: -16),
+            aboutAppButton.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: -16)
         ])
         layoutIfNeeded()
         menuPanel.makeGradientBackground(with: [UIColor.lightTeal.cgColor,

@@ -24,6 +24,7 @@ final class EventsListScreenVC: UIViewController, IEventsListScreenVC {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.alwaysBounceVertical = true
+        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 50, right: 0)
         return tableView
     }()
 
@@ -68,8 +69,8 @@ final class EventsListScreenVC: UIViewController, IEventsListScreenVC {
         navigationController?.navigationBar.isHidden = true
     }
 
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
         navigationController?.navigationBar.isHidden = false
     }
 

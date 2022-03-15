@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navigationController = UINavigationController()
         window = UIWindow()
         window?.rootViewController = navigationController
-        navigationController.pushViewController(MenuScreenGraph().viewController, animated: false)
+        navigationController.pushViewController(StartScreenGraph().viewController, animated: false)
 //        navigationController.pushViewController(TabBarControllerGraph().controller,
 //                                                animated: false)
         window?.makeKeyAndVisible()

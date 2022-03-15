@@ -50,11 +50,21 @@ final class AvardsScreenView: UIView {
         return tableView
     }()
 
+    lazy var backButton: UIButton = {
+        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+        let imageView = UIImageView(frame: CGRect(x: 10, y: 10, width: 20, height: 20))
+        imageView.image = .chevronLeft.withTintColor(.white)
+        button.addSubview(imageView)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+
     func setup() {
         addSubview(avardsPanel)
         addSubview(avardsImage)
         addSubview(myAvardsLabel)
         avardsPanel.addSubview(avardsTable)
+        avardsPanel.addSubview(backButton)
 
         NSLayoutConstraint.activate([
             avardsImage.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
@@ -69,6 +79,9 @@ final class AvardsScreenView: UIView {
             avardsPanel.trailingAnchor.constraint(equalTo: trailingAnchor),
             avardsPanel.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
             avardsPanel.topAnchor.constraint(equalTo: avardsImage.centerYAnchor),
+
+            backButton.leadingAnchor.constraint(equalTo: avardsPanel.leadingAnchor, constant: 16),
+            backButton.topAnchor.constraint(equalTo: avardsPanel.topAnchor, constant: 46),
 
             avardsTable.leadingAnchor.constraint(equalTo: avardsPanel.leadingAnchor, constant: 8),
             avardsTable.trailingAnchor.constraint(equalTo: avardsPanel.trailingAnchor, constant: -16),

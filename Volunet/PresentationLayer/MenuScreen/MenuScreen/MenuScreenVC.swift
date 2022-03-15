@@ -35,6 +35,7 @@ final class MenuScreenVC: UIViewController, IMenuScreenVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        addTargets()
     }
 
     private func setup() {
@@ -51,12 +52,26 @@ final class MenuScreenVC: UIViewController, IMenuScreenVC {
         ])
         menuScreenView.frame = view.frame
         menuScreenView.setup()
-//        menuScreenView.scrollView.setContentSize()
+        menuScreenView.scrollView.setContentSize()
     }
 
-    @objc
-    func didTapCloseButton() {
-        router.close()
+    private func addTargets() {
+        menuScreenView.profileButton.addTarget(self, action: #selector(onTapProfile), for: .touchUpInside)
+        menuScreenView.avardsButton.addTarget(self, action: #selector(onTapAvards), for: .touchUpInside)
+        menuScreenView.aboutAppButton.addTarget(self, action: #selector(onTapAboutApp), for: .touchUpInside)
+
+    }
+
+    @objc func onTapProfile() {
+        router.onTapProfile()
+    }
+
+    @objc func onTapAvards() {
+        router.onTapAvards()
+    }
+
+    @objc func onTapAboutApp() {
+        router.onTapAboutApp()
     }
 }
 

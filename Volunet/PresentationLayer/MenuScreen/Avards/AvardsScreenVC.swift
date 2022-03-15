@@ -39,6 +39,16 @@ final class AvardsScreenVC: UIViewController, IAvardsScreenVC {
         setup()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.isHidden = true
+    }
+
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        navigationController?.navigationBar.isHidden = false
+    }
+
     private func setup() {
         setNavigationControllerTransparent()
         hideKeyboardWhenTappedAround()
@@ -53,7 +63,7 @@ final class AvardsScreenVC: UIViewController, IAvardsScreenVC {
         ])
         avardsScreenView.frame = view.frame
         avardsScreenView.setup()
-//        avardsScreenView.scrollView.setContentSize()
+        avardsScreenView.backButton.addTarget(self, action: #selector(didTapCloseButton), for: .touchUpInside)
     }
 
     @objc
@@ -64,7 +74,7 @@ final class AvardsScreenVC: UIViewController, IAvardsScreenVC {
 
 extension AvardsScreenVC: UITableViewDataSource, UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 10
+        return interator.avardsCount
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -74,9 +84,7 @@ extension AvardsScreenVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "\(AvardCell.self)") as? AvardCell
                 else { return UITableViewCell() }
-
-//              let event = interator.getEvent(at: indexPath.section) else { return UITableViewCell() }
-        cell.setup(avard: Avard(title: "title", image: .add))
+        cell.setup(avard: interator.getAvard(at: indexPath.section))
         cell.isUserInteractionEnabled = false
         return cell
     }

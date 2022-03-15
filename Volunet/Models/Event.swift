@@ -6,10 +6,12 @@
 //
 
 import Foundation
+import UIKit
 
 struct Event {
     let startDate: String
     let title: String
     let description: String
     let ownerName: String
+    let location: String
 }

@@ -18,11 +18,11 @@ final class SignInService: ISignInService {
 
     let mockedProfile = Profile(uuid: "1",
                                 name: "Саша",
-                                events: [UserEvent(event: Event(startDate: "05/07/21", title: "Юбилей ВДНХ", description: "2", ownerName: "23"), mark: 4.9, comment: "Comment"),
-                                         UserEvent(event: Event(startDate: "05/07/21", title: "Поездка в детский дом", description: "2", ownerName: "23"), mark: 5.0, comment: "Comment")],
+                                events: [UserEvent(event: Event(startDate: "05/07/21", title: "Юбилей ВДНХ", description: "2", ownerName: "23", location: "ВДНХ"), mark: 4.9, comment: "Comment"),
+                                         UserEvent(event: Event(startDate: "05/07/21", title: "Поездка в детский дом", description: "2", ownerName: "23", location: "ВДНХ"), mark: 5.0, comment: "Comment")],
                                 specialHealthFeatures: ["Вегетарианец", "Плохой слух"],
                                 imageUrl: "image",
-                                avards: [Avard(title: "Шарики - детям", image: .add)])
+                                avards: [Avard(title: "Шарики - детям", image: .volunteerOrganizationPlaceholder)])
 
     static var shared: ISignInService {
         guard let instance = SignInService._shared else {

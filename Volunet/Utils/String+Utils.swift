@@ -30,6 +30,10 @@ enum LocalizedStringsKeys: String {
     case ok
     case error
     case somethingWentWrong
+    case profile
+    case avards
+    case privacyAndSafety
+    case aboutApp
 }
 
 extension String {

@@ -24,17 +24,18 @@ class StartScreenInteractor: IStartScreenInteractor {
 
     func tryToSignIn() {
         signInService.signIn(email: "", password: "") { [weak self] result in
-            switch result {
-            case let .success(profile):
-                guard let profile = profile else {
-                    self?.presenter.openWelcomingScreen()
-                    return
-                }
-                self?.profileStorage.updateProfile(profile)
-                self?.presenter.openMainPage()
-            case .failure:
-                self?.presenter.openWelcomingScreen()
-            }
+            self?.presenter.openWelcomingScreen()
+//            switch result {
+//            case let .success(profile):
+//                guard let profile = profile else {
+//                    self?.presenter.openWelcomingScreen()
+//                    return
+//                }
+//                self?.profileStorage.updateProfile(profile)
+//                self?.presenter.openMainPage()
+//            case .failure:
+//                self?.presenter.openWelcomingScreen()
+//            }
         }
     }
 }

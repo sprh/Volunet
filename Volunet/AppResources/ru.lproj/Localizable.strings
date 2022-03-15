@@ -28,3 +28,6 @@
 "ok" = "Хорошо";
 "error" = "Ошибка";
 "somethingWentWrong" = "Что-то пошло не так";
+"profile" = "Профиль";
+"avards" = "Награды";
+"aboutApp" = "О приложении";

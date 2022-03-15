@@ -32,7 +32,7 @@ final class EventInfoScreenInterator: IEventInfoScreenInterator {
     }
 
     var eventLocation: String {
-        "Location" // TODO: Change
+        event.location
     }
 
     var eventDate: String {

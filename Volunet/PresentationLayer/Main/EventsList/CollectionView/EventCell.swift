@@ -62,6 +62,7 @@ final class EventCell: UITableViewCell {
 
     func setup(with event: Event) {
         backgroundColor = .whiteTeal
+        selectionStyle = .none
         title.text = event.title
         descriptionLabel.text = event.description
         ownerName.text = event.ownerName
