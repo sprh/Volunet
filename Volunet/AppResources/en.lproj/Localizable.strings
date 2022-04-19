@@ -32,3 +32,8 @@
 "avards" = "Avards";
 "privacyAndSafety" = "Privacy and Safety";
 "aboutApp" = "About app";
+"addEvent" = "Create new event";
+"eventName" = "Event name";
+"eventDescription" = "Event description";
+"eventDates" = "Dates";
+"eventLocation" = "Location";

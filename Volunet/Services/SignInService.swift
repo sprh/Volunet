@@ -22,7 +22,7 @@ final class SignInService: ISignInService {
                                          UserEvent(event: Event(startDate: "05/07/21", title: "Поездка в детский дом", description: "2", ownerName: "23", location: "ВДНХ"), mark: 5.0, comment: "Comment")],
                                 specialHealthFeatures: ["Вегетарианец", "Плохой слух"],
                                 imageUrl: "image",
-                                avards: [Avard(title: "Шарики - детям", image: .volunteerOrganizationPlaceholder)])
+                                avards: [Avard(title: "Шарики - детям", image: .volunteerOrganizationPlaceholder)], accountType: .organization)
 
     static var shared: ISignInService {
         guard let instance = SignInService._shared else {

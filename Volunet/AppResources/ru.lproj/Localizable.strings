@@ -31,3 +31,8 @@
 "profile" = "Профиль";
 "avards" = "Награды";
 "aboutApp" = "О приложении";
+"addEvent" = "Создать новое событие";
+"eventName" = "Название события";
+"eventDescription" = "Описание события";
+"eventDates" = "Даты";
+"eventLocation" = "Локация";

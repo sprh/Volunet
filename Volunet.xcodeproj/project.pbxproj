@@ -36,6 +36,14 @@
 		E313D894273EFECA00EF1E3C /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E313D893273EFECA00EF1E3C /* EventCell.swift */; };
 		E313D89B273F019900EF1E3C /* CalendarDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E313D89A273F019900EF1E3C /* CalendarDate.swift */; };
 		E316FB3E27B9702400E9C76E /* UserEventInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E316FB3D27B9702400E9C76E /* UserEventInfoView.swift */; };
+		E32F62BD280F01470091AF26 /* NewEventVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32F62B8280F01470091AF26 /* NewEventVC.swift */; };
+		E32F62BE280F01470091AF26 /* NewEventPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32F62B9280F01470091AF26 /* NewEventPresenter.swift */; };
+		E32F62BF280F01470091AF26 /* NewEventRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32F62BA280F01470091AF26 /* NewEventRouter.swift */; };
+		E32F62C0280F01470091AF26 /* NewEventInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32F62BB280F01470091AF26 /* NewEventInteractor.swift */; };
+		E32F62C1280F01470091AF26 /* NewEventGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32F62BC280F01470091AF26 /* NewEventGraph.swift */; };
+		E32F62C3280F04230091AF26 /* NewEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32F62C2280F04230091AF26 /* NewEventCell.swift */; };
+		E32F62C6280F079B0091AF26 /* NewEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32F62C5280F079B0091AF26 /* NewEventView.swift */; };
+		E32F62C8280F0E560091AF26 /* Date+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32F62C7280F0E560091AF26 /* Date+Utils.swift */; };
 		E384C63227B99AAA008026AE /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E384C63127B99AAA008026AE /* TabBarController.swift */; };
 		E384C63527B9AA51008026AE /* TabBarControllerGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = E384C63427B9AA51008026AE /* TabBarControllerGraph.swift */; };
 		E384C63727BAE52D008026AE /* Avard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E384C63627BAE52D008026AE /* Avard.swift */; };
@@ -155,6 +163,14 @@
 		E313D893273EFECA00EF1E3C /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
 		E313D89A273F019900EF1E3C /* CalendarDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDate.swift; sourceTree = "<group>"; };
 		E316FB3D27B9702400E9C76E /* UserEventInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEventInfoView.swift; sourceTree = "<group>"; };
+		E32F62B8280F01470091AF26 /* NewEventVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewEventVC.swift; sourceTree = "<group>"; };
+		E32F62B9280F01470091AF26 /* NewEventPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewEventPresenter.swift; sourceTree = "<group>"; };
+		E32F62BA280F01470091AF26 /* NewEventRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewEventRouter.swift; sourceTree = "<group>"; };
+		E32F62BB280F01470091AF26 /* NewEventInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewEventInteractor.swift; sourceTree = "<group>"; };
+		E32F62BC280F01470091AF26 /* NewEventGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewEventGraph.swift; sourceTree = "<group>"; };
+		E32F62C2280F04230091AF26 /* NewEventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEventCell.swift; sourceTree = "<group>"; };
+		E32F62C5280F079B0091AF26 /* NewEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEventView.swift; sourceTree = "<group>"; };
+		E32F62C7280F0E560091AF26 /* Date+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Utils.swift"; sourceTree = "<group>"; };
 		E384C63127B99AAA008026AE /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		E384C63427B9AA51008026AE /* TabBarControllerGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllerGraph.swift; sourceTree = "<group>"; };
 		E384C63627BAE52D008026AE /* Avard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Avard.swift; sourceTree = "<group>"; };
@@ -322,6 +338,7 @@
 			isa = PBXGroup;
 			children = (
 				E313D893273EFECA00EF1E3C /* EventCell.swift */,
+				E32F62C2280F04230091AF26 /* NewEventCell.swift */,
 			);
 			path = CollectionView;
 			sourceTree = "<group>";
@@ -335,6 +352,27 @@
 				E384C63627BAE52D008026AE /* Avard.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		E32F62B7280F00D80091AF26 /* NewEvent */ = {
+			isa = PBXGroup;
+			children = (
+				E32F62C4280F078B0091AF26 /* CustomElements */,
+				E32F62BC280F01470091AF26 /* NewEventGraph.swift */,
+				E32F62BB280F01470091AF26 /* NewEventInteractor.swift */,
+				E32F62B9280F01470091AF26 /* NewEventPresenter.swift */,
+				E32F62BA280F01470091AF26 /* NewEventRouter.swift */,
+				E32F62B8280F01470091AF26 /* NewEventVC.swift */,
+			);
+			path = NewEvent;
+			sourceTree = "<group>";
+		};
+		E32F62C4280F078B0091AF26 /* CustomElements */ = {
+			isa = PBXGroup;
+			children = (
+				E32F62C5280F079B0091AF26 /* NewEventView.swift */,
+			);
+			path = CustomElements;
 			sourceTree = "<group>";
 		};
 		E384C63327B9AA36008026AE /* TabBar */ = {
@@ -432,6 +470,7 @@
 				E313D881273D7A0E00EF1E3C /* UIViewController+Utils.swift */,
 				E3FDDF4027949BC50045B237 /* UIButton+Utils.swift */,
 				E3FDDF472794B9860045B237 /* UIScrollView+Utils.swift */,
+				E32F62C7280F0E560091AF26 /* Date+Utils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -559,6 +598,7 @@
 		E3FDDF282786F4D30045B237 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				E32F62B7280F00D80091AF26 /* NewEvent */,
 				E3FDDF292786F5BB0045B237 /* EventInfo */,
 				E313D887273EFD3200EF1E3C /* EventsList */,
 			);
@@ -904,6 +944,7 @@
 				E313D88F273EFDB900EF1E3C /* EventsListRouter.swift in Sources */,
 				E3C8DEF327AC4E9E0020D176 /* ProfileStorage.swift in Sources */,
 				E313D891273EFDB900EF1E3C /* EventsListInteractor.swift in Sources */,
+				E32F62BE280F01470091AF26 /* NewEventPresenter.swift in Sources */,
 				E3FDDF4327949C040045B237 /* RoundedImageView.swift in Sources */,
 				E3C8DEFF27AC512E0020D176 /* ProfileScreenInteractor.swift in Sources */,
 				E313D880273D77DB00EF1E3C /* TextFieldWithPadding.swift in Sources */,
@@ -935,6 +976,7 @@
 				E3A507DB2737143800AE8DD2 /* UIColor+Utils.swift in Sources */,
 				E384C64727BAEBD2008026AE /* AvardCell.swift in Sources */,
 				E3FDDF4127949BC50045B237 /* UIButton+Utils.swift in Sources */,
+				E32F62BF280F01470091AF26 /* NewEventRouter.swift in Sources */,
 				E3C8DEF527AC4ED90020D176 /* Profile.swift in Sources */,
 				E3C8DEF727AC504C0020D176 /* UserEvent.swift in Sources */,
 				E313D858273D390100EF1E3C /* MainButton.swift in Sources */,
@@ -945,16 +987,21 @@
 				E313D86F273D445C00EF1E3C /* RegistrationScreenGraph.swift in Sources */,
 				E313D882273D7A0E00EF1E3C /* UIViewController+Utils.swift in Sources */,
 				E313D86D273D43E200EF1E3C /* RegistrationScreenRouter.swift in Sources */,
+				E32F62C3280F04230091AF26 /* NewEventCell.swift in Sources */,
 				E3A507EC273725EA00AE8DD2 /* UIView+Utils.swift in Sources */,
 				E384C64227BAE66A008026AE /* AvardsScreenPresenter.swift in Sources */,
+				E32F62C6280F079B0091AF26 /* NewEventView.swift in Sources */,
 				E313D879273D457A00EF1E3C /* SignInScreenGraph.swift in Sources */,
 				E313D877273D457A00EF1E3C /* SignInScreenInteractor.swift in Sources */,
+				E32F62C8280F0E560091AF26 /* Date+Utils.swift in Sources */,
 				E3A507A2273710F700AE8DD2 /* AppDelegate.swift in Sources */,
 				E3C8DF0227AC512E0020D176 /* ProfileScreenGraph.swift in Sources */,
 				E384C63F27BAE66A008026AE /* AvardsScreenRouter.swift in Sources */,
 				E313D88D273EFDB900EF1E3C /* EventsListPresenter.swift in Sources */,
+				E32F62BD280F01470091AF26 /* NewEventVC.swift in Sources */,
 				E313D878273D457A00EF1E3C /* SignInScreenPresenter.swift in Sources */,
 				E313D87C273D58CC00EF1E3C /* RegistrationScreenView.swift in Sources */,
+				E32F62C0280F01470091AF26 /* NewEventInteractor.swift in Sources */,
 				E3EE4C2327DCD4E300E02090 /* StartScreenRouter.swift in Sources */,
 				E384C63727BAE52D008026AE /* Avard.swift in Sources */,
 				E3FDDF322786F60F0045B237 /* EventInfoInteractor.swift in Sources */,
@@ -974,6 +1021,7 @@
 				E3FDDF382786F7F90045B237 /* EventsStorage.swift in Sources */,
 				E313D864273D408100EF1E3C /* String+Utils.swift in Sources */,
 				E3EE4C1427D78C8900E02090 /* SignInService.swift in Sources */,
+				E32F62C1280F01470091AF26 /* NewEventGraph.swift in Sources */,
 				E3A507E627371AA400AE8DD2 /* WelcomingScreenRouter.swift in Sources */,
 				E3A507EA27371EDD00AE8DD2 /* WelcomingScreenView.swift in Sources */,
 				E3AC9ED527DE235100C3A9DB /* MenuScreenPresenter.swift in Sources */,

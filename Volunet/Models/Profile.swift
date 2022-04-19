@@ -14,6 +14,7 @@ struct Profile {
     let specialHealthFeatures: [String]
     let imageUrl: String
     let avards: [Avard]?
+    let accountType: AccountType
 }
 
 enum AccountType: Int {

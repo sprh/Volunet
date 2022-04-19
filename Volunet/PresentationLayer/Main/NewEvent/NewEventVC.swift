@@ -1,5 +1,5 @@
 //
-//  EventInfoScreenVC.swift
+//  NewEventScreenVC.swift
 //  Volunet
 //
 //  Created by Софья Тимохина on 12.11.2021.
@@ -7,13 +7,13 @@
 
 import UIKit
 
-protocol IEventInfoScreenVC: UIViewController {
+protocol INewEventScreenVC: UIViewController {
 
 }
 
-final class EventInfoScreenVC: UIViewController, IEventInfoScreenVC {
-    private let interator: IEventInfoScreenInterator
-    private let router: IEventInfoScreenRouter
+final class NewEventScreenVC: UIViewController, INewEventScreenVC {
+    private let interator: INewEventScreenInterator
+    private let router: INewEventScreenRouter
 
     lazy var blurEffectView: UIVisualEffectView = {
         let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.light)
@@ -30,14 +30,8 @@ final class EventInfoScreenVC: UIViewController, IEventInfoScreenVC {
         return scrollView
     }()
 
-    lazy var eventInfoView: EventInfoView = {
-        let view = EventInfoView(frame: .zero,
-                                 location: interator.eventLocation,
-                                 date: interator.eventDate,
-                                 title: interator.eventTitle,
-                                 description: interator.eventDescription,
-                                 avatar: .volunteerOrganizationPlaceholder,  // TODO: change
-                                 ownerName: interator.eventOwner)
+    lazy var eventInfoView: NewEventView = {
+        let view = NewEventView()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -49,8 +43,8 @@ final class EventInfoScreenVC: UIViewController, IEventInfoScreenVC {
         return closeButton
     }()
 
-    init(interator: IEventInfoScreenInterator,
-         router: IEventInfoScreenRouter) {
+    init(interator: INewEventScreenInterator,
+         router: INewEventScreenRouter) {
         self.interator = interator
         self.router = router
         super.init(nibName: nil, bundle: nil)
@@ -80,6 +74,7 @@ final class EventInfoScreenVC: UIViewController, IEventInfoScreenVC {
         view.addSubview(scrollView)
         scrollView.addSubview(eventInfoView)
         view.addSubview(closeButton)
+        eventInfoView.setup()
 
         NSLayoutConstraint.activate([
             scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
@@ -98,9 +93,15 @@ final class EventInfoScreenVC: UIViewController, IEventInfoScreenVC {
         ])
         view.layoutIfNeeded()
         scrollView.setContentSize()
+        addTargets()
+    }
 
-        eventInfoView.respondButton.addTarget(self, action: #selector(onTapRespond), for: .touchUpInside)
-        eventInfoView.respondButton.isEnabled = ProfileStorage.shared.profile?.accountType == AccountType.volunteer
+    private func addTargets() {
+        eventInfoView.fromDate.addTarget(self, action: #selector(formDatePickerChanged), for: .valueChanged)
+        eventInfoView.toDate.addTarget(self, action: #selector(toDatePickerChanged), for: .valueChanged)
+        eventInfoView.eventDescription.delegate = self
+        eventInfoView.location.delegate = self
+        eventInfoView.eventName.delegate = self
     }
 
     @objc
@@ -111,5 +112,35 @@ final class EventInfoScreenVC: UIViewController, IEventInfoScreenVC {
     @objc
     private func onTapRespond() {
         router.onTapRespond()
+    }
+
+    @objc
+    private func formDatePickerChanged() {
+        if (eventInfoView.fromDate.date > eventInfoView.toDate.date) {
+            eventInfoView.toDate.setDate(eventInfoView.fromDate.date, animated: true)
+            eventInfoView.toDate.minimumDate = eventInfoView.fromDate.date
+        } else {
+            eventInfoView.fromDate.minimumDate = min(eventInfoView.fromDate.date, .tomorrow)
+        }
+    }
+
+    @objc
+    private func toDatePickerChanged() {
+        if (eventInfoView.toDate.date < eventInfoView.fromDate.date) {
+            eventInfoView.toDate.setDate(eventInfoView.toDate.date, animated: true)
+        }
+    }
+}
+
+extension NewEventScreenVC: UITextViewDelegate {
+    func textViewDidChange(_ textView: UITextView) {
+        if (eventInfoView.location.text?.isEmpty ?? true ||
+            eventInfoView.eventName.text?.isEmpty ?? true ||
+            eventInfoView.eventDescription.text?.isEmpty ?? true
+        ) {
+            eventInfoView.addEventButton.isEnabled = false
+        } else {
+            eventInfoView.addEventButton.isEnabled = true
+        }
     }
 }

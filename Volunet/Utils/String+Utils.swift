@@ -34,6 +34,11 @@ enum LocalizedStringsKeys: String {
     case avards
     case privacyAndSafety
     case aboutApp
+    case addEvent
+    case eventName
+    case eventDescription
+    case eventDates
+    case eventLocation
 }
 
 extension String {

@@ -12,6 +12,8 @@ protocol IEventsListScreenInterator {
 
     var loading: Bool { get set }
 
+    var organization: Bool { get }
+
     func getEvent(at index: Int) -> Event?
     func loadEvents()
 }
@@ -31,6 +33,10 @@ final class EventsListScreenInterator: IEventsListScreenInterator {
     }
 
     var loading = true
+
+    var organization: Bool {
+        return profileStorage.profile?.accountType == .organization
+    }
 
     init(presenter: IEventsListScreenPresenter,
          eventsStorage: IEventsStorage,

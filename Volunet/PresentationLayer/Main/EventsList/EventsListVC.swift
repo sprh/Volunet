@@ -21,6 +21,7 @@ final class EventsListScreenVC: UIViewController, IEventsListScreenVC {
         tableView.backgroundColor = .clear
         tableView.register(EventCell.self, forCellReuseIdentifier: "\(EventCell.self)")
         tableView.register(LoadingTableViewCell.self, forCellReuseIdentifier: "\(LoadingTableViewCell.self)")
+        tableView.register(NewEventCell.self, forCellReuseIdentifier: "\(NewEventCell.self)")
         tableView.delegate = self
         tableView.dataSource = self
         tableView.alwaysBounceVertical = true
@@ -90,7 +91,13 @@ final class EventsListScreenVC: UIViewController, IEventsListScreenVC {
 
 extension EventsListScreenVC: UITableViewDataSource, UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return interator.eventsCount + (interator.loading ? 1 : 0)
+        let count = interator.eventsCount
+        if (interator.loading) {
+            return count + 1
+        } else if (interator.organization) {
+            return count + 1
+        }
+        return count
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -105,8 +112,17 @@ extension EventsListScreenVC: UITableViewDataSource, UITableViewDelegate {
             cell.setup()
             return cell
         }
+
+        if (indexPath.section == 0 && interator.organization) {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "\(NewEventCell.self)") as? NewEventCell else {
+                return UITableViewCell()
+            }
+            cell.setup()
+            return cell
+        }
+
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "\(EventCell.self)") as? EventCell,
-              let event = interator.getEvent(at: indexPath.section) else { return UITableViewCell() }
+              let event = interator.getEvent(at: indexPath.section - (interator.organization ? 1 : 0)) else { return UITableViewCell() }
         cell.setup(with: event)
         return cell
     }
@@ -129,10 +145,14 @@ extension EventsListScreenVC: UITableViewDataSource, UITableViewDelegate {
         ])
         return tableViewHeaderView
     }
-
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let event = interator.getEvent(at: indexPath.section) else { return }
-        router.showEventInfoScreen(for: event)
+        if (interator.organization && indexPath.section == 0) {
+            router.showNewEvent()
+        } else {
+            guard let event = interator.getEvent(at: indexPath.section) else { return }
+            router.showEventInfoScreen(for: event)
+        }
     }
 }
 
