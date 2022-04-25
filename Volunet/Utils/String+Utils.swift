@@ -39,6 +39,7 @@ enum LocalizedStringsKeys: String {
     case eventDescription
     case eventDates
     case eventLocation
+    case messages
 }
 
 extension String {

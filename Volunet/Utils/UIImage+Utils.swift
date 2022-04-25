@@ -55,4 +55,8 @@ extension UIImage {
     static var balloon: UIImage {
         UIImage(named: "balloon")!
     }
+
+    static var chat: UIImage {
+        UIImage(named: "chat")!
+    }
 }

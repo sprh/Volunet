@@ -3,7 +3,7 @@ platform :ios, '10.0'
 target 'Volunet' do
   use_frameworks!
   pod 'AnyFormatKit', '~> 2.5.1'
-  pod 'SwiftLint'
+  pod 'MessageKit'
 
 
 

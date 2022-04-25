@@ -11,8 +11,10 @@ class TabBarControllerGraph {
     let controller: UITabBarController
 
     init() {
-        controller = TabBarController(controllers: [TabBarControllerGraph.getMainPage(),
-                                                    TabBarControllerGraph.getProfilePage()])
+        controller = TabBarController(controllers: [
+            TabBarControllerGraph.getChatsPage(),
+            TabBarControllerGraph.getMainPage(),
+            TabBarControllerGraph.getProfilePage()])
     }
 
     private static func getProfilePage() -> UIViewController {
@@ -24,6 +26,12 @@ class TabBarControllerGraph {
     private static func getMainPage() -> UIViewController {
         let viewController = EventsListScreenGraph().viewController
         viewController.tabBarItem.image = .mainTabBarItem
+        return viewController
+    }
+
+    private static func getChatsPage() -> UIViewController {
+        let viewController = ChatsListVC()
+        viewController.tabBarItem.image = .chat
         return viewController
     }
 }
