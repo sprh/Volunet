@@ -35,6 +35,11 @@ class ChatsListVC: UIViewController {
         chatsListView.chatsList.delegate = self
         chatsListView.chatsList.dataSource = self
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        chatsListView.chatsList.reloadData()
+    }
 }
 
 extension ChatsListVC: UITableViewDataSource, UITableViewDelegate {
@@ -53,5 +58,10 @@ extension ChatsListVC: UITableViewDataSource, UITableViewDelegate {
         cell.setup()
         cell.layoutIfNeeded()
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let view = ChatVC()
+        navigationController?.pushViewController(view, animated: true)
     }
 }

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import MessengerKit
 
 class Mocks {
     public static let sashaProfile = Profile(uuid: 1,
@@ -41,4 +42,14 @@ class Mocks {
                                                                   description: "Ты сможешь поделиться своей любовью и заботой с собаками из приюта N. Если хочешь, захвати с собой немного корма, всех ждем :)",
                                                                   ownerName: "Твори добро",
                                       location: "Больница", ownerUuid: 1)]
+
+    public static var messages: [[MSGMessage]] = [
+            [
+                MSGMessage(id: 2, body: .text("Ребята, никто не потерялся?"), user: vasyaProfile, sentAt: Date(timeIntervalSince1970: 1650640436)),
+                MSGMessage(id: 2, body: .text("Ждем вас у южного входа!"), user: vasyaProfile, sentAt: Date(timeIntervalSince1970: 1650640436)),
+                MSGMessage(id: 3, body: .text("Уже бегу!"), user: sashaProfile, sentAt: Date(timeIntervalSince1970: 1650640456)),
+                MSGMessage(id: 3, body: .text("Но могу немного опоздать :("), user: sashaProfile, sentAt: Date(timeIntervalSince1970: 1650640499)),
+                MSGMessage(id: 3, body: .text("Через 10 минут обед, не забывайте"), user: vasyaProfile, sentAt: Date(timeIntervalSince1970: 1650654836)),
+            ],
+        ]
 }

@@ -6,8 +6,9 @@
 //
 
 import Foundation
+import MessengerKit
 
-struct Profile {
+struct Profile: MSGUser {
     let uuid: Int
     let name: String
     let events: [UserEvent]
@@ -15,6 +16,22 @@ struct Profile {
     let imageUrl: String
     let avards: [Avard]?
     let accountType: AccountType
+
+    var displayName: String {
+        name
+    }
+
+    var avatar: UIImage? {
+        get {
+            return nil
+        } set {
+            
+        }
+    }
+
+    var isSender: Bool {
+        ProfileStorage.shared.profile?.uuid == uuid
+    }
 }
 
 enum AccountType: Int {

@@ -92,6 +92,13 @@
 		E3C8DF0327AC512E0020D176 /* ProfileScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C8DEFD27AC512D0020D176 /* ProfileScreenRouter.swift */; };
 		E3C8DF0627AC63AC0020D176 /* SpecialHealthFeatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C8DF0527AC63AC0020D176 /* SpecialHealthFeatureView.swift */; };
 		E3D4DDF82816D45400007672 /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D4DDF72816D45400007672 /* ChatCell.swift */; };
+		E3D4DDFB2816D50C00007672 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D4DDFA2816D50C00007672 /* ChatVC.swift */; };
+		E3D4DE002816D7C100007672 /* ChatCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D4DDFF2816D7C100007672 /* ChatCollectionView.swift */; };
+		E3D4DE152816E4B700007672 /* ChatViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D4DE0E2816E4B700007672 /* ChatViewStyle.swift */; };
+		E3D4DE162816E4B700007672 /* CustomIncomingTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3D4DE0F2816E4B700007672 /* CustomIncomingTextCell.xib */; };
+		E3D4DE172816E4B700007672 /* CustomOutgoingTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3D4DE102816E4B700007672 /* CustomOutgoingTextCell.xib */; };
+		E3D4DE1C2816E9EB00007672 /* MessageBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D4DE1B2816E9EB00007672 /* MessageBubble.swift */; };
+		E3D4DE1E2816EC2C00007672 /* ChatMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D4DE1D2816EC2C00007672 /* ChatMessageCell.swift */; };
 		E3EE4C1127D77FD200E02090 /* SignInScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE4C1027D77FD200E02090 /* SignInScreenView.swift */; };
 		E3EE4C1427D78C8900E02090 /* SignInService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE4C1327D78C8900E02090 /* SignInService.swift */; };
 		E3EE4C1627D791F500E02090 /* DotsAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE4C1527D791F500E02090 /* DotsAnimationView.swift */; };
@@ -231,6 +238,13 @@
 		E3C8DEFD27AC512D0020D176 /* ProfileScreenRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileScreenRouter.swift; sourceTree = "<group>"; };
 		E3C8DF0527AC63AC0020D176 /* SpecialHealthFeatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialHealthFeatureView.swift; sourceTree = "<group>"; };
 		E3D4DDF72816D45400007672 /* ChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
+		E3D4DDFA2816D50C00007672 /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
+		E3D4DDFF2816D7C100007672 /* ChatCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCollectionView.swift; sourceTree = "<group>"; };
+		E3D4DE0E2816E4B700007672 /* ChatViewStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewStyle.swift; sourceTree = "<group>"; };
+		E3D4DE0F2816E4B700007672 /* CustomIncomingTextCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomIncomingTextCell.xib; sourceTree = "<group>"; };
+		E3D4DE102816E4B700007672 /* CustomOutgoingTextCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomOutgoingTextCell.xib; sourceTree = "<group>"; };
+		E3D4DE1B2816E9EB00007672 /* MessageBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageBubble.swift; sourceTree = "<group>"; };
+		E3D4DE1D2816EC2C00007672 /* ChatMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageCell.swift; sourceTree = "<group>"; };
 		E3EE4C1027D77FD200E02090 /* SignInScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInScreenView.swift; sourceTree = "<group>"; };
 		E3EE4C1327D78C8900E02090 /* SignInService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInService.swift; sourceTree = "<group>"; };
 		E3EE4C1527D791F500E02090 /* DotsAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotsAnimationView.swift; sourceTree = "<group>"; };
@@ -590,6 +604,7 @@
 		E3C46F8E2816D381009FF381 /* Chats */ = {
 			isa = PBXGroup;
 			children = (
+				E3D4DDF92816D4F700007672 /* Chat */,
 				E3C46F862816AD46009FF381 /* ChatsList */,
 			);
 			path = Chats;
@@ -617,6 +632,37 @@
 			);
 			path = CustomElements;
 			sourceTree = "<group>";
+		};
+		E3D4DDF92816D4F700007672 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				E3D4DE0C2816E4B700007672 /* Xibs */,
+				E3D4DDFE2816D7B200007672 /* CustomElements */,
+				E3D4DDFA2816D50C00007672 /* ChatVC.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		E3D4DDFE2816D7B200007672 /* CustomElements */ = {
+			isa = PBXGroup;
+			children = (
+				E3D4DE0E2816E4B700007672 /* ChatViewStyle.swift */,
+				E3D4DDFF2816D7C100007672 /* ChatCollectionView.swift */,
+				E3D4DE1B2816E9EB00007672 /* MessageBubble.swift */,
+				E3D4DE1D2816EC2C00007672 /* ChatMessageCell.swift */,
+			);
+			path = CustomElements;
+			sourceTree = "<group>";
+		};
+		E3D4DE0C2816E4B700007672 /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				E3D4DE0F2816E4B700007672 /* CustomIncomingTextCell.xib */,
+				E3D4DE102816E4B700007672 /* CustomOutgoingTextCell.xib */,
+			);
+			name = Xibs;
+			path = Volunet/PresentationLayer/Main/Chats/Xibs;
+			sourceTree = SOURCE_ROOT;
 		};
 		E3EE4C1227D78C6600E02090 /* Storages */ = {
 			isa = PBXGroup;
@@ -831,10 +877,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E313D85D273D3D3E00EF1E3C /* ChangaOne-Regular.ttf in Resources */,
+				E3D4DE172816E4B700007672 /* CustomOutgoingTextCell.xib in Resources */,
 				E3A507AE273710FC00AE8DD2 /* LaunchScreen.storyboard in Resources */,
 				E3A507AB273710FC00AE8DD2 /* Assets.xcassets in Resources */,
 				E3A507D4273713D700AE8DD2 /* Localizable.strings in Resources */,
 				E313D85C273D3D3B00EF1E3C /* ChangaOne-Italic.ttf in Resources */,
+				E3D4DE162816E4B700007672 /* CustomIncomingTextCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1005,6 +1053,7 @@
 				E32F62BE280F01470091AF26 /* NewEventPresenter.swift in Sources */,
 				E3FDDF4327949C040045B237 /* RoundedImageView.swift in Sources */,
 				E3C46F852816A9F5009FF381 /* AnotherProfileVC.swift in Sources */,
+				E3D4DE002816D7C100007672 /* ChatCollectionView.swift in Sources */,
 				E3C8DEFF27AC512E0020D176 /* ProfileScreenInteractor.swift in Sources */,
 				E313D880273D77DB00EF1E3C /* TextFieldWithPadding.swift in Sources */,
 				E3AC9EDA27DE235100C3A9DB /* MenuScreenRouter.swift in Sources */,
@@ -1015,7 +1064,9 @@
 				E3FDDF482794B9860045B237 /* UIScrollView+Utils.swift in Sources */,
 				E3EE4C2227DCD4E300E02090 /* StartScreenGraph.swift in Sources */,
 				E3FDDF332786F60F0045B237 /* EventInfoRouter.swift in Sources */,
+				E3D4DE1C2816E9EB00007672 /* MessageBubble.swift in Sources */,
 				E3AC9ED727DE235100C3A9DB /* MenuScreenInteractor.swift in Sources */,
+				E3D4DE1E2816EC2C00007672 /* ChatMessageCell.swift in Sources */,
 				E3C46F802816A39D009FF381 /* Mocks.swift in Sources */,
 				E3FDDF352786F7440045B237 /* Event.swift in Sources */,
 				E3C46F832816A668009FF381 /* AnotherProfileInfoView.swift in Sources */,
@@ -1046,6 +1097,7 @@
 				E313D890273EFDB900EF1E3C /* EventsListVC.swift in Sources */,
 				E384C64327BAE66A008026AE /* AvardsScreenGraph.swift in Sources */,
 				E313D867273D431700EF1E3C /* RegistrationScreenInteractor.swift in Sources */,
+				E3D4DE152816E4B700007672 /* ChatViewStyle.swift in Sources */,
 				E313D869273D434B00EF1E3C /* RegistrationScreenPresenter.swift in Sources */,
 				E313D86F273D445C00EF1E3C /* RegistrationScreenGraph.swift in Sources */,
 				E313D882273D7A0E00EF1E3C /* UIViewController+Utils.swift in Sources */,
@@ -1061,6 +1113,7 @@
 				E3C46F882816B73F009FF381 /* ChatsListVC.swift in Sources */,
 				E3C8DF0227AC512E0020D176 /* ProfileScreenGraph.swift in Sources */,
 				E384C63F27BAE66A008026AE /* AvardsScreenRouter.swift in Sources */,
+				E3D4DDFB2816D50C00007672 /* ChatVC.swift in Sources */,
 				E313D88D273EFDB900EF1E3C /* EventsListPresenter.swift in Sources */,
 				E32F62BD280F01470091AF26 /* NewEventVC.swift in Sources */,
 				E313D878273D457A00EF1E3C /* SignInScreenPresenter.swift in Sources */,

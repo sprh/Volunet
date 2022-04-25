@@ -46,6 +46,8 @@ class ChatCell: UITableViewCell {
 
     public func setup() {
         backgroundColor = .clear
+        selectionStyle = .none
+        setContent()
 
         let topLine = UIView()
         topLine.backgroundColor = .whiteTeal
@@ -89,6 +91,25 @@ class ChatCell: UITableViewCell {
             bottomLine.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             bottomLine.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
         ])
+    }
+
+    public func setContent() {
+        guard let last = Mocks.messages.last?.last else {
+            return
+        }
+
+        switch (last.body) {
+        case let .text(text):
+            lastMessage.text = text
+        default:
+            break
+        }
+
+        let sentAt = last.sentAt
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+        let date = dateFormatter.string(from: sentAt)
+        lastMessageTime.text = date
     }
 }
 
