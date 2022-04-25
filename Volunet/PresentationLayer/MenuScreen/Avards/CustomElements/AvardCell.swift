@@ -25,7 +25,7 @@ class AvardCell: UITableViewCell {
         return label
     }()
 
-    lazy var avardImage: UIImageView = {
+    lazy var avardImage: UIButton = {
         let imageView = RoundedImageView(frame: CGRect(x: 0,
                                                        y: 0,
                                                        width: 80,
@@ -37,7 +37,7 @@ class AvardCell: UITableViewCell {
     }()
 
     func setup(avard: Avard) {
-        avardImage.image = avard.image
+        avardImage.setImage(avard.image, for: .normal)
         title.text = avard.title
         backgroundColor = .clear
 

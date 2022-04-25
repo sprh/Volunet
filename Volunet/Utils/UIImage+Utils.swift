@@ -51,4 +51,8 @@ extension UIImage {
     static var menuItem: UIImage {
         UIImage(named: "menuItem")!
     }
+
+    static var balloon: UIImage {
+        UIImage(named: "balloon")!
+    }
 }

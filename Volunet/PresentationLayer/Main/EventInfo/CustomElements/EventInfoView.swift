@@ -67,7 +67,7 @@ final class EventInfoView: UIStackView {
         return label
     }()
 
-    lazy var roundedImageView: UIView = {
+    lazy var roundedImageView: UIButton = {
         let avatar = RoundedImageView(frame: CGRect(x: 0,
                                               y: 0,
                                               width: 60,

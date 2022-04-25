@@ -87,6 +87,11 @@ final class EventsListScreenVC: UIViewController, IEventsListScreenVC {
     func onLoadEvents() {
         tableView.reloadData()
     }
+
+    @objc
+    func onTapImage() {
+        router.onTapImage()
+    }
 }
 
 extension EventsListScreenVC: UITableViewDataSource, UITableViewDelegate {
@@ -124,6 +129,7 @@ extension EventsListScreenVC: UITableViewDataSource, UITableViewDelegate {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "\(EventCell.self)") as? EventCell,
               let event = interator.getEvent(at: indexPath.section - (interator.organization ? 1 : 0)) else { return UITableViewCell() }
         cell.setup(with: event)
+        cell.ownerAvatar.addTarget(self, action: #selector(onTapImage), for: .touchUpInside)
         return cell
     }
 

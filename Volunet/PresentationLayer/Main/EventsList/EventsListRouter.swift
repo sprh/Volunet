@@ -14,6 +14,7 @@ protocol IEventsListScreenRouter {
     func showEventInfoScreen(for event: Event)
     func showErrorDialog(error: String)
     func showNewEvent()
+    func onTapImage()
 }
 
 final class EventsListScreenRouter: IEventsListScreenRouter {
@@ -35,6 +36,12 @@ final class EventsListScreenRouter: IEventsListScreenRouter {
     func showNewEvent() {
         let graph = NewEventScreenGraph()
         let navigationController = UINavigationController(rootViewController: graph.viewController)
+        navigationController.modalPresentationStyle = .overCurrentContext
+        viewController?.navigationController?.present(navigationController, animated: false)
+    }
+
+    func onTapImage() {
+        let navigationController = UINavigationController(rootViewController: AnotherProfileVC())
         navigationController.modalPresentationStyle = .overCurrentContext
         viewController?.navigationController?.present(navigationController, animated: false)
     }

@@ -1,19 +1,18 @@
 //
-//  EventInfoScreenVC.swift
+//  AnotherProfileVC.swift
 //  Volunet
 //
-//  Created by Софья Тимохина on 12.11.2021.
+//  Created by Софья Тимохина on 25.04.2022.
 //
 
 import UIKit
 
-protocol IEventInfoScreenVC: UIViewController {
-
-}
-
-final class EventInfoScreenVC: UIViewController, IEventInfoScreenVC {
-    private let interator: IEventInfoScreenInterator
-    private let router: IEventInfoScreenRouter
+class AnotherProfileVC: UIViewController {
+    lazy var anotherProfileView: AnotherProfileInfoView = {
+        let view = AnotherProfileInfoView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
 
     lazy var blurEffectView: UIVisualEffectView = {
         let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.light)
@@ -30,35 +29,12 @@ final class EventInfoScreenVC: UIViewController, IEventInfoScreenVC {
         return scrollView
     }()
 
-    lazy var eventInfoView: EventInfoView = {
-        let view = EventInfoView(frame: .zero,
-                                 location: interator.eventLocation,
-                                 date: interator.eventDate,
-                                 title: interator.eventTitle,
-                                 description: interator.eventDescription,
-                                 avatar: .volunteerOrganizationPlaceholder,  // TODO: change
-                                 ownerName: interator.eventOwner)
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
-
     lazy var closeButton: UIButton = {
         let closeButton = CloseButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
         closeButton.translatesAutoresizingMaskIntoConstraints = false
         closeButton.addTarget(self, action: #selector(close), for: .touchUpInside)
         return closeButton
     }()
-
-    init(interator: IEventInfoScreenInterator,
-         router: IEventInfoScreenRouter) {
-        self.interator = interator
-        self.router = router
-        super.init(nibName: nil, bundle: nil)
-    }
-
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,8 +54,9 @@ final class EventInfoScreenVC: UIViewController, IEventInfoScreenVC {
     private func setup() {
         view.addSubview(blurEffectView)
         view.addSubview(scrollView)
-        scrollView.addSubview(eventInfoView)
+        scrollView.addSubview(anotherProfileView)
         view.addSubview(closeButton)
+        anotherProfileView.setup()
 
         NSLayoutConstraint.activate([
             scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
@@ -87,9 +64,9 @@ final class EventInfoScreenVC: UIViewController, IEventInfoScreenVC {
             scrollView.topAnchor.constraint(equalTo: view.topAnchor),
             scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
 
-            eventInfoView.leadingAnchor.constraint(equalTo: scrollView.safeAreaLayoutGuide.leadingAnchor, constant: 16),
-            eventInfoView.trailingAnchor.constraint(equalTo: scrollView.safeAreaLayoutGuide.trailingAnchor, constant: -16),
-            eventInfoView.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 16 + UIViewController.topSafeAreaHeight),
+            anotherProfileView.leadingAnchor.constraint(equalTo: scrollView.safeAreaLayoutGuide.leadingAnchor, constant: 16),
+            anotherProfileView.trailingAnchor.constraint(equalTo: scrollView.safeAreaLayoutGuide.trailingAnchor, constant: -16),
+            anotherProfileView.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 16 + UIViewController.topSafeAreaHeight),
 
             closeButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
             closeButton.widthAnchor.constraint(equalToConstant: 30),
@@ -98,24 +75,10 @@ final class EventInfoScreenVC: UIViewController, IEventInfoScreenVC {
         ])
         view.layoutIfNeeded()
         scrollView.setContentSize()
-
-        eventInfoView.respondButton.addTarget(self, action: #selector(onTapRespond), for: .touchUpInside)
-        eventInfoView.respondButton.isEnabled = ProfileStorage.shared.profile?.accountType == AccountType.volunteer
-        eventInfoView.roundedImageView.addTarget(self, action: #selector(onTapImage), for: .touchUpInside)
     }
 
     @objc
-    private func close() {
-        router.close()
-    }
-
-    @objc
-    private func onTapRespond() {
-        router.onTapRespond()
-    }
-
-    @objc
-    private func onTapImage() {
-        router.onTapImage()
+    func close() {
+        dismiss(animated: true)
     }
 }

@@ -8,7 +8,7 @@
 import Foundation
 
 struct Profile {
-    let uuid: String
+    let uuid: Int
     let name: String
     let events: [UserEvent]
     let specialHealthFeatures: [String]

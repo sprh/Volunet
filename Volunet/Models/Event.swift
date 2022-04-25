@@ -14,4 +14,5 @@ struct Event {
     let description: String
     let ownerName: String
     let location: String
+    let ownerUuid: Int
 }

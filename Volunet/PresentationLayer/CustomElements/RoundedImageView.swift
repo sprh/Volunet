@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class RoundedImageView: UIImageView {
+final class RoundedImageView: UIButton {
     private let layerColor: UIColor
     private let borderWidth: CGFloat
 
@@ -18,7 +18,7 @@ final class RoundedImageView: UIImageView {
         self.layerColor = layerColor
         self.borderWidth = borderWidth
         super.init(frame: frame)
-        self.image = image
+        setImage(image, for: .normal)
         setup()
     }
 

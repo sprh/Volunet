@@ -5,13 +5,14 @@
 //  Created by Софья Тимохина on 12.11.2021.
 //
 
-import Foundation
+import UIKit
 
 protocol IEventInfoScreenRouter {
     var viewController: IEventInfoScreenVC? { get set }
 
     func close()
     func onTapRespond()
+    func onTapImage()
 }
 
 final class EventInfoScreenRouter: IEventInfoScreenRouter {
@@ -23,5 +24,11 @@ final class EventInfoScreenRouter: IEventInfoScreenRouter {
 
     func onTapRespond() {
         viewController?.dismiss(animated: true)
+    }
+
+    func onTapImage() {
+        let navigationController = UINavigationController(rootViewController: AnotherProfileVC())
+        navigationController.modalPresentationStyle = .overCurrentContext
+        viewController?.navigationController?.present(navigationController, animated: false)
     }
 }

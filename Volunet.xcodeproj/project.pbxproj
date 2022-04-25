@@ -76,6 +76,9 @@
 		E3AC9ED827DE235100C3A9DB /* MenuScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AC9ED227DE235100C3A9DB /* MenuScreenView.swift */; };
 		E3AC9ED927DE235100C3A9DB /* MenuScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AC9ED327DE235100C3A9DB /* MenuScreenVC.swift */; };
 		E3AC9EDA27DE235100C3A9DB /* MenuScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AC9ED427DE235100C3A9DB /* MenuScreenRouter.swift */; };
+		E3C46F802816A39D009FF381 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C46F7F2816A39D009FF381 /* Mocks.swift */; };
+		E3C46F832816A668009FF381 /* AnotherProfileInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C46F822816A668009FF381 /* AnotherProfileInfoView.swift */; };
+		E3C46F852816A9F5009FF381 /* AnotherProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C46F842816A9F5009FF381 /* AnotherProfileVC.swift */; };
 		E3C8DEF327AC4E9E0020D176 /* ProfileStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C8DEF227AC4E9E0020D176 /* ProfileStorage.swift */; };
 		E3C8DEF527AC4ED90020D176 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C8DEF427AC4ED90020D176 /* Profile.swift */; };
 		E3C8DEF727AC504C0020D176 /* UserEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C8DEF627AC504C0020D176 /* UserEvent.swift */; };
@@ -209,6 +212,9 @@
 		E3AC9ED227DE235100C3A9DB /* MenuScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuScreenView.swift; sourceTree = "<group>"; };
 		E3AC9ED327DE235100C3A9DB /* MenuScreenVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuScreenVC.swift; sourceTree = "<group>"; };
 		E3AC9ED427DE235100C3A9DB /* MenuScreenRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuScreenRouter.swift; sourceTree = "<group>"; };
+		E3C46F7F2816A39D009FF381 /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
+		E3C46F822816A668009FF381 /* AnotherProfileInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnotherProfileInfoView.swift; sourceTree = "<group>"; };
+		E3C46F842816A9F5009FF381 /* AnotherProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnotherProfileVC.swift; sourceTree = "<group>"; };
 		E3C8DEF227AC4E9E0020D176 /* ProfileStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileStorage.swift; sourceTree = "<group>"; };
 		E3C8DEF427AC4ED90020D176 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		E3C8DEF627AC504C0020D176 /* UserEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEvent.swift; sourceTree = "<group>"; };
@@ -540,6 +546,23 @@
 			path = CustomElements;
 			sourceTree = "<group>";
 		};
+		E3C46F7E2816A38E009FF381 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				E3C46F7F2816A39D009FF381 /* Mocks.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		E3C46F812816A655009FF381 /* AnotherProfileInfo */ = {
+			isa = PBXGroup;
+			children = (
+				E3C46F822816A668009FF381 /* AnotherProfileInfoView.swift */,
+				E3C46F842816A9F5009FF381 /* AnotherProfileVC.swift */,
+			);
+			path = AnotherProfileInfo;
+			sourceTree = "<group>";
+		};
 		E3C8DEF127AC4C320020D176 /* ProfileScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -598,6 +621,7 @@
 		E3FDDF282786F4D30045B237 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				E3C46F812816A655009FF381 /* AnotherProfileInfo */,
 				E32F62B7280F00D80091AF26 /* NewEvent */,
 				E3FDDF292786F5BB0045B237 /* EventInfo */,
 				E313D887273EFD3200EF1E3C /* EventsList */,
@@ -621,6 +645,7 @@
 		E3FDDF362786F7C70045B237 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				E3C46F7E2816A38E009FF381 /* Mocks */,
 				E3EE4C1227D78C6600E02090 /* Storages */,
 				E3EE4C1327D78C8900E02090 /* SignInService.swift */,
 				E3EE4C1727D79DA100E02090 /* RegistrationService.swift */,
@@ -946,6 +971,7 @@
 				E313D891273EFDB900EF1E3C /* EventsListInteractor.swift in Sources */,
 				E32F62BE280F01470091AF26 /* NewEventPresenter.swift in Sources */,
 				E3FDDF4327949C040045B237 /* RoundedImageView.swift in Sources */,
+				E3C46F852816A9F5009FF381 /* AnotherProfileVC.swift in Sources */,
 				E3C8DEFF27AC512E0020D176 /* ProfileScreenInteractor.swift in Sources */,
 				E313D880273D77DB00EF1E3C /* TextFieldWithPadding.swift in Sources */,
 				E3AC9EDA27DE235100C3A9DB /* MenuScreenRouter.swift in Sources */,
@@ -956,7 +982,9 @@
 				E3EE4C2227DCD4E300E02090 /* StartScreenGraph.swift in Sources */,
 				E3FDDF332786F60F0045B237 /* EventInfoRouter.swift in Sources */,
 				E3AC9ED727DE235100C3A9DB /* MenuScreenInteractor.swift in Sources */,
+				E3C46F802816A39D009FF381 /* Mocks.swift in Sources */,
 				E3FDDF352786F7440045B237 /* Event.swift in Sources */,
+				E3C46F832816A668009FF381 /* AnotherProfileInfoView.swift in Sources */,
 				E313D88E273EFDB900EF1E3C /* EventsListGraph.swift in Sources */,
 				E384C64027BAE66A008026AE /* AvardsScreenVC.swift in Sources */,
 				E3EE4C1627D791F500E02090 /* DotsAnimationView.swift in Sources */,
