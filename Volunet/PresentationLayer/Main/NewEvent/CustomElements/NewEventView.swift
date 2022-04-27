@@ -54,7 +54,9 @@ final class NewEventView: UIStackView {
 
     lazy var fromDate: UIDatePicker = {
         let datePicker = UIDatePicker()
-        datePicker.preferredDatePickerStyle = .wheels
+        if #available(iOS 13.4, *) {
+            datePicker.preferredDatePickerStyle = .wheels
+        }
         datePicker.translatesAutoresizingMaskIntoConstraints = false
         datePicker.minimumDate = .tomorrow
         return datePicker
@@ -62,7 +64,9 @@ final class NewEventView: UIStackView {
 
     lazy var toDate: UIDatePicker = {
         let datePicker = UIDatePicker()
-        datePicker.preferredDatePickerStyle = .wheels
+        if #available(iOS 13.4, *) {
+            datePicker.preferredDatePickerStyle = .wheels
+        }
         datePicker.translatesAutoresizingMaskIntoConstraints = false
         datePicker.minimumDate = .tomorrow
         return datePicker
