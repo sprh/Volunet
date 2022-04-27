@@ -25,7 +25,7 @@ class Mocks {
                                              specialHealthFeatures: ["Плохой слух"],
                                              imageUrl: "image",
                                              avards: [Avard(title: "Шарики - детям", image: .volunteerOrganizationPlaceholder)],
-                                             accountType: .organization)
+                                             accountType: .volunteer)
 
     public static let events = [Event(startDate: "05/21",
                                       title: "Мы едем в приют!",
@@ -45,11 +45,11 @@ class Mocks {
 
     public static var messages: [[MSGMessage]] = [
             [
-                MSGMessage(id: 2, body: .text("Ребята, никто не потерялся?"), user: vasyaProfile, sentAt: Date(timeIntervalSince1970: 1650640436)),
-                MSGMessage(id: 2, body: .text("Ждем вас у южного входа!"), user: vasyaProfile, sentAt: Date(timeIntervalSince1970: 1650640436)),
-                MSGMessage(id: 3, body: .text("Уже бегу!"), user: sashaProfile, sentAt: Date(timeIntervalSince1970: 1650640456)),
-                MSGMessage(id: 3, body: .text("Но могу немного опоздать :("), user: sashaProfile, sentAt: Date(timeIntervalSince1970: 1650640499)),
-                MSGMessage(id: 3, body: .text("Через 10 минут обед, не забывайте"), user: vasyaProfile, sentAt: Date(timeIntervalSince1970: 1650654836)),
+                MSGMessage(id: 1, body: .text("Ребята, никто не потерялся?"), user: vasyaProfile, sentAt: Date(timeIntervalSince1970: 1650640436)),
+                MSGMessage(id: 1, body: .text("Ждем вас у южного входа!"), user: vasyaProfile, sentAt: Date(timeIntervalSince1970: 1650640436)),
+                MSGMessage(id: 2, body: .text("Уже бегу!"), user: sashaProfile, sentAt: Date(timeIntervalSince1970: 1650640456)),
+                MSGMessage(id: 2, body: .text("Но могу немного опоздать :("), user: sashaProfile, sentAt: Date(timeIntervalSince1970: 1650640499)),
+                MSGMessage(id: 1, body: .text("Через 10 минут обед, не забывайте"), user: vasyaProfile, sentAt: Date(timeIntervalSince1970: 1650654836)),
             ],
         ]
 }

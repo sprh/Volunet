@@ -99,6 +99,5 @@ final class MenuScreenView: UIView {
                                       UIColor.darkTeal.cgColor,
                                       UIColor.darkTeal.cgColor,
                                       UIColor.darkTeal.cgColor])
-        scrollView.setContentSize()
     }
 }

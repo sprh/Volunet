@@ -9,9 +9,11 @@ import Foundation
 import UIKit
 
 class ChatsListVC: UIViewController {
-    let chatsListView: ChatsListView = {
+    lazy var chatsListView: ChatsListView = {
         let view = ChatsListView()
         view.translatesAutoresizingMaskIntoConstraints = false
+        view.chatsList.delegate = self
+        view.chatsList.dataSource = self
         return view
     }()
 
@@ -32,8 +34,6 @@ class ChatsListVC: UIViewController {
         ])
         chatsListView.frame.size.width = view.frame.width
         chatsListView.setup()
-        chatsListView.chatsList.delegate = self
-        chatsListView.chatsList.dataSource = self
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -56,12 +56,11 @@ extension ChatsListVC: UITableViewDataSource, UITableViewDelegate {
             return UITableViewCell()
         }
         cell.setup()
-        cell.layoutIfNeeded()
         return cell
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let view = ChatVC()
-        navigationController?.pushViewController(view, animated: true)
+        navigationController?.present(view, animated: true)
     }
 }

@@ -39,9 +39,6 @@ final class MenuScreenVC: UIViewController, IMenuScreenVC {
     }
 
     private func setup() {
-        setNavigationControllerTransparent()
-        hideKeyboardWhenTappedAround()
-
         view.backgroundColor = .background
         view.addSubview(menuScreenView)
         NSLayoutConstraint.activate([
@@ -52,7 +49,6 @@ final class MenuScreenVC: UIViewController, IMenuScreenVC {
         ])
         menuScreenView.frame = view.frame
         menuScreenView.setup()
-        menuScreenView.scrollView.setContentSize()
     }
 
     private func addTargets() {

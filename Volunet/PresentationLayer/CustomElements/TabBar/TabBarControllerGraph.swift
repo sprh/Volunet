@@ -12,9 +12,10 @@ class TabBarControllerGraph {
 
     init() {
         controller = TabBarController(controllers: [
-            TabBarControllerGraph.getChatsPage(),
             TabBarControllerGraph.getMainPage(),
-            TabBarControllerGraph.getProfilePage()])
+            TabBarControllerGraph.getChatsPage(),
+            TabBarControllerGraph.getProfilePage(),
+        ])
     }
 
     private static func getProfilePage() -> UIViewController {

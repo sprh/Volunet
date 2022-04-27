@@ -9,6 +9,7 @@ import UIKit
 
 final class TabBarController: UITabBarController {
     let controllers: [UIViewController]
+    var previousFrame: CGRect = .zero
 
     init(controllers: [UIViewController]) {
         self.controllers = controllers
@@ -29,11 +30,15 @@ final class TabBarController: UITabBarController {
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        let previousFrame = tabBar.frame
+        let currentFrame = tabBar.frame
+        if (previousFrame == currentFrame) {
+            return
+        }
+        previousFrame = currentFrame
         tabBar.frame = CGRect(x: xInsets,
-                              y: previousFrame.midY - yInsets,
-                              width: previousFrame.width - 32,
-                              height: previousFrame.height - 16)
+                              y: currentFrame.midY - yInsets,
+                              width: currentFrame.width - 32,
+                              height: currentFrame.height - 16)
     }
 
     private func makeUI() {

@@ -27,7 +27,6 @@ final class MenuScreenRouter: IMenuScreenRouter {
     }
 
     func onTapAboutApp() {
-        // TODO: 
-//        viewController?.navigationController?.pushViewController(ProfileScreenGraph().viewController, animated: true)
+        viewController?.navigationController?.pushViewController(AppInfoVC(), animated: true)
     }
 }

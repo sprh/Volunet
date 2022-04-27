@@ -41,7 +41,7 @@ class ChatVC: MSGMessengerViewController {
 
         let body: MSGMessageBody = .text(inputView.message)
 
-        let message = MSGMessage(id: id, body: body, user: Mocks.sashaProfile, sentAt: Date())
+        let message = MSGMessage(id: id, body: body, user: ProfileStorage.shared.profile ?? Mocks.sashaProfile, sentAt: Date())
         insert(message)
         Mocks.messages.append([message])
     }
@@ -97,7 +97,7 @@ class ChatVC: MSGMessengerViewController {
 
     @objc
     private func didTabBackButton() {
-        navigationController?.popViewController(animated: true)
+        navigationController?.dismiss(animated: true)
     }
 }
 

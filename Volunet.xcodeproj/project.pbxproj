@@ -35,6 +35,7 @@
 		E313D891273EFDB900EF1E3C /* EventsListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E313D88C273EFDB900EF1E3C /* EventsListInteractor.swift */; };
 		E313D894273EFECA00EF1E3C /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E313D893273EFECA00EF1E3C /* EventCell.swift */; };
 		E313D89B273F019900EF1E3C /* CalendarDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E313D89A273F019900EF1E3C /* CalendarDate.swift */; };
+		E3141A442819BDE900DD1DC4 /* AppInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3141A432819BDE900DD1DC4 /* AppInfoVC.swift */; };
 		E316FB3E27B9702400E9C76E /* UserEventInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E316FB3D27B9702400E9C76E /* UserEventInfoView.swift */; };
 		E32F62BD280F01470091AF26 /* NewEventVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32F62B8280F01470091AF26 /* NewEventVC.swift */; };
 		E32F62BE280F01470091AF26 /* NewEventPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32F62B9280F01470091AF26 /* NewEventPresenter.swift */; };
@@ -175,6 +176,7 @@
 		E313D88C273EFDB900EF1E3C /* EventsListInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsListInteractor.swift; sourceTree = "<group>"; };
 		E313D893273EFECA00EF1E3C /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
 		E313D89A273F019900EF1E3C /* CalendarDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDate.swift; sourceTree = "<group>"; };
+		E3141A432819BDE900DD1DC4 /* AppInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfoVC.swift; sourceTree = "<group>"; };
 		E316FB3D27B9702400E9C76E /* UserEventInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEventInfoView.swift; sourceTree = "<group>"; };
 		E32F62B8280F01470091AF26 /* NewEventVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewEventVC.swift; sourceTree = "<group>"; };
 		E32F62B9280F01470091AF26 /* NewEventPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewEventPresenter.swift; sourceTree = "<group>"; };
@@ -380,6 +382,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		E3141A422819BDD700DD1DC4 /* AppInfoScreen */ = {
+			isa = PBXGroup;
+			children = (
+				E3141A432819BDE900DD1DC4 /* AppInfoVC.swift */,
+			);
+			path = AppInfoScreen;
+			sourceTree = "<group>";
+		};
 		E32F62B7280F00D80091AF26 /* NewEvent */ = {
 			isa = PBXGroup;
 			children = (
@@ -537,6 +547,7 @@
 		E3AC9EB027DE1E0900C3A9DB /* MenuScreen */ = {
 			isa = PBXGroup;
 			children = (
+				E3141A422819BDD700DD1DC4 /* AppInfoScreen */,
 				E3AC9EB327DE1E6B00C3A9DB /* MenuScreen */,
 				E384C63827BAE612008026AE /* Avards */,
 				E3C8DEF127AC4C320020D176 /* ProfileScreen */,
@@ -1058,6 +1069,7 @@
 				E313D880273D77DB00EF1E3C /* TextFieldWithPadding.swift in Sources */,
 				E3AC9EDA27DE235100C3A9DB /* MenuScreenRouter.swift in Sources */,
 				E3C46F8A2816B804009FF381 /* ChatsListView.swift in Sources */,
+				E3141A442819BDE900DD1DC4 /* AppInfoVC.swift in Sources */,
 				E3FDDF2F2786F60F0045B237 /* EventInfoGraph.swift in Sources */,
 				E3EE4C2527DCD66F00E02090 /* StartScreenInteractor.swift in Sources */,
 				E3EE4C1A27DCD33800E02090 /* EventsService.swift in Sources */,
