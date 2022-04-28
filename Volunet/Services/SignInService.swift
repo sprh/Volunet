@@ -28,7 +28,7 @@ final class SignInService: ISignInService {
         queue.async { [weak self] in
             DispatchQueue.main.async {
                 // TODO: fix sign in
-                completion(.success(Mocks.vasyaProfile))
+                completion(.success(Mocks.sashaProfile))
             }
         }
     }

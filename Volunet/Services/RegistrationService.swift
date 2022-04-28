@@ -24,7 +24,6 @@ final class RegistrationService: IRegistrationService {
     }
 
     func register(name: String, accountType: AccountType, email: String, password: String, completion: @escaping (Result<Profile?, Error>) -> Void) {
-        // TODO: register
         completion(.success(Mocks.sashaProfile))
     }
 }

@@ -9,9 +9,17 @@ import Foundation
 
 protocol IEventsService {
     func loadEvents(uuid: Int, completion: @escaping (Result<[Event], Error>) -> Void)
+    func register(id: Int, completion: @escaping (Result<Void, Error>) -> Void)
+    func create(name: String, from: Date, to: Date, description: String, location: String, completion: @escaping (Result<Void, Error>) -> Void)
 }
 
 class EventsService: IEventsService {
+    func register(id: Int, completion: @escaping (Result<Void, Error>) -> Void) {
+    }
+
+    func create(name: String, from: Date, to: Date, description: String, location: String, completion: @escaping (Result<Void, Error>) -> Void) {
+    }
+
     private static var _shared: IEventsService?
 
     let queue = DispatchQueue(label: "EventsService", attributes: [.concurrent])
@@ -25,7 +33,6 @@ class EventsService: IEventsService {
     }
 
     func loadEvents(uuid: Int, completion: @escaping (Result<[Event], Error>) -> Void) {
-        // TODO: load events
         queue.async { [weak self] in
             sleep(2)
             DispatchQueue.main.async {
